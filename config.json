@@ -1,5 +1,5 @@
 {
-    "mof_database_path" : "./mof_database/2019-11-01-ASR-public_12020",
+    "mof_database_path" : "mof_database/2019-11-01-ASR-public_12020.csv",
     "kinetic_diameters": [
         {"name": "Hydrogen", "formula": "H2", "molecular_mass": 2, "kinetic_diameter_A": 2.89},
         {"name": "Helium", "formula": "He", "molecular_mass": 4, "kinetic_diameter_A": 2.60},

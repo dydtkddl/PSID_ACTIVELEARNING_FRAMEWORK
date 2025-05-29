@@ -5,10 +5,10 @@ import pandas as pd
 import shlex
 import subprocess
 
-def run_remote_job(node, node_dir, args_list, make_simulations_py_path, pwd):
+def run_remote_job(node, node_dir, args_list, make_simulations_py_path, pwd,runall_py_path,max_cpu_fraction):
     # 안전한 인자 문자열 생성 (공백 처리 등)
     arg_string = ' '.join(str(arg) for arg in args_list)
-    ssh_cmd = f"ssh {node} 'cd {pwd} && python {make_simulations_py_path} {arg_string}'"
+    ssh_cmd = f"ssh {node} 'cd {pwd} && python {make_simulations_py_path} {arg_string} && cd simulations && python {runall_py_path} {max_cpu_fraction}'"
 
     print(f"🚀 {node}에서 백그라운드 실행 중...")
     subprocess.Popen(ssh_cmd, shell=True)
@@ -36,6 +36,7 @@ def main():
     cifs_path = os.path.join(raspa_dir, "share", "raspa", "structures", "cif")
     python_file_dir_path = os.path.dirname(os.path.abspath(__file__))
     make_simulations_py_path = os.path.join(python_file_dir_path, "make_simulations.py")
+    runall_py_path = os.path.join(python_file_dir_path, "run_all.py")
     for chunk, node in zip(chunks, execute_nodes):
         print(f"🔧 노드 {node} 처리 시작 ({len(chunk)}개 MOF)")
 
@@ -44,7 +45,7 @@ def main():
         os.makedirs(node_dir, exist_ok=True)
         chunk = chunk[["filename"]].copy()
         chunk["node"] = node
-       	chunk.to_csv(os.path.join(node_dir, "target_mofs.csv"), index=False)
+        chunk.to_csv(os.path.join(node_dir, "target_mofs.csv"), index=False)
         pwd = os.path.abspath(node_dir)
         # make_simulations.py에 전달할 인자
         args_list = [
@@ -65,7 +66,8 @@ def main():
             max_cpu_fraction
         ]
 
-        run_remote_job(node, node_dir, args_list,make_simulations_py_path, pwd)
+        run_remote_job(node, node_dir, args_list,make_simulations_py_path, pwd,runall_py_path,max_cpu_fraction)
 
 if __name__ == "__main__":
     main()
+
