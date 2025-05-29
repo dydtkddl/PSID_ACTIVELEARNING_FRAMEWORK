@@ -1,0 +1,110 @@
+{
+    "mof_database_path" : "./mof_database//2019-04-11-ASR-internal_14845.csv",
+    "kinetic_diameters": [
+        {"name": "Hydrogen", "formula": "H2", "molecular_mass": 2, "kinetic_diameter_A": 2.89},
+        {"name": "Helium", "formula": "He", "molecular_mass": 4, "kinetic_diameter_A": 2.60},
+        {"name": "Methane", "formula": "CH4", "molecular_mass": 16, "kinetic_diameter_A": 3.80},
+        {"name": "Ammonia", "formula": "NH3", "molecular_mass": 17, "kinetic_diameter_A": 2.60},
+        {"name": "Water", "formula": "H2O", "molecular_mass": 18, "kinetic_diameter_A": 2.65},
+        {"name": "Neon", "formula": "Ne", "molecular_mass": 20, "kinetic_diameter_A": 2.75},
+        {"name": "Acetylene", "formula": "C2H2", "molecular_mass": 26, "kinetic_diameter_A": 3.30},
+        {"name": "Nitrogen", "formula": "N2", "molecular_mass": 28, "kinetic_diameter_A": 3.64},
+        {"name": "Carbon monoxide", "formula": "CO", "molecular_mass": 28, "kinetic_diameter_A": 3.76},
+        {"name": "Ethylene", "formula": "C2H4", "molecular_mass": 28, "kinetic_diameter_A": 3.90},
+        {"name": "Nitric oxide", "formula": "NO", "molecular_mass": 30, "kinetic_diameter_A": 3.17},
+        {"name": "Oxygen", "formula": "O2", "molecular_mass": 32, "kinetic_diameter_A": 3.46},
+        {"name": "Hydrogen sulfide", "formula": "H2S", "molecular_mass": 34, "kinetic_diameter_A": 3.60},
+        {"name": "Hydrogen chloride", "formula": "HCl", "molecular_mass": 36, "kinetic_diameter_A": 3.20},
+        {"name": "Argon", "formula": "Ar", "molecular_mass": 40, "kinetic_diameter_A": 3.40},
+        {"name": "Propylene", "formula": "C3H6", "molecular_mass": 42, "kinetic_diameter_A": 4.50},
+        {"name": "Carbon dioxide", "formula": "CO2", "molecular_mass": 44, "kinetic_diameter_A": 3.30},
+        {"name": "Nitrous oxide", "formula": "N2O", "molecular_mass": 44, "kinetic_diameter_A": 3.30},
+        {"name": "Propane", "formula": "C3H8", "molecular_mass": 44, "kinetic_diameter_A": 4.30},
+        {"name": "Sulfur dioxide", "formula": "SO2", "molecular_mass": 64, "kinetic_diameter_A": 3.60},
+        {"name": "Chlorine", "formula": "Cl2", "molecular_mass": 70, "kinetic_diameter_A": 3.20},
+        {"name": "Benzene", "formula": "C6H6", "molecular_mass": 78, "kinetic_diameter_A": 5.85},
+        {"name": "Hydrogen bromide", "formula": "HBr", "molecular_mass": 81, "kinetic_diameter_A": 3.50},
+        {"name": "Krypton", "formula": "Kr", "molecular_mass": 84, "kinetic_diameter_A": 3.60},
+        {"name": "Xenon", "formula": "Xe", "molecular_mass": 131, "kinetic_diameter_A": 3.96},
+        {"name": "Sulfur hexafluoride", "formula": "SF6", "molecular_mass": 146, "kinetic_diameter_A": 5.50},
+        {"name": "Carbon tetrachloride", "formula": "CCl4", "molecular_mass": 154, "kinetic_diameter_A": 5.90},
+        {"name": "Bromine", "formula": "Br2", "molecular_mass": 160, "kinetic_diameter_A": 3.50}
+    ],
+    "main_config" : {
+        "main" : { 
+            "gas" : null,
+            "temperature" : null ,
+            "target_mofs_csv" : "./target_mofs.csv"
+        },
+        "GCMC" : {
+            "NumberOfCycles" : 20000 ,
+            "NumberOfInitializationCycles" : 10000 ,
+            "PrintEvery" : 1000,
+
+            "UseChargesFromCIFFile" : null,
+    
+            "ExternalTemperature" : null ,
+            "ExternalPressure" : null , 
+            "Forcefield" : "GarciaPerez2006ForceField", 
+                    
+            "GAS" : null,
+            "MoleculeDefinition" : "ExampleDefinitions",
+
+            "CUTOFFVDW" : 14,
+            "CUTOFFCHARGECHARGE" : 14,
+            "CUTOFFCHARGEBONDDIPOLE" : 14,
+            "CUTOFFBONDDIPOLEBONDDIPOLE" : 14
+        },
+        "Low_Pressure_GCMC" : {
+            "Parallel" : {
+                "nodes" : [null],
+                "max_cpu_fraction" : 0.8
+            }
+        },
+        "Active_GCMC" : {
+            "initial_sampling" : {
+                "initial_fraction" : 0.01,
+                "Parallel" : {
+                    "nodes" : [null],
+                    "max_cpu_fraction" : 0.8
+                }
+            },
+            "active_sampling": {
+                "target_fraction" : 0.1,
+                "n_samples" : 10,
+                "Parallel" : {
+                    "nodes" : [null],
+                    "max_cpu_fraction" : 0.8
+                },
+                "neural_network":{
+                    "model_spec" : {
+                        "hidden_layers" : [
+                            {
+                                "hidden_dim" : 64,
+                                "dropout" : 0.1,
+                                "activation_func" : "ReLU"
+                            },
+                            {
+                                "hidden_dim" : 64,
+                                "dropout" : 0.1,
+                                "activation_func" : "ReLU"
+                            }
+                        ]
+                    },
+                    "dataset" : {
+                        "BATCH_SIZE" : 64
+                    },
+                    "training": {
+                        "max_epoch" : 500,
+                        "patience" : 30,
+                        "learning_rate" : 1e-3
+                    },
+                    "prediction" : {
+                        "mcd_numbers" : 20
+                }
+                }
+            }
+
+        }
+    }
+}
