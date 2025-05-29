@@ -1,0 +1,80 @@
+{
+  "main": {
+    "gas": "Ar",
+    "temperature": 313.0,
+    "target_mofs_csv": "/home/ys/PSID_ACTIVELEARNING_FRAMEWORK/Isotherm_Ar_313.0K_20250530_030247/target_mofs.csv"
+  },
+  "GCMC": {
+    "NumberOfCycles": 20000,
+    "NumberOfInitializationCycles": 10000,
+    "PrintEvery": 1000,
+    "UseChargesFromCIFFile": "yes",
+    "ExternalTemperature": 313.0,
+    "ExternalPressure": 0.5,
+    "Forcefield": "GarciaPerez2006ForceField",
+    "GAS": "Ar",
+    "MoleculeDefinition": "ExampleDefinitions",
+    "CUTOFFVDW": 14,
+    "CUTOFFCHARGECHARGE": 14,
+    "CUTOFFCHARGEBONDDIPOLE": 14,
+    "CUTOFFBONDDIPOLEBONDDIPOLE": 14
+  },
+  "Low_Pressure_GCMC": {
+    "Parallel": {
+      "nodes": [
+	"psid00",
+        "psid05",
+        "psid06"
+      ],
+      "max_cpu_fraction": 0.8
+    }
+  },
+  "Active_GCMC": {
+    "initial_sampling": {
+      "initial_fraction": 0.01,
+      "Parallel": {
+        "nodes": [
+          null
+        ],
+        "max_cpu_fraction": 0.8
+      }
+    },
+    "active_sampling": {
+      "target_fraction": 0.1,
+      "n_samples": 10,
+      "Parallel": {
+        "nodes": [
+          null
+        ],
+        "max_cpu_fraction": 0.8
+      },
+      "neural_network": {
+        "model_spec": {
+          "hidden_layers": [
+            {
+              "hidden_dim": 64,
+              "dropout": 0.1,
+              "activation_func": "ReLU"
+            },
+            {
+              "hidden_dim": 64,
+              "dropout": 0.1,
+              "activation_func": "ReLU"
+            }
+          ]
+        },
+        "dataset": {
+          "BATCH_SIZE": 64
+        },
+        "training": {
+          "max_epoch": 500,
+          "patience": 30,
+          "learning_rate": 0.001
+        },
+        "prediction": {
+          "mcd_numbers": 20
+        }
+      }
+    }
+  }
+}

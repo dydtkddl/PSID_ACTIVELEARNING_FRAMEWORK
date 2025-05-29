@@ -17,7 +17,7 @@ def main():
     target_gas = args.target_gas
     target_temp = args.target_temp
     config      = args.config
-    
+    print(config) 
     python_file_path = os.path.abspath(__file__)
     python_file_dir_path = os.path.dirname(python_file_path)
     print(python_file_dir_path)

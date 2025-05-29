@@ -57,7 +57,7 @@
         },
         "Low_Pressure_GCMC" : {
             "Parallel" : {
-                "nodes" : ["psid05","psid06"],
+                "nodes" : ["psid05","psid06","psid04", "psid03"],
                 "max_cpu_fraction" : 0.8
             }
         },
