@@ -44,3 +44,4 @@ git_push.log
 \#*#
 *.sdf
 *.gz
+*.data
