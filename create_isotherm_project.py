@@ -21,7 +21,7 @@ def main():
     python_file_path = os.path.abspath(__file__)
     python_file_dir_path = os.path.dirname(python_file_path)
     print(python_file_dir_path)
-    with open(python_file_dir_path + "\\config.json" , 'r') as f:
+    with open(python_file_dir_path + "/config.json" , 'r') as f:
         config = json.load(f)
     mof_database_relative_path = config["mof_database_path"]
     mof_database_abs_path = os.path.join(python_file_dir_path, mof_database_relative_path)
