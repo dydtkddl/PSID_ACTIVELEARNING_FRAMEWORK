@@ -47,3 +47,4 @@ git_push.log
 *.data
 OLD
 **/Output/**
+**/simulation.input
