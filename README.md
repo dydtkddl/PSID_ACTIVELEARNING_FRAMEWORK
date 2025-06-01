@@ -1,4 +1,3 @@
-```markdown
 # PSID Active Learning Framework
 
 ## 1. 전체 목적
