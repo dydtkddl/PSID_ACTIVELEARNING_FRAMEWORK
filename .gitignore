@@ -46,3 +46,4 @@ git_push.log
 *.gz
 *.data
 OLD
+**/Output/**
