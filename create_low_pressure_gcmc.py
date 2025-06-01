@@ -28,7 +28,7 @@ def main():
     python_file_dir_path = os.path.dirname(os.path.abspath(__file__))
     make_simulations_py_path = os.path.join(python_file_dir_path, "make_simulations.py")
     runall_py_path = os.path.join(python_file_dir_path, "run_all.py")
-
+    crop_py_path = os.path.join(python_file_dir_path, "crop_simulations.py")
     procs = []
 
     for chunk, node in zip(chunks, execute_nodes):
@@ -63,7 +63,7 @@ def main():
         arg_string = ' '.join(str(arg) for arg in args_list)
 
         # 원격 실행 명령 생성 및 병렬 실행 시작
-        ssh_cmd = f"ssh {node} 'cd {pwd} && python {make_simulations_py_path} {arg_string} && cd simulations && python {runall_py_path} {max_cpu_fraction}'"
+        ssh_cmd = f"ssh {node} 'cd {pwd} && python {make_simulations_py_path} {arg_string} && cd simulations && python {runall_py_path} {max_cpu_fraction} && python {crop_py_path}'"
         print(f"🚀 {node}에서 백그라운드 실행 중...")
         procs.append((node, subprocess.Popen(ssh_cmd, shell=True)))
 
