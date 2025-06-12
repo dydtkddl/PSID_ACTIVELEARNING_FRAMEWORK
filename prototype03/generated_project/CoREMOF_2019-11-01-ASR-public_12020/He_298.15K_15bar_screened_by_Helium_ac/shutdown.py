@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
 """
-Safe shutdown utility for Low-pressure GCMC workflow.
-Finds and terminates all running workflow runner processes and any lingering RASPA simulate processes,
-commits pending database transactions, and exits cleanly.
+Safe shutdown utility for GCMC workflows.
+Terminates all running workflow runner processes (low_pressure_gcmc or active_learning_gcmc)
+and any lingering RASPA simulate processes, commits pending database transactions, and exits cleanly.
 
 Usage:
-    python safe_shutdown.py [--db-path path/to/mof_project.db]
+    python safe_shutdown.py --workflow [low_pressure_gcmc|active_learning_gcmc] [--db-path path/to/mof_project.db]
 """
 import sys
 import time
 import signal
 import sqlite3
 from pathlib import Path
+import argparse
 
 try:
     import psutil
@@ -20,11 +21,7 @@ except ImportError:
     sys.exit(1)
 
 
-def find_workflow_processes(name_snippet: str = 'low_pressure_gcmc') -> list:
-    """
-    Search for all processes whose command line contains the given snippet.
-    Returns a list of matching psutil.Process. Raises LookupError if none found.
-    """
+def find_workflow_processes(name_snippet: str) -> list:
     matches = []
     for proc in psutil.process_iter(['pid', 'cmdline']):
         try:
@@ -39,10 +36,6 @@ def find_workflow_processes(name_snippet: str = 'low_pressure_gcmc') -> list:
 
 
 def safe_terminate(process: psutil.Process, timeout: float = 5.0):
-    """
-    Gracefully terminate the given process and its children.
-    Sends SIGTERM, waits up to timeout, then SIGKILL if still alive.
-    """
     children = process.children(recursive=True)
     to_kill = children + [process]
     for p in to_kill:
@@ -60,9 +53,6 @@ def safe_terminate(process: psutil.Process, timeout: float = 5.0):
 
 
 def kill_simulation_processes(cmd_snippet: str = 'simulate simulation.input', timeout: float = 5.0):
-    """
-    Terminate any RASPA simulate processes matching the given command snippet.
-    """
     to_terminate = []
     for proc in psutil.process_iter(['pid', 'cmdline']):
         try:
@@ -88,9 +78,6 @@ def kill_simulation_processes(cmd_snippet: str = 'simulate simulation.input', ti
 
 
 def commit_db(db_path: Path):
-    """
-    Commit any pending SQLite transactions and close the connection.
-    """
     if not db_path.exists():
         print(f"Database file not found: {db_path}")
         return
@@ -100,29 +87,26 @@ def commit_db(db_path: Path):
 
 
 def main():
-    import argparse
     parser = argparse.ArgumentParser(description='Safely shutdown GCMC workflow')
+    parser.add_argument('--workflow', choices=['low_pressure_gcmc', 'active_learning_gcmc'], required=True,
+                        help='Workflow script name to match and shut down')
     parser.add_argument('--db-path', type=Path, default=Path.cwd() / 'mof_project.db',
                         help='Path to SQLite database file')
     args = parser.parse_args()
 
-    # Step 1: terminate all workflow runners
     try:
-        runners = find_workflow_processes()
+        runners = find_workflow_processes(args.workflow)
         for runner in runners:
-            print(f"Terminating workflow runner PID {runner.pid}")
+            print(f"Terminating workflow runner PID {runner.pid} ({args.workflow})")
             safe_terminate(runner)
     except LookupError as e:
         print(e)
 
-    # Step 2: terminate any simulate processes
     print("Terminating RASPA simulate processes...")
     kill_simulation_processes()
 
-    # Step 3: wait for cleanup
     time.sleep(1)
 
-    # Step 4: commit DB
     print("Committing pending DB transactions...")
     commit_db(args.db_path)
     print("Safe shutdown complete.")

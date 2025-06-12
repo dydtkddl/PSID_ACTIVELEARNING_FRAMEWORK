@@ -119,20 +119,23 @@ def initial_create(db_path: Path, config_path: Path, base_input: Path, mode: str
 
     for mof in sample[sample.columns[0]]:
         make_simulation_input(mof, tpl, cfg, out, raspa,gcfg)
-        conn.execute(f"UPDATE {TABLE} SET initial_sample=1 WHERE mof=?", (mof,))
+        conn.execute(f"UPDATE {TABLE} SET initial_sample=1 WHERE {eligible.columns[0]}=?", (mof,))
 
     conn.commit()
     conn.close()
     print(f"✅ Added {remaining} new initial inputs (mode={mode}).")
 
 
-def initial_run(db_path: Path, config_path: Path, ncpus: int):
+def initial_run(db_path: Path, config_path: Path, ncpus: int, gcfg : Path):
     conn = get_db_connection(db_path)
     df = pd.read_sql(f"SELECT * FROM {TABLE}", conn)
     cfg = json.loads(config_path.read_text(encoding='utf-8'))
-    raspa = Path(cfg['RASPA_DIR'])
+    gcfg = json.loads(gcfg.read_text(encoding='utf-8'))
+    raspa = Path(gcfg['RASPA_DIR'])
     base_dir = Path("initial_gcmc")
-    targets = df[(df['initial_sample'] == 1) & (df['iteration'].isna())]['mof'].tolist()
+
+
+    targets = df[(df['initial_sample'] == str(1)) & (df['iteration'].isna())][df.columns[0]].tolist()
 
     results = Parallel(n_jobs=ncpus)(
         delayed(run_simulation)(mof, raspa, base_dir) for mof in targets
@@ -141,7 +144,7 @@ def initial_run(db_path: Path, config_path: Path, ncpus: int):
     for mof, uptake, time_spent in results:
         if uptake is not None:
             conn.execute(
-                f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE mof=?",
+                f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
                 (uptake, time_spent, mof)
             )
             uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
@@ -169,7 +172,7 @@ def main():
         if args.action == 'create':
             initial_create(dbp, cfg, binput, args.initial_mode,gcfg)
         elif args.action == 'run':
-            initial_run(dbp, cfg, args.ncpus)
+            initial_run(dbp, cfg, args.ncpus, gcfg)
 
     elif args.phase == 'init_model':
         print("🔧 Placeholder: init_model not implemented yet.")

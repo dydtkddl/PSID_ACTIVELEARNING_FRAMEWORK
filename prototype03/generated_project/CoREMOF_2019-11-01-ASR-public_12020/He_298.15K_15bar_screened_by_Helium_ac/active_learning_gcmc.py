@@ -133,7 +133,9 @@ def initial_run(db_path: Path, config_path: Path, ncpus: int, gcfg : Path):
     gcfg = json.loads(gcfg.read_text(encoding='utf-8'))
     raspa = Path(gcfg['RASPA_DIR'])
     base_dir = Path("initial_gcmc")
-    targets = df[(df['initial_sample'] == 1) & (df['iteration'].isna())][df.columns[0]].tolist()
+
+
+    targets = df[(df['initial_sample'] == str(1)) & (df['iteration'].isna())][df.columns[0]].tolist()
 
     results = Parallel(n_jobs=ncpus)(
         delayed(run_simulation)(mof, raspa, base_dir) for mof in targets
