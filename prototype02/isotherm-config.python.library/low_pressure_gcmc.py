@@ -13,9 +13,12 @@ import pyrascont
 import pandas as pd
 from pathlib import Path
 from tqdm import tqdm  
+from multiprocessing import Manager
+import time 
 CSV_NAME = './low_pressure_gcmc.csv'
 FIRST_COL = None  # CSV 로드 후 설정
 
+## create 관련
 def _make_simulation_input(mof, base_tpl, gcmc_params, out_root,raspa_dir):
     """
     단일 MOF 폴더에 simulation.input 생성 함수
@@ -56,8 +59,6 @@ def _make_simulation_input(mof, base_tpl, gcmc_params, out_root,raspa_dir):
             df.loc[df[fir] == mof, "sim_created"] = False
             df.to_csv(CSV_NAME, index = False)
     return mof
-
-
 def cmd_create(ncpus):
     """
     1) low_pressure_gcmc/ 하위 폴더 생성
@@ -123,42 +124,96 @@ def cmd_create(ncpus):
     print("✅ CREATE 완료")
 
 
-def parse_data_file(data_path: Path):
+def parse_data_file(gcmc_sim_root: Path):
     """
     Output/.data 파일에서 uptake, calculation time 추출
     """
     uptake = None
-    ctime = None
-    if not data_path.exists():
-        raise FileNotFoundError(f"{data_path} not found")
-    for line in data_path.read_text().splitlines():
-        ll = line.lower()
-        if 'uptake' in ll:
-            uptake = float(ll.split()[-2])
-        if 'calculation time' in ll:
-            ctime = float(ll.split()[-2])
-    if uptake is None or ctime is None:
-        raise ValueError(f"데이터 파싱 실패: {data_path}")
-    return uptake, ctime
+    gcmc_data_root = gcmc_sim_root / "Output" / "System_0"
+    gcmc_datas = [ x for x in os.listdir(gcmc_data_root) if ".data" in x]
+    if len(gcmc_datas) == 0 :
+        raise FileNotFoundError(f"{gcmc_datas} .data file not found")
+    if len(gcmc_datas) > 1 : 
+        print(">> warining : there are two data file exist")
+    datafile = gcmc_data_root / gcmc_datas[0]
+    with open(datafile, "r") as f:
+        data = f.read()
+        dic = {}
+        uptake_absolute = float(data.split("Average loading absolute [mol/kg framework]")[1].split(" +/-")[0].split()[0])
+        dic["Average loading absolute [mol/kg framework]"] = uptake_absolute
+        uptake_excess = float(data.split("Average loading excess [mol/kg framework]")[1].split(" +/-")[0].split()[0])
+        dic["Average loading excess [mol/kg framework]"] = uptake_excess
+        uptake_absolute_per_unitcell = float(data.split("Average loading absolute [molecules/unit cell]")[1].split(" +/-")[0].split()[0])
+        dic["Average loading absolute [molecules/unit cell]"] = uptake_absolute_per_unitcell
+        uptake_excess_per_unitcell = float(data.split("Average loading excess [molecules/unit cell]")[1].split(" +/-")[0].split()[0])
+        dic["Average loading excess [molecules/unit cell]"] = uptake_excess_per_unitcell
+    if uptake is None:
+        raise ValueError(f"데이터 파싱 실패: {datafile}")
+    return dic
 
+from threading import Lock
+write_lock = Lock()
 
-def run_one(mof: str):
+def append_to_file(filename, text):
+    """파일에 text 한 줄을 안전하게(락 사용) 추가합니다."""
+    with write_lock:
+        with open(filename, 'a', encoding='utf-8') as f:
+            f.write(text + "\n")
+
+def load_completed_list(completed_file):
+    """98_complete.txt에서 이미 완료된 디렉터리 목록(줄 단위)을 세트로 읽어옵니다."""
+    if not os.path.exists(completed_file):
+        return set()
+    with open(completed_file, 'r', encoding='utf-8') as f:
+        return {line.strip() for line in f if line.strip()}
+def run_one(mof: str, idx : int, total : int):
     """
     한 MOF에 대해 GCMC 실행 및 결과 파싱
     """
     cwd = Path.cwd()
     mof_dir = cwd / 'low_pressure_gcmc' / mof
 
-    cmds = [
-        ["python", "make_simulations.py", mof],   # 실제 스크립트로 교체
-        ["python", "run_all.py"],                 
-        ["python", "crop_simulations.py"]         
-    ]
-    for c in cmds:
-        subprocess.run(c, cwd=mof_dir, check=True)
+    gcmcconf_path = cwd / 'gcmcconfig.json'
+    if not gcmcconf_path.exists():
+        print("✖ gcmcconfig.json 파일이 없습니다.")
+        sys.exit(1)
+    with open(gcmcconf_path) as f:
+        gcmc_params = json.load(f)
+    raspa_dir = Path(gcmc_params["RASPA_DIR"])
 
-    data_file = mof_dir / 'Output' / 'results.data'  # 실제 파일 경로로 조정
-    uptake, ctime = parse_data_file(data_file)
+    try:
+        print(f"[{idx+1}/{total}] Starting simulation in {mof_dir}")
+
+        command = f"{raspa_dir}/bin/simulate simulation.input"
+        start_t = time.time()
+        subprocess.run(command, shell=True, check=True, cwd=mof_dir)
+        end_t = time.time()
+
+        ctime = end_t - start_t
+        # elapsed_total = end_t - start_time
+        # avg_time_each = elapsed_total / completed_count if completed_count > 0 else 0
+        # remain_count = total - completed_count
+        # est_remain_time = avg_time_each * remain_count
+        # eta = datetime.datetime.now() + datetime.timedelta(seconds=est_remain_time)
+
+        # log_text = (f"[{idx+1}/{total}] {sim_dir} Done. "
+        #             f"TimeForThis={elapsed_for_this:.1f}s, "
+        #             f"Completed={completed_count}/{total}, "
+        #             f"ETA={eta.strftime('%Y-%m-%d %H:%M:%S')}")
+        # append_to_file(progress_file, log_text)
+
+        print(f"[{idx+1}/{total}] Simulation completed in {mof_dir}. Elapsed: {elapsed_for_this:.1f}s")
+
+    except subprocess.CalledProcessError as e:
+        error_msg = f"[{idx+1}/{total}] {mof_dir} FAILED: {str(e)}"
+        # append_to_file(progress_file, error_msg)
+        print(error_msg)
+    except Exception as e:
+        error_msg = f"[{idx+1}/{total}] {mof_dir} Unexpected Error: {str(e)}"
+        # append_to_file(progress_file, error_msg)
+        print(error_msg)
+
+    uptake = parse_data_file(mof_dir)
     return mof, uptake, ctime
 
 
@@ -184,21 +239,28 @@ def cmd_run(ncpus: int):
 
     random.shuffle(pending)
     print(f"▶ RUN: {len(pending)}개 MOF, {ncpus}개 CPU로 실행 시작")
+        
+    manager = Manager()
+    lock = manager.Lock()  # 🔒 공유 Lock 생성
 
+    def _safe_update_csv(mof, uptake, ctime):
+        """Lock으로 보호된 CSV 업데이트 함수"""
+        with lock:
+            df = pd.read_csv(csv_path)
+            df.loc[df[FIRST_COL] == mof, 'uptake'] = uptake
+            df.loc[df[FIRST_COL] == mof, 'calculation_time'] = ctime
+            df.loc[df[FIRST_COL] == mof, 'completed'] = True
+            df.to_csv(csv_path, index=False)
     with ProcessPoolExecutor(max_workers=ncpus) as exe:
         futures = {exe.submit(run_one, mof): mof for mof in pending}
         for fut in as_completed(futures):
             mof = futures[fut]
             try:
                 _, uptake, ctime = fut.result()
-                df.loc[df[FIRST_COL] == mof, 'uptake'] = uptake
-                df.loc[df[FIRST_COL] == mof, 'calculation_time'] = ctime
-                df.loc[df[FIRST_COL] == mof, 'completed'] = True
-                df.to_csv(csv_path, index=False)
+                _safe_update_csv(mof, uptake, ctime)  # 🔒 Lock으로 보호
                 print(f"✔ {mof}: uptake={uptake}, time={ctime}")
             except Exception as e:
                 print(f"✖ {mof} 실패: {e}")
-
     print("✅ RUN 완료")
 
 
