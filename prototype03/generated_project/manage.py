@@ -140,6 +140,8 @@ def main():
     al.insert(2, 'iteration', pd.NA)
     al.insert(3, 'uptake[mol/kg framework]', pd.NA)
     al.insert(4, 'calculation_time', pd.NA)
+    al.insert(5, 'initial_sample', pd.NA)
+
 
     # SQLite DB 생성 및 테이블 저장
     db_path = out_dir / 'mof_project.db'
