@@ -195,7 +195,7 @@ def initial_run(db_path: Path, config_path: Path, ncpus: int, gcfg : Path):
                 # update DB
                 conn = get_db_connection(db_path)
                 conn.execute(
-                    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {df.columns[0]}=?",
                     (uptake, elapsed, mof)
                 )
                 conn.commit()

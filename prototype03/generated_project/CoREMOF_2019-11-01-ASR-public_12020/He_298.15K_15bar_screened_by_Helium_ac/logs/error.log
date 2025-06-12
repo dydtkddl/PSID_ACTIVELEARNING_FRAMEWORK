@@ -2232,3 +2232,681 @@ Traceback (most recent call last):
     uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
                                         ^^^^^^^^^^^^
 TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:42,786 ERROR: Error processing FOPFAS_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:12:16,826 ERROR: Error processing GIFKIP_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:16,972 ERROR: Error processing LADKIN_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:17,343 ERROR: Error processing FIHHOV_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:17,544 ERROR: Error processing PAPNUR_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:18,423 ERROR: Error processing cg050585esi20051105_115011_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:18,686 ERROR: Error processing LATBUG_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:18,732 ERROR: Error processing cg3015354_si_002_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:19,985 ERROR: Error processing RAXBOJ_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:19,988 ERROR: Error processing YEFNIG_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:20,414 ERROR: Error processing UDAXAB_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:20,597 ERROR: Error processing EMIREX_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:20,809 ERROR: Error processing TAJVOS_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:21,573 ERROR: Error processing c5sc00614g_c5sc00614g2_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:21,770 ERROR: Error processing ABEXEN_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:22,347 ERROR: Error processing AVETEC_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:22,924 ERROR: Error processing APETAS_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:23,427 ERROR: Error processing BAKYOE_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:24,068 ERROR: Error processing BIMDEF_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:24,193 ERROR: Error processing BEPMIU_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:24,290 ERROR: Error processing ZARTAP02_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:24,976 ERROR: Error processing UZUXOE_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:25,015 ERROR: Error processing AMIMAL_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:25,161 ERROR: Error processing BUGSAY_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:25,567 ERROR: Error processing cm503311x_alf425K_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:25,727 ERROR: Error processing BUGSEC_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:26,224 ERROR: Error processing c5dt00281h_c5dt00281h2_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:26,395 ERROR: Error processing cm503311x_alf70K_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:27,888 ERROR: Error processing CUWNOZ_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:27,984 ERROR: Error processing CUWVAT_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:28,877 ERROR: Error processing cg8002564_si_008_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:29,128 ERROR: Error processing CURZEV_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:29,646 ERROR: Error processing CIRTUU_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:29,649 ERROR: Error processing DIWNAA_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:29,696 ERROR: Error processing DADLOM_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:30,474 ERROR: Error processing ECIYEU01_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:30,765 ERROR: Error processing COPXOV_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:31,396 ERROR: Error processing AYOQEM_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:31,772 ERROR: Error processing GEBCAT_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:31,872 ERROR: Error processing EMAMOW_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:32,504 ERROR: Error processing DALVIY_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:32,557 ERROR: Error processing ESEDIQ_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:33,485 ERROR: Error processing GADNUX_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:34,001 ERROR: Error processing HOJLEY_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:34,946 ERROR: Error processing GIWCAR_ion_b: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:35,608 ERROR: Error processing HOMXIR_manual: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:36,082 ERROR: Error processing IGAGUU_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:36,517 ERROR: Error processing ic060030osi20060309_091447_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:37,251 ERROR: Error processing HOQMIL04_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:37,571 ERROR: Error processing HASTAY_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:38,540 ERROR: Error processing IGINIX01_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:39,847 ERROR: Error processing ILUHUT_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:39,866 ERROR: Error processing ja205976v_si_006_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:39,868 ERROR: Error processing IXAMAW_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:39,888 ERROR: Error processing ILOJEZ_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:41,253 ERROR: Error processing LAWGAS_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:41,461 ERROR: Error processing ITIWEO_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:42,090 ERROR: Error processing LOMLUW_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:42,623 ERROR: Error processing KITVEQ_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:42,845 ERROR: Error processing KIXKOS_ion_b: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:43,474 ERROR: Error processing LEQVIN_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:43,574 ERROR: Error processing LETPUX_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:43,625 ERROR: Error processing LEQQEE_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:44,288 ERROR: Error processing LUFNAC05_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:45,218 ERROR: Error processing MIXBAY_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:46,045 ERROR: Error processing MIFROK_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:46,088 ERROR: Error processing MIJMAU_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:46,230 ERROR: Error processing MOXNUK_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:47,029 ERROR: Error processing NAPZUB_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:48,042 ERROR: Error processing MIFTEC_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:48,667 ERROR: Error processing OMEWUZ_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:51,035 ERROR: Error processing NAHNES_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:51,036 ERROR: Error processing OTAVAH_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:52,241 ERROR: Error processing MIHHIV_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:52,242 ERROR: Error processing ELEREU_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:52,243 ERROR: Error processing OWIJOV_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:52,965 ERROR: Error processing OPUDAF_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:53,171 ERROR: Error processing QEFWUV_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:53,183 ERROR: Error processing REXCUU_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:53,379 ERROR: Error processing ROQRAS_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:53,781 ERROR: Error processing OPIXUI_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:53,782 ERROR: Error processing RUGJEK_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:54,070 ERROR: Error processing PELRIJ_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:54,191 ERROR: Error processing SIKJOM_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:54,360 ERROR: Error processing SAHBAF_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:54,608 ERROR: Error processing SOMFIK_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:55,624 ERROR: Error processing TASWOB_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:55,765 ERROR: Error processing SODNAA_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:55,986 ERROR: Error processing SIVVAW_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:56,183 ERROR: Error processing TASWIV_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:56,464 ERROR: Error processing SUKYON_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:57,351 ERROR: Error processing SUJNUH_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:59,418 ERROR: Error processing SINXET_charged: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:59,419 ERROR: Error processing FOPFAS_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:59,419 ERROR: Error processing TANBIV_charged: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:59,420 ERROR: Error processing TORXAB_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:59,421 ERROR: Error processing TUMQID_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:59,421 ERROR: Error processing TOTWAC_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:12:59,422 ERROR: Error processing UJOJIO04_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:13:01,381 ERROR: Error processing UZUNAF01_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:13:01,636 ERROR: Error processing ULUQAV_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:13:01,841 ERROR: Error processing WEXNIW_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:13:01,956 ERROR: Error processing UKUBUY_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:13:02,416 ERROR: Error processing WAJLEA_charged: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:13:02,425 ERROR: Error processing XEGKIF_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:13:02,703 ERROR: Error processing WILHIK_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:13:03,072 ERROR: Error processing WOBQEL_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:13:03,196 ERROR: Error processing WASNIO_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:13:03,435 ERROR: Error processing XEXLOD_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:13:04,543 ERROR: Error processing YATDUV_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:13:04,660 ERROR: Error processing ZABQIC_ion_b: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:13:08,327 ERROR: Error processing YINDOQ_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
+2025-06-13 07:13:11,524 ERROR: Error processing UHUPOD01_clean: 'list' object has no attribute 'columns'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 198, in initial_run
+    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {targets.columns[0]}=?",
+                                                                                              ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'columns'
