@@ -1,236 +1,249 @@
 #!/usr/bin/env python3
-# low_pressure_gcmc.py
-
+"""
+Low-pressure GCMC simulation workflow using RASPA and SQLite.
+Generates input files, runs simulations in parallel, parses outputs,
+updates a SQLite database with uptake results, and logs detailed progress.
+"""
 import argparse
 import json
-import os
-import random
+import sqlite3
 import subprocess
 import sys
-import sqlite3
 import time
-import datetime
-import logging
-from logging.handlers import QueueHandler, QueueListener
-import multiprocessing
 from pathlib import Path
-from concurrent.futures import ProcessPoolExecutor
-import pyrascont
+from datetime import datetime
+import logging
+from collections import deque
+
 import pandas as pd
-from tqdm import tqdm
-from threading import Lock
+from joblib import Parallel, delayed, parallel_backend
+import pyrascont
 
 # Constants
-DB_PATH = Path.cwd() / 'mof_project.db'
 TABLE = 'low_pressure_gcmc'
 FIRST_COL = None
+WINDOW_SIZE = 10  # for moving average ETA
 
-# Thread-safe file append
-write_lock = Lock()
-def append_to_file(filename, text):
-    """파일에 text 한 줄을 안전하게(락 사용) 추가합니다."""
-    with write_lock:
-        with open(filename, 'a', encoding='utf-8') as f:
-            f.write(text + "\n")
+# Setup log directory
+LOG_DIR = Path.cwd() / 'logs'
+LOG_DIR.mkdir(exist_ok=True)
 
-def load_completed_list(completed_file):
-    """completed_file에서 이미 완료된 MOF 리스트를 읽어 세트로 반환합니다."""
-    if not os.path.exists(completed_file):
-        return set()
-    with open(completed_file, 'r', encoding='utf-8') as f:
-        return {line.strip() for line in f if line.strip()}
+# Main run logger (run.log)
+LOG_FILE = LOG_DIR / 'run.log'
+logging.basicConfig(
+    filename=str(LOG_FILE),
+    level=logging.INFO,
+    format='%(asctime)s %(levelname)s: %(message)s'
+)
+run_logger = logging.getLogger('gcmc_run')
 
-# Prepare logs directory and rotate if exists
-logs_dir = Path('logs/low_pressure_gcmc')
-logs_dir.mkdir(parents=True, exist_ok=True)
+# Uptake logger (uptake.log)
+uptake_log_file = LOG_DIR / 'uptake.log'
+uptake_logger = logging.getLogger('gcmc_uptake')
+uptake_handler = logging.FileHandler(uptake_log_file)
+uptake_handler.setFormatter(logging.Formatter('%(asctime)s %(message)s'))
+uptake_logger.addHandler(uptake_handler)
+uptake_logger.setLevel(logging.INFO)
 
-def _rotate(path: Path):
-    if path.exists():
-        idx = 1
-        while True:
-            new = path.with_name(f"{path.stem}.{idx}{path.suffix}")
-            if not new.exists():
-                path.rename(new)
-                break
-            idx += 1
-
-progress_log = logs_dir / 'progress.log'
-complete_log = logs_dir / 'completed.log'
-_rotate(progress_log)
-_rotate(complete_log)
-
-# Configure multiprocessing logging
-log_queue = multiprocessing.Queue(-1)
-queue_handler = QueueHandler(log_queue)
-root_logger = logging.getLogger()
-root_logger.setLevel(logging.INFO)
-root_logger.addHandler(queue_handler)
-
-# Handlers for writing to files
-gress_handler = logging.FileHandler(progress_log)
-gress_handler.setFormatter(logging.Formatter('%(asctime)s | %(message)s'))
-gress_handler.addFilter(lambda rec: rec.name=='progress')
-
-complete_handler = logging.FileHandler(complete_log)
-complete_handler.setFormatter(logging.Formatter('%(message)s'))
-complete_handler.addFilter(lambda rec: rec.name=='complete')
-
-listener = QueueListener(log_queue, gress_handler, complete_handler)
-listener.start()
-
-# Convenience loggers
-progress_logger = logging.getLogger('progress')
-complete_logger = logging.getLogger('complete')
+# Error logger (error.log)
+error_log_file = LOG_DIR / 'error.log'
+error_logger = logging.getLogger('gcmc_error')
+error_handler = logging.FileHandler(error_log_file)
+error_handler.setFormatter(logging.Formatter('%(asctime)s %(levelname)s: %(message)s'))
+error_logger.addHandler(error_handler)
+error_logger.setLevel(logging.ERROR)
 
 
-def get_connection():
-    """SQLite 연결 반환"""
-    if not DB_PATH.exists():
-        print(f"✖ DB 파일이 없습니다: {DB_PATH}")
-        sys.exit(1)
-    return sqlite3.connect(DB_PATH)
+def get_db_connection(db_path: Path) -> sqlite3.Connection:
+    """
+    Return a SQLite connection that waits up to 30s for locks,
+    uses WAL mode, and sets busy_timeout to 30s.
+    """
+    if not db_path.exists():
+        raise FileNotFoundError(f"Database file not found: {db_path}")
+    conn = sqlite3.connect(str(db_path), timeout=30, check_same_thread=False)
+    conn.execute("PRAGMA journal_mode = WAL;")
+    conn.execute("PRAGMA busy_timeout = 30000;")
+    return conn
 
 
-def _make_simulation_input(mof, base_tpl, params, out_root, raspa_dir):
-    cif = raspa_dir / 'share' / 'raspa' / 'structures' / 'cif' / mof
+def make_simulation_input(mof: str,
+                          base_template: str,
+                          params: dict,
+                          out_root: Path,
+                          raspa_dir: Path) -> None:
+    """
+    Convert CIF to unit cell, format RASPA input, and write to directory.
+    """
+    cif_path = raspa_dir / 'share' / 'raspa' / 'structures' / 'cif' / mof
     try:
-        ucell = pyrascont.cif2Ucell(str(cif), float(params['CUTOFFVDW']), Display=False)
-        uc = ' '.join(map(str, ucell))
-    except Exception as e:
-        print(f"⚠ CIF 변환 실패: {mof}: {e}")
-        return mof
-    try:
-        content = base_tpl.format(
-            NumberOfCycles=params['NumberOfCycles'],
-            NumberOfInitializationCycles=params['NumberOfInitializationCycles'],
-            PrintEvery=params['PrintEvery'],
-            UseChargesFromCIFFile=params['UseChargesFromCIFFile'],
-            Forcefield=params['Forcefield'],
-            TEMP=params['ExternalTemperature'],
-            PRESSURE=float(params['ExternalPressure'])*1e5,
-            GAS=params['GAS'],
-            MoleculeDefinition=params.get('MoleculeDefinition',''),
-            MOF=mof,
-            UNITCELL=uc
+        ucell = pyrascont.cif2Ucell(
+            str(cif_path), float(params.get('CUTOFFVDW', 12.8)), Display=False
         )
-        d = out_root / mof
-        d.mkdir(exist_ok=True)
-        with open(d/'simulation.input','w') as f:
-            f.write(content)
+        unitcell_str = ' '.join(map(str, ucell))
     except Exception as e:
-        print(f"⚠ 시뮬 입력 파일 생성 실패: {mof}: {e}")
-    return mof
-
-
-def parse_data_file(mof_dir: Path):
-    root = mof_dir/'Output'/'System_0'
-    files = list(root.glob('*.data'))
-    if not files:
-        raise FileNotFoundError(f".data 파일 없음: {root}")
-    text = files[0].read_text()
-    key = 'Average loading absolute [mol/kg framework]'
-    try:
-        val = float(text.split(key)[1].split('+/-')[0].split()[-1])
-        return val
-    except Exception:
-        raise ValueError(f"데이터 파싱 실패 for {mof_dir}")
-
-
-def run_one(task):
-    mof, idx, raspa = task
-    d = Path('low_pressure_gcmc')/mof
-    cmd = f"{raspa}/bin/simulate simulation.input"
-    start = time.time()
-    subprocess.run(cmd, shell=True, cwd=d, check=True)
-    t = time.time()-start
-    uptake = parse_data_file(d)
-    return mof, uptake, t
-
-
-def cmd_create(n):
-    conn = get_connection()
-    df = pd.read_sql(f"SELECT * FROM {TABLE}", conn)
-    conn.close()
-    global FIRST_COL
-    FIRST_COL = df.columns[0]
-    cfg = json.load(open('gcmcconfig.json'))
-    raspa = Path(cfg['RASPA_DIR'])
-    base_tpl = open('base.input').read()
-    out = Path('low_pressure_gcmc'); out.mkdir(exist_ok=True)
-    ms = list(df[FIRST_COL].astype(str))
-    print(f"▶ CREATE: {len(ms)} MOFs on {n} threads")
-    from joblib import Parallel, delayed, parallel_backend
-    with parallel_backend('threading', n_jobs=n):
-        Parallel()(delayed(_make_simulation_input)(m, base_tpl, cfg, out, raspa) for m in ms)
-    print('✅ CREATE 완료')
-
-
-def cmd_run(n):
-    conn = get_connection()
-    df = pd.read_sql_query(f"SELECT * FROM {TABLE}", conn)
-    conn.close()
-    global FIRST_COL
-    FIRST_COL = df.columns[0]
-
-    all_mofs = list(df[FIRST_COL].astype(str))
-    completed = load_completed_list(str(complete_log))
-    pending = [m for m in all_mofs if m not in completed]
-    total = len(all_mofs)
-    to_run = len(pending)
-    print(f"▶ RUN: {to_run}/{total} MOFs on {n} threads")
-    if to_run == 0:
-        print("✔ 처리할 MOF가 없습니다.")
+        error_logger.error(f"Input gen failed for {mof}: {e}", exc_info=True)
         return
 
-    start_time = time.time()
-    now0 = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    append_to_file(str(progress_log), f"---- START at {now0}, remaining={to_run}/{total} ----")
+    content = base_template.format(
+        NumberOfCycles=params['NumberOfCycles'],
+        NumberOfInitializationCycles=params['NumberOfInitializationCycles'],
+        PrintEvery=params['PrintEvery'],
+        UseChargesFromCIFFile=params['UseChargesFromCIFFile'],
+        Forcefield=params['Forcefield'],
+        TEMP=params['ExternalTemperature'],
+        PRESSURE=float(params['ExternalPressure']) * 1e5,
+        GAS=params['GAS'],
+        MoleculeDefinition=params.get('MoleculeDefinition', ''),
+        MOF=mof,
+        UNITCELL=unitcell_str
+    )
 
-    cfg = json.load(open('gcmcconfig.json'))
-    raspa = cfg['RASPA_DIR']
-    tasks = [(m, i, raspa) for i, m in enumerate(pending,1)]
+    dest = out_root / mof
+    dest.mkdir(parents=True, exist_ok=True)
+    (dest / 'simulation.input').write_text(content, encoding='utf-8')
 
-    done = len(completed)
-    tot_t = 0.0
 
-    from joblib import Parallel, delayed, parallel_backend
-    with parallel_backend('threading', n_jobs=n):
-        results = Parallel()(delayed(run_one)(task) for task in tasks)
+def parse_output(mof_dir: Path) -> dict:
+    """
+    Parse .data file for uptake values.
+    """
+    data_dir = mof_dir / 'Output' / 'System_0'
+    files = list(data_dir.glob('*.data'))
+    if not files:
+        raise FileNotFoundError(f"No .data file in {data_dir}")
+    text = files[0].read_text(encoding='utf-8')
+    keys = [
+        "Average loading absolute [mol/kg framework]",
+        "Average loading excess [mol/kg framework]",
+        "Average loading absolute [molecules/unit cell]",
+        "Average loading excess [molecules/unit cell]"
+    ]
+    res = {}
+    for k in keys:
+        try:
+            part = text.split(k)[1]
+            val = float(part.split('+/-')[0].split()[-1])
+            res[k] = val
+        except Exception:
+            continue
+    if "Average loading absolute [mol/kg framework]" not in res:
+        raise ValueError(f"Parse failed for {mof_dir.name}")
+    return res
 
-    for mof, uptake, t in results:
-        done += 1
-        tot_t += t
-        avg = tot_t/done
-        rem = total - done
-        eta = avg*rem
-        peta = eta/n
 
-        conn2 = sqlite3.connect(DB_PATH)
-        conn2.execute(
-            f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, completed=1 WHERE {FIRST_COL}=?",
-            (uptake, t, mof)
-        )
-        conn2.commit()
-        conn2.close()
+def run_simulation(mof: str, raspa_dir: Path):
+    """
+    Run RASPA simulate and return uptake and elapsed time.
+    """
+    d = Path('low_pressure_gcmc') / mof
+    start = time.time()
+    subprocess.run(
+        f"{raspa_dir}/bin/simulate simulation.input",
+        shell=True, cwd=d, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+    )
+    elapsed = time.time() - start
+    uptake = parse_output(d)["Average loading absolute [mol/kg framework]"]
+    return mof, uptake, elapsed
 
-        append_to_file(str(complete_log), mof)
-        append_to_file(str(progress_log),
-            f"[{done}/{total}] {mof} | time={t:.1f}s | avg={avg:.1f}s | rem={rem} | ETA={int(peta)}s"
-        )
-        print(f"✔ {mof}: uptake={uptake}, time={t:.1f}s")
 
-    now1 = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    append_to_file(str(progress_log), f"---- ALL DONE at {now1} ----")
-    print('✅ RUN 완료')
+def cmd_create(db_path: Path, config_path: Path, base_input: Path, ncpus: int):
+    conn = get_db_connection(db_path)
+    df = pd.read_sql(f"SELECT * FROM {TABLE}", conn)
+    conn.close()
+
+    global FIRST_COL
+    FIRST_COL = df.columns[0]
+
+    cfg = json.loads(config_path.read_text(encoding='utf-8'))
+    raspa = Path(cfg['RASPA_DIR'])
+    tpl = base_input.read_text(encoding='utf-8')
+    out = Path('low_pressure_gcmc')
+
+    print(f"▶ CREATE: {len(df)} MOFs using {ncpus} CPUs")
+    with parallel_backend('threading', n_jobs=ncpus):
+        Parallel()(delayed(make_simulation_input)(m, tpl, cfg, out, raspa)
+                   for m in pd.Series(df[FIRST_COL].astype(str)).tolist())
+    print("✅ Input generation complete.")
+
+
+def cmd_run(db_path: Path, config_path: Path, ncpus: int):
+    conn0 = get_db_connection(db_path)
+    df = pd.read_sql(f"SELECT * FROM {TABLE}", conn0)
+    conn0.close()
+
+    first_col = df.columns[0]
+    raspa = Path(json.loads(config_path.read_text(encoding='utf-8'))['RASPA_DIR'])
+    pend = df[df['completed'].isna()][first_col].astype(str).tolist()
+    total = len(df)
+    to_run = len(pend)
+
+    print(f"▶ RUN: {to_run}/{total} pending using {ncpus} CPUs")
+    run_logger.info(f"Start run: {to_run}/{total}, CPUs={ncpus}")
+    time.sleep(1)
+    if to_run == 0:
+        return
+
+    recent = deque(maxlen=WINDOW_SIZE)
+    done = 0
+
+    import concurrent.futures
+    with concurrent.futures.ThreadPoolExecutor(max_workers=ncpus) as executor:
+        futures = {executor.submit(run_simulation, mof, raspa): mof for mof in pend}
+        for future in concurrent.futures.as_completed(futures):
+            mof = futures[future]
+            try:
+                mof, uptake, elapsed = future.result()
+                done += 1
+                recent.append(elapsed)
+                win_avg = sum(recent) / len(recent)
+                remain = to_run - done
+                eta_sec = win_avg * remain / ncpus
+                eta_min = eta_sec / 60
+
+                msg = (
+                    f"{done}/{to_run} completed: {mof} took {elapsed:.2f}s | "
+                    f"win_avg({len(recent)})={win_avg:.2f}s | "
+                    f"ETA@{ncpus}cpus={eta_sec:.2f}s({eta_min:.2f}min)"
+                )
+                run_logger.info(msg)
+                print(msg)
+                uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+
+                # update DB
+                conn = get_db_connection(db_path)
+                conn.execute(
+                    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, completed=1 "
+                    f"WHERE {first_col}=?",
+                    (uptake, elapsed, mof)
+                )
+                conn.commit()
+                conn.close()
+
+            except Exception as e:
+                error_logger.error(f"Error processing {mof}: {e}", exc_info=True)
+    print("✅ Simulations and DB update complete.")
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    sp = parser.add_subparsers(dest='cmd', required=True)
+    c = sp.add_parser('create', help='Generate simulation inputs')
+    c.add_argument('-n', '--ncpus', type=int, default=1)
+    r = sp.add_parser('run', help='Run simulations and update DB')
+    r.add_argument('-n', '--ncpus', type=int, default=1)
+
+    args = parser.parse_args()
+    base = Path.cwd()
+    dbp = base / 'mof_project.db'
+    cfg = base / 'gcmcconfig.json'
+    binput = base / 'base.input'
+
+    if args.cmd == 'create':
+        cmd_create(dbp, cfg, binput, args.ncpus)
+    else:
+        cmd_run(dbp, cfg, args.ncpus)
+
 
 if __name__ == '__main__':
-    parser=argparse.ArgumentParser(prog="low_pressure_gcmc.py")
-    sub=parser.add_subparsers(dest='cmd',required=True)
-    p1=sub.add_parser('create');p1.add_argument('-n','--ncpus',type=int,default=1)
-    p2=sub.add_parser('run');p2.add_argument('-n','--ncpus',type=int,default=1)
-    args=parser.parse_args()
-    if args.cmd=='create':
-        cmd_create(args.ncpus)
-    else:
-        cmd_run(args.ncpus)
-    listener.stop()
+    main()
