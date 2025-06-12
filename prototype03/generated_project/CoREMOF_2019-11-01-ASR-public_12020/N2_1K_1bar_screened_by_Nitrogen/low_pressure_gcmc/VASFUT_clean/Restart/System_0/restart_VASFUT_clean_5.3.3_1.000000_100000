@@ -1,0 +1,49 @@
+Cell info:
+========================================================================
+number-of-unit-cells: 5 3 3
+unit-cell-vector-a:     6.052000000000     0.000000000000     0.000000000000
+unit-cell-vector-b:     0.164734180866    10.498107591831     0.000000000000
+unit-cell-vector-c:     0.175177346319     4.238050980195    12.768601680552
+
+cell-vector-a:    30.260000000000     0.000000000000     0.000000000000
+cell-vector-b:     0.494202542598    31.494322775492     0.000000000000
+cell-vector-c:     0.525532038958    12.714152940584    38.305805041657
+
+cell-lengths:     6.052000000000    10.499400000000    13.454700000000
+cell-angles:    71.630000000000    89.254000000000    89.101000000000
+
+
+Maximum changes for MC-moves:
+========================================================================
+Maximum-volume-change: 0.025000
+Maximum-Gibbs-volume-change: 0.100000
+Maximum-box-shape-change: 0.100000 0.100000 0.100000, 0.100000 0.100000 0.100000, 0.100000 0.100000 0.100000
+
+
+Acceptance targets for MC-moves:
+========================================================================
+Target-volume-change: 0.500000
+Target-box-shape-change: 0.500000
+Target-Gibbs-volume-change: 0.500000
+
+
+Components: 1 (Adsorbates 0, Cations 0)
+========================================================================
+Component 0 (N2)
+	Fractional-molecule-id component 0: -1
+	Lambda-factors component 0:  0.000000 0.000000 0.000000
+	Number-of-biasing-factors component 0: 21
+	Biasing-factors component 0:  0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+	Maximum-CF-Lambda-change component 0: 0.500000
+	Maximum-CBCF-Lambda-change component 0: 0.500000
+
+	Maximum-translation-change component 0: 1.300000,1.300000,1.300000
+	Maximum-translation-in-plane-change component 0: 0.000000,0.000000,0.000000
+	Maximum-rotation-change component 0: 0.436332 0.436332 0.436332
+
+Reactions: 0
+
+Component: 0     Adsorbate    0 molecules of N2
+------------------------------------------------------------------------
+
+

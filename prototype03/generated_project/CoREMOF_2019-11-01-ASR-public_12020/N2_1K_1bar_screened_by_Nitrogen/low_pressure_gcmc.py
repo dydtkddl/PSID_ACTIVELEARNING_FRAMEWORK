@@ -167,7 +167,8 @@ def run_one(mof_idx):
     subprocess.run(cmd, shell=True, check=True, cwd=mof_dir)
     elapsed = time.time() - start
     uptake_dic = parse_data_file(mof_dir)
-    return mof, uptake_dic.get(keys[0]), elapsed
+    print(uptake_dic)
+    return mof, uptake_dic["Average loading absolute [mol/kg framework]"], elapsed
 
 
 def cmd_run(ncpus):
