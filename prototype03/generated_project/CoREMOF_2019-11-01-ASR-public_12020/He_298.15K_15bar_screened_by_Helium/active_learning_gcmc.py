@@ -106,7 +106,7 @@ def run_simulation(mof: str, raspa_dir: Path):
     subprocess.run(f"{raspa_dir}/bin/simulate simulation.input", shell=True, cwd=d, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     elapsed = time.time() - start
     uptake = parse_output(d)["Average loading absolute [mol/kg framework]"]
-    return mof, None, elapsed
+    return mof, uptake, elapsed
 
 # Initial GCMC phase
 
