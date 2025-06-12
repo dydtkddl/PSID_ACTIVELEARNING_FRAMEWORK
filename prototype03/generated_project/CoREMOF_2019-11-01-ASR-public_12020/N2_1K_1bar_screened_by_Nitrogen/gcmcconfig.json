@@ -1,6 +1,6 @@
 {
-    "NumberOfCycles": 20000,
-    "NumberOfInitializationCycles": 10000,
+    "NumberOfCycles": 20,
+    "NumberOfInitializationCycles": 10,
     "PrintEvery": 1000,
     "UseChargesFromCIFFile": null,
     "ExternalTemperature": 1.0,
