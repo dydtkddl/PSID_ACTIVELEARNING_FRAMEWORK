@@ -1,0 +1,18 @@
+{
+      "NumberOfCycles" : 20000,
+      "NumberOfInitializationCycles" : 10000,
+      "PrintEvery" : 1000,
+
+      "UseChargesFromCIFFile" : null,
+      "ExternalTemperature" : null ,
+      "ExternalPressure" : null , 
+      "Forcefield" : "GarciaPerez2006ForceField", 
+              
+      "GAS" : null,
+      "MoleculeDefinition" : "ExampleDefinitions",
+
+      "CUTOFFVDW" : 14,
+      "CUTOFFCHARGECHARGE" : 14,
+      "CUTOFFCHARGEBONDDIPOLE" : 14,
+      "CUTOFFBONDDIPOLEBONDDIPOLE" : 14
+  }

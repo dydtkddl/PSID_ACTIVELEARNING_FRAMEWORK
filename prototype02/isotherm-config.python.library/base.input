@@ -1,0 +1,25 @@
+SimulationType                MonteCarlo
+NumberOfCycles                {NumberOfCycles}
+NumberOfInitializationCycles  {NumberOfInitializationCycles}
+PrintEvery                    {PrintEvery}
+RestartFile                   no
+
+Forcefield                    {Forcefield}
+UseChargesFromCIFFile {UseChargesFromCIFFile}
+
+Framework 0
+FrameworkName {MOF}
+UnitCells {UNITCELL}
+ExternalTemperature    {TEMP}
+ExternalPressure    {PRESSURE}
+
+Component 0 MoleculeName             {GAS}
+            MoleculeDefinition       {MoleculeDefinition}
+            FugacityCoefficient      1.0
+            TranslationProbability   0.5
+            RotationProbability      0.5
+            ReinsertionProbability   0.5
+            SwapProbability          1.0
+            CreateNumberOfMolecules  0
+
+
