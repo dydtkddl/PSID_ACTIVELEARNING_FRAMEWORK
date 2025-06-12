@@ -147,7 +147,7 @@ def parse_data_file(gcmc_sim_root: Path):
         dic["Average loading absolute [molecules/unit cell]"] = uptake_absolute_per_unitcell
         uptake_excess_per_unitcell = float(data.split("Average loading excess [molecules/unit cell]")[1].split(" +/-")[0].split()[0])
         dic["Average loading excess [molecules/unit cell]"] = uptake_excess_per_unitcell
-    if uptake is None:
+    if dic == {}:
         raise ValueError(f"데이터 파싱 실패: {datafile}")
     return dic
 
@@ -202,7 +202,7 @@ def run_one(mof: str, idx : int, total : int):
         #             f"ETA={eta.strftime('%Y-%m-%d %H:%M:%S')}")
         # append_to_file(progress_file, log_text)
 
-        print(f"[{idx+1}/{total}] Simulation completed in {mof_dir}. Elapsed: {elapsed_for_this:.1f}s")
+        print(f"[{idx+1}/{total}] Simulation completed in {mof_dir}.") # Elapsed: {elapsed_for_this:.1f}s")
 
     except subprocess.CalledProcessError as e:
         error_msg = f"[{idx+1}/{total}] {mof_dir} FAILED: {str(e)}"
@@ -213,8 +213,8 @@ def run_one(mof: str, idx : int, total : int):
         # append_to_file(progress_file, error_msg)
         print(error_msg)
 
-    uptake = parse_data_file(mof_dir)
-    return mof, uptake, ctime
+    uptake_dic = parse_data_file(mof_dir)
+    return mof, uptake_dic, ctime
 
 
 def cmd_run(ncpus: int):
@@ -228,11 +228,12 @@ def cmd_run(ncpus: int):
         print(f"✖ CSV 파일이 없습니다: {CSV_NAME}")
         sys.exit(1)
 
-    df = pd.read_csv(csv_path)
+#    df = pd.read_csv(csv_path)
+    df = pd.read_csv(csv_path, dtype={'completed': 'Int64'})
     global FIRST_COL
     FIRST_COL = df.columns[0]
-
-    pending = df.loc[df['completed'] != True, FIRST_COL].astype(str).tolist()
+    pending = df[df["completed"].isna()][FIRST_COL].astype(str).tolist()
+    print(f"{len(pending)} 개 처리줌 ( {len(df)} completed ) ")
     if not pending:
         print("✔ 처리할 MOF가 없습니다.")
         return
@@ -246,19 +247,27 @@ def cmd_run(ncpus: int):
     def _safe_update_csv(mof, uptake, ctime):
         """Lock으로 보호된 CSV 업데이트 함수"""
         with lock:
-            df = pd.read_csv(csv_path)
-            df.loc[df[FIRST_COL] == mof, 'uptake'] = uptake
+#            df = pd.read_csv(csv_path)
+            df = pd.read_csv(csv_path, dtype={'completed': 'Int64'})
+            df.loc[df[FIRST_COL] == mof, 'uptake[mol/kg framework]'] = uptake
             df.loc[df[FIRST_COL] == mof, 'calculation_time'] = ctime
-            df.loc[df[FIRST_COL] == mof, 'completed'] = True
+            df.loc[df[FIRST_COL] == mof, 'completed'] = 1
             df.to_csv(csv_path, index=False)
+            print(csv_path)
+            print(df.loc[df[FIRST_COL] == mof, 'completed'] )
+            print(df.head())
+            print(df.loc[df[FIRST_COL] == mof])
+            print(mof)
     with ProcessPoolExecutor(max_workers=ncpus) as exe:
-        futures = {exe.submit(run_one, mof): mof for mof in pending}
+       # futures = {exe.submit(run_one, mof): mof for mof in pending}
+        total = len(pending)
+        futures = { exe.submit(run_one, mof, idx, total): (mof, idx ) for idx, mof in enumerate(pending, 1)  }
         for fut in as_completed(futures):
             mof = futures[fut]
             try:
-                _, uptake, ctime = fut.result()
-                _safe_update_csv(mof, uptake, ctime)  # 🔒 Lock으로 보호
-                print(f"✔ {mof}: uptake={uptake}, time={ctime}")
+                _, uptake_dic, ctime = fut.result()
+                _safe_update_csv(mof[0], uptake_dic["Average loading absolute [mol/kg framework]"], ctime)  # 🔒 Lock으로 보호
+                print(f"✔ {mof}: Average loading absolute [mol/kg framework]={uptake_dic["Average loading absolute [mol/kg framework]"]}, time={ctime}")
             except Exception as e:
                 print(f"✖ {mof} 실패: {e}")
     print("✅ RUN 완료")
@@ -283,4 +292,5 @@ if __name__ == '__main__':
         cmd_run(args.ncpus)
     else:
         parser.print_help()
+
 

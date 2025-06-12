@@ -137,7 +137,7 @@ def main():
     lp.insert(1, 'cif_file_exist', 
             lp.iloc[:, 0].isin(cifs))  # ✅ 첫 번째 열 기준 존재 여부
     lp.insert(2, 'completed', pd.NA)
-    lp.insert(3, 'uptake', pd.NA)
+    lp.insert(3, 'uptake[mol/kg framework]', pd.NA)
     lp.insert(4, 'calculation_time', pd.NA)
     lp.to_csv(out_dir/'low_pressure_gcmc.csv', index=False)
 
@@ -146,7 +146,7 @@ def main():
     al.insert(1, 'cif_file_exist', 
             al.iloc[:, 0].isin(cifs))  # ✅ 첫 번째 열 기준 존재 여부
     al.insert(2, 'iteration', pd.NA)
-    al.insert(3, 'uptake', pd.NA)
+    al.insert(3, 'uptake[mol/kg framework]', pd.NA)
     al.insert(4, 'calculation_time', pd.NA)
     al.to_csv(out_dir/'active_learning_gcmc.csv', index=False)
 
