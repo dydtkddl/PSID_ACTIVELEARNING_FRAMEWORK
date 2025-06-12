@@ -1,0 +1,2234 @@
+2025-06-13 07:02:02,807 ERROR: Error processing AMIMAL_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,808 ERROR: Error processing RAXBOJ_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,808 ERROR: Error processing AYOQEM_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,808 ERROR: Error processing APETAS_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,808 ERROR: Error processing UDAXAB_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,809 ERROR: Error processing FIHHOV_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,809 ERROR: Error processing TAJVOS_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,809 ERROR: Error processing AVETEC_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,809 ERROR: Error processing cg050585esi20051105_115011_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,809 ERROR: Error processing EMIREX_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,810 ERROR: Error processing LATBUG_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,810 ERROR: Error processing ABEXEN_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,810 ERROR: Error processing cg3015354_si_002_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,810 ERROR: Error processing BUGSAY_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,810 ERROR: Error processing YEFNIG_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,810 ERROR: Error processing BAKYOE_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,811 ERROR: Error processing ZARTAP02_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,811 ERROR: Error processing c5sc00614g_c5sc00614g2_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,811 ERROR: Error processing BEPMIU_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,811 ERROR: Error processing PAPNUR_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,811 ERROR: Error processing LADKIN_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,811 ERROR: Error processing BIMDEF_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,812 ERROR: Error processing BUGSEC_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,812 ERROR: Error processing c5dt00281h_c5dt00281h2_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,812 ERROR: Error processing FOPFAS_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,812 ERROR: Error processing UZUXOE_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,812 ERROR: Error processing GIFKIP_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,812 ERROR: Error processing cg8002564_si_008_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,813 ERROR: Error processing CIRTUU_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,813 ERROR: Error processing cm503311x_alf425K_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,813 ERROR: Error processing cm503311x_alf70K_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,813 ERROR: Error processing COPXOV_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,813 ERROR: Error processing CURZEV_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,813 ERROR: Error processing CUWNOZ_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,814 ERROR: Error processing CUWVAT_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,814 ERROR: Error processing DADLOM_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,814 ERROR: Error processing DALVIY_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,814 ERROR: Error processing DIWNAA_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,814 ERROR: Error processing ECIYEU01_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,814 ERROR: Error processing ELEREU_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,815 ERROR: Error processing EMAMOW_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,815 ERROR: Error processing ESEDIQ_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,815 ERROR: Error processing GADNUX_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,815 ERROR: Error processing GEBCAT_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,815 ERROR: Error processing GIWCAR_ion_b: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,815 ERROR: Error processing HASTAY_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,816 ERROR: Error processing HOJLEY_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,816 ERROR: Error processing HOMXIR_manual: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,816 ERROR: Error processing HOQMIL04_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,816 ERROR: Error processing ic060030osi20060309_091447_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,816 ERROR: Error processing IGAGUU_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,816 ERROR: Error processing IGINIX01_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,817 ERROR: Error processing ILOJEZ_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,817 ERROR: Error processing ILUHUT_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,817 ERROR: Error processing ITIWEO_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,817 ERROR: Error processing IXAMAW_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,817 ERROR: Error processing ja205976v_si_006_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,817 ERROR: Error processing KITVEQ_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,818 ERROR: Error processing KIXKOS_ion_b: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,818 ERROR: Error processing LAWGAS_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,818 ERROR: Error processing LEQQEE_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,818 ERROR: Error processing LEQVIN_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,818 ERROR: Error processing LETPUX_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,818 ERROR: Error processing LOMLUW_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,819 ERROR: Error processing LUFNAC05_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,819 ERROR: Error processing MIFROK_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,819 ERROR: Error processing MIFTEC_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,819 ERROR: Error processing MIHHIV_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,819 ERROR: Error processing MIJMAU_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,819 ERROR: Error processing MIXBAY_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,820 ERROR: Error processing MOXNUK_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,820 ERROR: Error processing NAHNES_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,820 ERROR: Error processing NAPZUB_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,820 ERROR: Error processing OMEWUZ_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,820 ERROR: Error processing OPIXUI_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,820 ERROR: Error processing OPUDAF_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,821 ERROR: Error processing OTAVAH_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,821 ERROR: Error processing OWIJOV_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,821 ERROR: Error processing PELRIJ_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,821 ERROR: Error processing QEFWUV_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,821 ERROR: Error processing REXCUU_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,821 ERROR: Error processing ROQRAS_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,822 ERROR: Error processing RUGJEK_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,822 ERROR: Error processing SAHBAF_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,822 ERROR: Error processing SIKJOM_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,822 ERROR: Error processing SINXET_charged: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,822 ERROR: Error processing SIVVAW_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,822 ERROR: Error processing SODNAA_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,823 ERROR: Error processing SOMFIK_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,823 ERROR: Error processing SUJNUH_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,823 ERROR: Error processing SUKYON_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,823 ERROR: Error processing TANBIV_charged: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,823 ERROR: Error processing TASWIV_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,823 ERROR: Error processing TASWOB_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,824 ERROR: Error processing TORXAB_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,824 ERROR: Error processing TOTWAC_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,824 ERROR: Error processing TUMQID_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,824 ERROR: Error processing UHUPOD01_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,824 ERROR: Error processing UJOJIO04_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,824 ERROR: Error processing UKUBUY_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,825 ERROR: Error processing ULUQAV_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,825 ERROR: Error processing UZUNAF01_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,825 ERROR: Error processing WAJLEA_charged: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,825 ERROR: Error processing WASNIO_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,825 ERROR: Error processing WEXNIW_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,826 ERROR: Error processing WILHIK_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,826 ERROR: Error processing WOBQEL_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,826 ERROR: Error processing XEGKIF_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,826 ERROR: Error processing XEXLOD_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,826 ERROR: Error processing YATDUV_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,826 ERROR: Error processing YINDOQ_clean: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:02:02,827 ERROR: Error processing ZABQIC_ion_b: run_simulation() missing 1 required positional argument: 'base_dir'
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 177, in initial_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: run_simulation() missing 1 required positional argument: 'base_dir'
+2025-06-13 07:08:57,282 ERROR: Error processing cm503311x_alf425K_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:08:57,508 ERROR: Error processing YEFNIG_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:08:57,930 ERROR: Error processing AVETEC_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:08:58,156 ERROR: Error processing GIFKIP_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:08:58,260 ERROR: Error processing BIMDEF_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:08:58,261 ERROR: Error processing LADKIN_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:08:58,572 ERROR: Error processing BEPMIU_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:08:58,603 ERROR: Error processing PAPNUR_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:08:58,611 ERROR: Error processing BAKYOE_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:08:58,706 ERROR: Error processing FIHHOV_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:08:58,709 ERROR: Error processing cm503311x_alf70K_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:08:58,709 ERROR: Error processing c5dt00281h_c5dt00281h2_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:08:58,738 ERROR: Error processing BUGSAY_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:08:58,768 ERROR: Error processing BUGSEC_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:08:58,831 ERROR: Error processing APETAS_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:08:59,025 ERROR: Error processing UDAXAB_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:08:59,060 ERROR: Error processing ABEXEN_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:08:59,135 ERROR: Error processing RAXBOJ_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:08:59,705 ERROR: Error processing cg050585esi20051105_115011_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:08:59,933 ERROR: Error processing TAJVOS_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:00,131 ERROR: Error processing LATBUG_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:00,152 ERROR: Error processing cg3015354_si_002_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:00,309 ERROR: Error processing DIWNAA_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:00,472 ERROR: Error processing CUWNOZ_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:00,509 ERROR: Error processing CUWVAT_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:00,739 ERROR: Error processing cg8002564_si_008_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:00,807 ERROR: Error processing HOJLEY_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:00,819 ERROR: Error processing GEBCAT_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:01,067 ERROR: Error processing AMIMAL_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:01,094 ERROR: Error processing ECIYEU01_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:01,378 ERROR: Error processing HOMXIR_manual: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:01,741 ERROR: Error processing EMAMOW_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:01,764 ERROR: Error processing CIRTUU_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:01,770 ERROR: Error processing DADLOM_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:01,771 ERROR: Error processing ESEDIQ_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:01,783 ERROR: Error processing ZARTAP02_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:01,923 ERROR: Error processing CURZEV_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:02,997 ERROR: Error processing EMIREX_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:03,256 ERROR: Error processing ja205976v_si_006_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:03,257 ERROR: Error processing IGINIX01_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:03,257 ERROR: Error processing IXAMAW_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:03,276 ERROR: Error processing GIWCAR_ion_b: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:03,379 ERROR: Error processing LAWGAS_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:03,523 ERROR: Error processing ILUHUT_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:03,523 ERROR: Error processing ic060030osi20060309_091447_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:03,660 ERROR: Error processing GADNUX_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:03,851 ERROR: Error processing IGAGUU_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:03,875 ERROR: Error processing ILOJEZ_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:04,667 ERROR: Error processing COPXOV_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:04,697 ERROR: Error processing HOQMIL04_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:04,710 ERROR: Error processing LOMLUW_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:04,710 ERROR: Error processing c5sc00614g_c5sc00614g2_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:05,259 ERROR: Error processing KITVEQ_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:05,747 ERROR: Error processing ITIWEO_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:06,237 ERROR: Error processing KIXKOS_ion_b: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:06,319 ERROR: Error processing LEQQEE_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:07,182 ERROR: Error processing HASTAY_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:07,771 ERROR: Error processing MIXBAY_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:07,771 ERROR: Error processing LUFNAC05_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:08,057 ERROR: Error processing UZUXOE_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:08,058 ERROR: Error processing NAPZUB_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:08,058 ERROR: Error processing LEQVIN_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:08,268 ERROR: Error processing OMEWUZ_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:08,352 ERROR: Error processing MOXNUK_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:09,037 ERROR: Error processing MIJMAU_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:09,726 ERROR: Error processing OWIJOV_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:09,885 ERROR: Error processing ROQRAS_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:09,950 ERROR: Error processing LETPUX_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:09,983 ERROR: Error processing OTAVAH_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:09,984 ERROR: Error processing REXCUU_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:10,567 ERROR: Error processing QEFWUV_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:10,643 ERROR: Error processing RUGJEK_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:10,724 ERROR: Error processing SAHBAF_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:11,095 ERROR: Error processing MIFTEC_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:11,095 ERROR: Error processing MIFROK_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:11,099 ERROR: Error processing SIKJOM_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:11,395 ERROR: Error processing DALVIY_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:11,767 ERROR: Error processing NAHNES_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:12,196 ERROR: Error processing SOMFIK_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:12,621 ERROR: Error processing SIVVAW_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:12,790 ERROR: Error processing AYOQEM_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:12,827 ERROR: Error processing TASWOB_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:12,841 ERROR: Error processing OPUDAF_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:13,070 ERROR: Error processing SODNAA_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:13,218 ERROR: Error processing TASWIV_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:13,219 ERROR: Error processing SUKYON_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:13,793 ERROR: Error processing PELRIJ_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:14,737 ERROR: Error processing MIHHIV_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:14,832 ERROR: Error processing SUJNUH_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:14,974 ERROR: Error processing UJOJIO04_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:14,985 ERROR: Error processing SINXET_charged: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:14,985 ERROR: Error processing UZUNAF01_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:14,987 ERROR: Error processing OPIXUI_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:14,987 ERROR: Error processing TUMQID_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:14,988 ERROR: Error processing TANBIV_charged: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:14,988 ERROR: Error processing TORXAB_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:14,992 ERROR: Error processing TOTWAC_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:15,250 ERROR: Error processing WEXNIW_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:15,430 ERROR: Error processing WAJLEA_charged: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:15,839 ERROR: Error processing WILHIK_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:16,030 ERROR: Error processing XEXLOD_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:16,366 ERROR: Error processing ULUQAV_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:16,529 ERROR: Error processing WASNIO_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:16,559 ERROR: Error processing XEGKIF_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:17,820 ERROR: Error processing UKUBUY_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:17,834 ERROR: Error processing WOBQEL_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:17,889 ERROR: Error processing YATDUV_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:17,905 ERROR: Error processing ZABQIC_ion_b: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:19,819 ERROR: Error processing ELEREU_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:20,349 ERROR: Error processing YINDOQ_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
+2025-06-13 07:09:29,999 ERROR: Error processing UHUPOD01_clean: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium_ac/active_learning_gcmc.py", line 193, in initial_run
+    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                                        ^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__

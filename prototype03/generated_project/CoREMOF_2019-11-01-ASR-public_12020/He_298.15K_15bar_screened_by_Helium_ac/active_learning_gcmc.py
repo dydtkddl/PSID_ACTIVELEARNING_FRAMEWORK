@@ -161,7 +161,7 @@ def initial_run(db_path: Path, config_path: Path, ncpus: int, gcfg : Path):
     print(f"▶ RUN: {to_run}/{total} pending using {ncpus} CPUs")
     run_logger.info(f"Start run: {to_run}/{total}, CPUs={ncpus}")
     results = Parallel(n_jobs=ncpus)(
-        delayed(run_simulation)(mof, raspa, base_dir) for mof in targets
+        delayed(run_simulation)(mof, raspa) for mof in targets
     )
     time.sleep(1)
     if to_run == 0:
@@ -219,7 +219,7 @@ def main():
     cfg = Path('active_learning_config.json')
     gcfg = Path('gcmcconfig.json')
     binput = Path('base.input')
-    
+    print(args.phase) 
     if args.phase == 'initial_gcmc':
         if args.action == 'create':
             initial_create(dbp, cfg, binput, args.initial_mode,gcfg)

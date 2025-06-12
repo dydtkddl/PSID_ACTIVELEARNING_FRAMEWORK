@@ -6683,3 +6683,237 @@ FileNotFoundError: No .data file in low_pressure_gcmc/RUBLEH_clean/Output/System
 2025-06-13 06:54:50,331 INFO: WARFIG_clean, uptake: 0.002965
 2025-06-13 06:54:55,203 INFO: 182/9843 completed: WAZRAS_clean took 70.48s | win_avg(10)=95.06s | ETA@30cpus=30612.17s(510.20min)
 2025-06-13 06:54:55,203 INFO: WAZRAS_clean, uptake: 0.001510
+2025-06-13 06:55:01,791 INFO: 183/9843 completed: WANKOO_clean took 181.17s | win_avg(10)=101.33s | ETA@30cpus=32628.23s(543.80min)
+2025-06-13 06:55:01,791 INFO: WANKOO_clean, uptake: 0.000373
+2025-06-13 06:55:06,350 INFO: 184/9843 completed: WANBIY_clean took 200.77s | win_avg(10)=114.56s | ETA@30cpus=36885.41s(614.76min)
+2025-06-13 06:55:06,350 INFO: WANBIY_clean, uptake: 0.000418
+2025-06-13 06:55:11,089 INFO: 185/9843 completed: WARXUL_clean took 106.89s | win_avg(10)=118.67s | ETA@30cpus=38202.24s(636.70min)
+2025-06-13 06:55:11,089 INFO: WARXUL_clean, uptake: 0.003925
+2025-06-13 06:55:22,615 INFO: 186/9843 completed: WIBDAO_clean took 60.48s | win_avg(10)=108.07s | ETA@30cpus=34789.11s(579.82min)
+2025-06-13 06:55:22,615 INFO: WIBDAO_clean, uptake: 0.000484
+2025-06-13 06:55:27,128 INFO: 187/9843 completed: WAZQIZ_clean took 103.79s | win_avg(10)=107.70s | ETA@30cpus=34666.24s(577.77min)
+2025-06-13 06:55:27,128 INFO: WAZQIZ_clean, uptake: 0.001159
+2025-06-13 06:55:28,955 INFO: 188/9843 completed: WETPES_clean took 73.98s | win_avg(10)=103.92s | ETA@30cpus=33444.51s(557.41min)
+2025-06-13 06:55:28,955 INFO: WETPES_clean, uptake: 0.004211
+2025-06-13 06:55:33,352 INFO: 189/9843 completed: WANNEH_clean took 209.79s | win_avg(10)=118.44s | ETA@30cpus=38113.56s(635.23min)
+2025-06-13 06:55:33,352 INFO: WANNEH_clean, uptake: 0.000755
+2025-06-13 06:55:34,495 INFO: 190/9843 completed: WEBKAR_clean took 95.72s | win_avg(10)=121.42s | ETA@30cpus=39068.25s(651.14min)
+2025-06-13 06:55:34,495 INFO: WEBKAR_clean, uptake: 0.003473
+2025-06-13 06:55:40,736 INFO: 191/9843 completed: WEXSEZ_clean took 84.19s | win_avg(10)=118.72s | ETA@30cpus=38197.58s(636.63min)
+2025-06-13 06:55:40,736 INFO: WEXSEZ_clean, uptake: 0.002692
+2025-06-13 06:55:42,246 INFO: 192/9843 completed: WANNIL_clean took 214.95s | win_avg(10)=133.17s | ETA@30cpus=42841.13s(714.02min)
+2025-06-13 06:55:42,246 INFO: WANNIL_clean, uptake: 0.000654
+2025-06-13 06:55:50,208 INFO: 193/9843 completed: WEBKEV_clean took 108.87s | win_avg(10)=125.94s | ETA@30cpus=40510.94s(675.18min)
+2025-06-13 06:55:50,208 INFO: WEBKEV_clean, uptake: 0.003373
+2025-06-13 06:55:55,098 INFO: 194/9843 completed: WEBJUK_clean took 116.69s | win_avg(10)=117.53s | ETA@30cpus=37802.45s(630.04min)
+2025-06-13 06:55:55,098 INFO: WEBJUK_clean, uptake: 0.003545
+2025-06-13 06:56:13,861 INFO: 195/9843 completed: WEBJIY_clean took 137.79s | win_avg(10)=120.62s | ETA@30cpus=38792.32s(646.54min)
+2025-06-13 06:56:13,861 INFO: WEBJIY_clean, uptake: 0.002958
+2025-06-13 06:56:18,894 INFO: 196/9843 completed: VOXTOT_clean took 485.02s | win_avg(10)=163.08s | ETA@30cpus=52440.27s(874.00min)
+2025-06-13 06:56:18,894 INFO: VOXTOT_clean, uptake: 0.003805
+2025-06-13 06:56:23,850 INFO: 197/9843 completed: WILGOO_clean took 72.76s | win_avg(10)=159.97s | ETA@30cpus=51436.95s(857.28min)
+2025-06-13 06:56:23,851 INFO: WILGOO_clean, uptake: 0.000703
+2025-06-13 06:56:36,617 INFO: 198/9843 completed: WIJXAQ_clean took 106.26s | win_avg(10)=163.20s | ETA@30cpus=52469.31s(874.49min)
+2025-06-13 06:56:36,617 INFO: WIJXAQ_clean, uptake: 0.002816
+2025-06-13 06:56:52,516 INFO: 199/9843 completed: WIRMUH_clean took 79.16s | win_avg(10)=150.14s | ETA@30cpus=48264.67s(804.41min)
+2025-06-13 06:56:52,516 INFO: WIRMUH_clean, uptake: 0.001341
+2025-06-13 06:56:58,327 INFO: 200/9843 completed: WIVFIS_clean took 76.07s | win_avg(10)=148.17s | ETA@30cpus=47628.17s(793.80min)
+2025-06-13 06:56:58,327 INFO: WIVFIS_clean, uptake: 0.001190
+2025-06-13 06:57:03,098 INFO: 201/9843 completed: WISKOA_clean took 82.36s | win_avg(10)=147.99s | ETA@30cpus=47564.48s(792.74min)
+2025-06-13 06:57:03,098 INFO: WISKOA_clean, uptake: 0.001105
+2025-06-13 06:57:03,904 INFO: 202/9843 completed: WIDTAF_clean took 152.44s | win_avg(10)=141.74s | ETA@30cpus=45550.70s(759.18min)
+2025-06-13 06:57:03,904 INFO: WIDTAF_clean, uptake: 0.000688
+2025-06-13 06:57:04,093 INFO: 203/9843 completed: WIKLOT_clean took 122.30s | win_avg(10)=143.08s | ETA@30cpus=45977.47s(766.29min)
+2025-06-13 06:57:04,093 INFO: WIKLOT_clean, uptake: 0.001193
+2025-06-13 06:57:10,378 INFO: 204/9843 completed: WILGUV_clean took 107.75s | win_avg(10)=142.19s | ETA@30cpus=45685.73s(761.43min)
+2025-06-13 06:57:10,378 INFO: WILGUV_clean, uptake: 0.000983
+2025-06-13 06:57:16,526 INFO: 205/9843 completed: WIRNAO_clean took 102.03s | win_avg(10)=138.61s | ETA@30cpus=44532.15s(742.20min)
+2025-06-13 06:57:16,527 INFO: WIRNAO_clean, uptake: 0.000962
+2025-06-13 06:57:35,181 INFO: 206/9843 completed: WIFGUP_clean took 179.43s | win_avg(10)=108.06s | ETA@30cpus=34710.93s(578.52min)
+2025-06-13 06:57:35,181 INFO: WIFGUP_clean, uptake: 0.000032
+2025-06-13 06:57:37,691 INFO: 207/9843 completed: WIVRAW02_clean took 107.48s | win_avg(10)=111.53s | ETA@30cpus=35822.58s(597.04min)
+2025-06-13 06:57:37,691 INFO: WIVRAW02_clean, uptake: 0.000148
+2025-06-13 06:57:39,282 INFO: 208/9843 completed: WOLROF_clean took 40.94s | win_avg(10)=105.00s | ETA@30cpus=33721.12s(562.02min)
+2025-06-13 06:57:39,282 INFO: WOLROF_clean, uptake: 0.003345
+2025-06-13 06:57:56,784 INFO: 209/9843 completed: WIKNOU_clean took 170.39s | win_avg(10)=114.12s | ETA@30cpus=36647.33s(610.79min)
+2025-06-13 06:57:56,784 INFO: WIKNOU_clean, uptake: 0.000280
+2025-06-13 06:57:58,822 INFO: 210/9843 completed: WILNEL02_clean took 151.65s | win_avg(10)=121.68s | ETA@30cpus=39070.34s(651.17min)
+2025-06-13 06:57:58,822 INFO: WILNEL02_clean, uptake: 0.001134
+2025-06-13 06:57:59,407 INFO: 211/9843 completed: WILNEL_clean took 150.40s | win_avg(10)=128.48s | ETA@30cpus=41250.98s(687.52min)
+2025-06-13 06:57:59,408 INFO: WILNEL_clean, uptake: 0.001134
+2025-06-13 06:58:11,123 INFO: 212/9843 completed: WONBAD_clean took 60.74s | win_avg(10)=119.31s | ETA@30cpus=38302.92s(638.38min)
+2025-06-13 06:58:11,124 INFO: WONBAD_clean, uptake: 0.001465
+2025-06-13 06:58:16,868 INFO: 213/9843 completed: WIWKIX_clean took 141.76s | win_avg(10)=121.26s | ETA@30cpus=38923.76s(648.73min)
+2025-06-13 06:58:16,868 INFO: WIWKIX_clean, uptake: 0.001287
+2025-06-13 06:58:22,034 INFO: 214/9843 completed: WAVRES_clean took 286.18s | win_avg(10)=139.10s | ETA@30cpus=44646.56s(744.11min)
+2025-06-13 06:58:22,034 INFO: WAVRES_clean, uptake: 0.002707
+2025-06-13 06:58:23,102 INFO: 215/9843 completed: WONZUV_clean took 45.41s | win_avg(10)=133.44s | ETA@30cpus=42824.77s(713.75min)
+2025-06-13 06:58:23,103 INFO: WONZUV_clean, uptake: 0.004483
+2025-06-13 06:58:24,789 INFO: 216/9843 completed: WODREO_clean took 130.91s | win_avg(10)=128.59s | ETA@30cpus=41263.23s(687.72min)
+2025-06-13 06:58:24,789 INFO: WODREO_clean, uptake: 0.001608
+2025-06-13 06:58:46,785 INFO: 217/9843 completed: WAVQIV_ion_b took 313.76s | win_avg(10)=149.21s | ETA@30cpus=47877.88s(797.96min)
+2025-06-13 06:58:46,786 INFO: WAVQIV_ion_b, uptake: 0.003726
+2025-06-13 06:58:48,838 INFO: 218/9843 completed: WONZOP_clean took 73.65s | win_avg(10)=152.49s | ETA@30cpus=48922.53s(815.38min)
+2025-06-13 06:58:48,838 INFO: WONZOP_clean, uptake: 0.004167
+2025-06-13 06:58:51,117 INFO: 219/9843 completed: WAVRIW_clean took 311.25s | win_avg(10)=166.57s | ETA@30cpus=53436.09s(890.60min)
+2025-06-13 06:58:51,117 INFO: WAVRIW_clean, uptake: 0.002931
+2025-06-13 06:58:56,765 INFO: 220/9843 completed: WIKGII_clean took 241.30s | win_avg(10)=175.54s | ETA@30cpus=56306.03s(938.43min)
+2025-06-13 06:58:56,765 INFO: WIKGII_clean, uptake: 0.001575
+2025-06-13 06:59:11,337 INFO: 221/9843 completed: WOXROQ_clean took 72.51s | win_avg(10)=167.75s | ETA@30cpus=53801.94s(896.70min)
+2025-06-13 06:59:11,338 INFO: WOXROQ_clean, uptake: 0.000331
+2025-06-13 06:59:16,449 INFO: 222/9843 completed: WOMFAG_clean took 133.35s | win_avg(10)=175.01s | ETA@30cpus=56124.81s(935.41min)
+2025-06-13 06:59:16,450 INFO: WOMFAG_clean, uptake: 0.003010
+2025-06-13 06:59:34,457 INFO: 223/9843 completed: WOPGOZ_clean took 115.12s | win_avg(10)=172.34s | ETA@30cpus=55264.58s(921.08min)
+2025-06-13 06:59:34,457 INFO: WOPGOZ_clean, uptake: 0.000206
+2025-06-13 06:59:39,202 INFO: 224/9843 completed: WOMFEK_clean took 155.29s | win_avg(10)=159.25s | ETA@30cpus=51062.24s(851.04min)
+2025-06-13 06:59:39,202 INFO: WOMFEK_clean, uptake: 0.003734
+2025-06-13 07:00:01,591 INFO: 225/9843 completed: WUDTUM_clean took 99.51s | win_avg(10)=164.66s | ETA@30cpus=52791.39s(879.86min)
+2025-06-13 07:00:01,591 INFO: WUDTUM_clean, uptake: 0.000647
+2025-06-13 07:00:10,484 INFO: 226/9843 completed: WUGPUL_clean took 73.69s | win_avg(10)=158.94s | ETA@30cpus=50951.53s(849.19min)
+2025-06-13 07:00:10,484 INFO: WUGPUL_clean, uptake: 0.004657
+2025-06-13 07:00:23,136 INFO: 227/9843 completed: UBAVUR02_clean took 1571.29s | win_avg(10)=284.69s | ETA@30cpus=91254.15s(1520.90min)
+2025-06-13 07:00:23,136 INFO: UBAVUR02_clean, uptake: 0.000461
+2025-06-13 07:00:23,322 INFO: 228/9843 completed: WUDZIG_clean took 96.26s | win_avg(10)=286.96s | ETA@30cpus=91969.13s(1532.82min)
+2025-06-13 07:00:23,335 INFO: WUDZIG_clean, uptake: 0.001203
+2025-06-13 07:00:23,349 INFO: 229/9843 completed: WUDZOM_clean took 94.26s | win_avg(10)=265.26s | ETA@30cpus=85005.88s(1416.76min)
+2025-06-13 07:00:23,349 INFO: WUDZOM_clean, uptake: 0.001041
+2025-06-13 07:00:23,505 INFO: 230/9843 completed: WUJPIC_clean took 49.04s | win_avg(10)=246.03s | ETA@30cpus=78836.61s(1313.94min)
+2025-06-13 07:00:23,506 INFO: WUJPIC_clean, uptake: 0.001524
+2025-06-13 07:00:24,588 INFO: 231/9843 completed: WOYWOY_clean took 133.44s | win_avg(10)=252.12s | ETA@30cpus=80780.41s(1346.34min)
+2025-06-13 07:00:24,588 INFO: WOYWOY_clean, uptake: 0.001481
+2025-06-13 07:00:33,820 INFO: 232/9843 completed: WUDZUS_clean took 102.59s | win_avg(10)=249.05s | ETA@30cpus=79786.78s(1329.78min)
+2025-06-13 07:00:33,820 INFO: WUDZUS_clean, uptake: 0.001169
+2025-06-13 07:00:47,668 INFO: 233/9843 completed: WOZGOH_clean took 150.71s | win_avg(10)=252.61s | ETA@30cpus=80918.77s(1348.65min)
+2025-06-13 07:00:47,668 INFO: WOZGOH_clean, uptake: 0.000122
+2025-06-13 07:00:56,858 INFO: 234/9843 completed: UBAVUR_clean took 1603.87s | win_avg(10)=397.47s | ETA@30cpus=127308.28s(2121.80min)
+2025-06-13 07:00:57,028 INFO: UBAVUR_clean, uptake: 0.000523
+2025-06-13 07:00:57,572 INFO: 235/9843 completed: WELTIR_clean took 412.91s | win_avg(10)=428.81s | ETA@30cpus=137332.33s(2288.87min)
+2025-06-13 07:00:57,573 INFO: WELTIR_clean, uptake: 0.000662
+2025-06-13 07:01:03,452 INFO: 236/9843 completed: UBAVUR01_clean took 1611.84s | win_avg(10)=582.62s | ETA@30cpus=186574.71s(3109.58min)
+2025-06-13 07:01:03,452 INFO: UBAVUR01_clean, uptake: 0.000494
+2025-06-13 07:01:09,584 INFO: 237/9843 completed: WUXMAD_clean took 67.99s | win_avg(10)=432.29s | ETA@30cpus=138419.78s(2307.00min)
+2025-06-13 07:01:09,585 INFO: WUXMAD_clean, uptake: 0.000271
+2025-06-13 07:01:18,507 INFO: 238/9843 completed: WUYLOS_clean took 54.99s | win_avg(10)=428.16s | ETA@30cpus=137084.10s(2284.73min)
+2025-06-13 07:01:18,507 INFO: WUYLOS_clean, uptake: 0.001549
+2025-06-13 07:01:19,651 INFO: 239/9843 completed: WUXMIL_clean took 69.16s | win_avg(10)=425.66s | ETA@30cpus=136266.46s(2271.11min)
+2025-06-13 07:01:19,651 INFO: WUXMIL_clean, uptake: 0.000279
+2025-06-13 07:01:21,065 INFO: 240/9843 completed: WOYWIS_clean took 201.55s | win_avg(10)=440.91s | ETA@30cpus=141133.87s(2352.23min)
+2025-06-13 07:01:21,065 INFO: WOYWIS_clean, uptake: 0.001420
+2025-06-13 07:01:23,242 INFO: 241/9843 completed: WUTCET_clean took 104.01s | win_avg(10)=437.96s | ETA@30cpus=140177.32s(2336.29min)
+2025-06-13 07:01:23,243 INFO: WUTCET_clean, uptake: 0.001739
+2025-06-13 07:01:29,121 INFO: 242/9843 completed: WOPSAX01_clean took 212.32s | win_avg(10)=448.94s | ETA@30cpus=143674.45s(2394.57min)
+2025-06-13 07:01:29,122 INFO: WOPSAX01_clean, uptake: 0.000641
+2025-06-13 07:01:46,480 INFO: 243/9843 completed: WUDZAY_clean took 201.36s | win_avg(10)=454.00s | ETA@30cpus=145280.23s(2421.34min)
+2025-06-13 07:01:46,480 INFO: WUDZAY_clean, uptake: 0.000893
+2025-06-13 07:01:52,753 INFO: 244/9843 completed: XAMDUM07_clean took 55.18s | win_avg(10)=299.13s | ETA@30cpus=95711.99s(1595.20min)
+2025-06-13 07:01:52,753 INFO: XAMDUM07_clean, uptake: 0.003492
+2025-06-13 07:01:59,142 INFO: 245/9843 completed: WOJYEB_clean took 340.05s | win_avg(10)=291.84s | ETA@30cpus=93370.81s(1556.18min)
+2025-06-13 07:01:59,142 INFO: WOJYEB_clean, uptake: 0.001203
+2025-06-13 07:01:59,600 INFO: 246/9843 completed: XANMUX01_clean took 56.14s | win_avg(10)=136.28s | ETA@30cpus=43594.47s(726.57min)
+2025-06-13 07:01:59,601 INFO: XANMUX01_clean, uptake: 0.001583
+2025-06-13 07:02:03,439 INFO: 247/9843 completed: WOJYIF_clean took 339.46s | win_avg(10)=163.42s | ETA@30cpus=52273.26s(871.22min)
+2025-06-13 07:02:03,439 INFO: WOJYIF_clean, uptake: 0.001119
+2025-06-13 07:02:08,163 INFO: 248/9843 completed: XANMUX02_clean took 58.58s | win_avg(10)=163.78s | ETA@30cpus=52382.47s(873.04min)
+2025-06-13 07:02:08,164 INFO: XANMUX02_clean, uptake: 0.001636
+2025-06-13 07:02:09,629 INFO: 249/9843 completed: WOJYOL_clean took 332.89s | win_avg(10)=190.15s | ETA@30cpus=60810.88s(1013.51min)
+2025-06-13 07:02:09,630 INFO: WOJYOL_clean, uptake: 0.001038
+2025-06-13 07:02:14,350 INFO: 250/9843 completed: XAKLIH_clean took 100.52s | win_avg(10)=180.05s | ETA@30cpus=57574.00s(959.57min)
+2025-06-13 07:02:14,350 INFO: XAKLIH_clean, uptake: 0.001369
+2025-06-13 07:02:14,957 INFO: 251/9843 completed: XACYAB_clean took 110.37s | win_avg(10)=180.69s | ETA@30cpus=57771.20s(962.85min)
+2025-06-13 07:02:14,957 INFO: XACYAB_clean, uptake: 0.002168
+2025-06-13 07:02:16,459 INFO: 252/9843 completed: XANMUX03_clean took 57.95s | win_avg(10)=165.25s | ETA@30cpus=52829.76s(880.50min)
+2025-06-13 07:02:16,459 INFO: XANMUX03_clean, uptake: 0.002338
+2025-06-13 07:02:19,437 INFO: 253/9843 completed: WOJYUR_clean took 326.71s | win_avg(10)=177.78s | ETA@30cpus=56831.25s(947.19min)
+2025-06-13 07:02:19,437 INFO: WOJYUR_clean, uptake: 0.001030
+2025-06-13 07:02:19,448 INFO: 254/9843 completed: XANMUX04_clean took 59.67s | win_avg(10)=178.23s | ETA@30cpus=56969.07s(949.48min)
+2025-06-13 07:02:19,448 INFO: XANMUX04_clean, uptake: 0.001778
+2025-06-13 07:02:19,938 INFO: 255/9843 completed: WUXYIZ_clean took 116.80s | win_avg(10)=155.91s | ETA@30cpus=49828.13s(830.47min)
+2025-06-13 07:02:19,939 INFO: WUXYIZ_clean, uptake: 0.000224
+2025-06-13 07:02:20,431 INFO: 256/9843 completed: XANMUX05_clean took 59.36s | win_avg(10)=156.23s | ETA@30cpus=49925.84s(832.10min)
+2025-06-13 07:02:20,431 INFO: XANMUX05_clean, uptake: 0.001744
+2025-06-13 07:02:23,743 INFO: 257/9843 completed: XANMUX06_clean took 60.50s | win_avg(10)=128.33s | ETA@30cpus=41006.87s(683.45min)
+2025-06-13 07:02:23,743 INFO: XANMUX06_clean, uptake: 0.002039
+2025-06-13 07:02:26,038 INFO: 258/9843 completed: WUHHUC_clean took 194.67s | win_avg(10)=141.94s | ETA@30cpus=45350.74s(755.85min)
+2025-06-13 07:02:26,039 INFO: WUHHUC_clean, uptake: 0.000657
+2025-06-13 07:02:27,599 INFO: 259/9843 completed: XANMUX07_clean took 58.47s | win_avg(10)=114.50s | ETA@30cpus=36579.39s(609.66min)
+2025-06-13 07:02:27,599 INFO: XANMUX07_clean, uptake: 0.001786
+2025-06-13 07:02:31,117 INFO: 260/9843 completed: XAMDOF_clean took 94.25s | win_avg(10)=113.87s | ETA@30cpus=36375.31s(606.26min)
+2025-06-13 07:02:31,117 INFO: XAMDOF_clean, uptake: 0.001151
+2025-06-13 07:02:31,411 INFO: 261/9843 completed: XAKZEP_clean took 103.64s | win_avg(10)=113.20s | ETA@30cpus=36156.77s(602.61min)
+2025-06-13 07:02:31,411 INFO: XAKZEP_clean, uptake: 0.002561
+2025-06-13 07:02:34,224 INFO: 262/9843 completed: WUHJAK_clean took 197.74s | win_avg(10)=127.18s | ETA@30cpus=40617.39s(676.96min)
+2025-06-13 07:02:34,224 INFO: WUHJAK_clean, uptake: 0.000678
+2025-06-13 07:02:35,168 INFO: 263/9843 completed: WUXYUL_clean took 131.84s | win_avg(10)=107.69s | ETA@30cpus=34390.34s(573.17min)
+2025-06-13 07:02:35,169 INFO: WUXYUL_clean, uptake: 0.000257
+2025-06-13 07:02:39,787 INFO: 264/9843 completed: WUDYUR_clean took 256.25s | win_avg(10)=127.35s | ETA@30cpus=40663.36s(677.72min)
+2025-06-13 07:02:39,787 INFO: WUDYUR_clean, uptake: 0.000523
+2025-06-13 07:02:41,428 INFO: 265/9843 completed: WUXZAS_clean took 138.09s | win_avg(10)=129.48s | ETA@30cpus=41338.76s(688.98min)
+2025-06-13 07:02:41,428 INFO: WUXZAS_clean, uptake: 0.000356
+2025-06-13 07:02:45,128 INFO: 266/9843 completed: XANMUX08_clean took 58.64s | win_avg(10)=129.41s | ETA@30cpus=41311.49s(688.52min)
+2025-06-13 07:02:45,129 INFO: XANMUX08_clean, uptake: 0.002410
+2025-06-13 07:02:48,667 INFO: 267/9843 completed: XANZAQ03_clean took 45.23s | win_avg(10)=127.88s | ETA@30cpus=40819.72s(680.33min)
+2025-06-13 07:02:48,667 INFO: XANZAQ03_clean, uptake: 0.002675
+2025-06-13 07:02:51,996 INFO: 268/9843 completed: XANMUX_clean took 59.24s | win_avg(10)=114.34s | ETA@30cpus=36492.98s(608.22min)
+2025-06-13 07:02:51,996 INFO: XANMUX_clean, uptake: 0.001711
+2025-06-13 07:03:06,258 INFO: 269/9843 completed: XANZAQ04_clean took 58.09s | win_avg(10)=114.30s | ETA@30cpus=36476.94s(607.95min)
+2025-06-13 07:03:06,258 INFO: XANZAQ04_clean, uptake: 0.002393
+2025-06-13 07:03:08,013 INFO: 270/9843 completed: WONJUG_clean took 351.09s | win_avg(10)=139.98s | ETA@30cpus=44668.85s(744.48min)
+2025-06-13 07:03:08,013 INFO: WONJUG_clean, uptake: 0.002435
+2025-06-13 07:03:08,180 INFO: 271/9843 completed: XANZAQ05_clean took 58.55s | win_avg(10)=135.47s | ETA@30cpus=43225.35s(720.42min)
+2025-06-13 07:03:08,180 INFO: XANZAQ05_clean, uptake: 0.002338
+2025-06-13 07:03:13,560 INFO: 272/9843 completed: XANZAQ06_clean took 59.21s | win_avg(10)=121.62s | ETA@30cpus=38801.26s(646.69min)
+2025-06-13 07:03:13,560 INFO: XANZAQ06_clean, uptake: 0.002476
+2025-06-13 07:03:13,683 INFO: 273/9843 completed: XANZAQ07_clean took 58.72s | win_avg(10)=114.31s | ETA@30cpus=36464.70s(607.75min)
+2025-06-13 07:03:13,684 INFO: XANZAQ07_clean, uptake: 0.002557
+2025-06-13 07:03:13,839 INFO: 274/9843 completed: XANZAQ08_clean took 57.38s | win_avg(10)=94.42s | ETA@30cpus=30117.61s(501.96min)
+2025-06-13 07:03:13,840 INFO: XANZAQ08_clean, uptake: 0.002400
+2025-06-13 07:03:16,732 INFO: 275/9843 completed: XANZAQ_clean took 57.29s | win_avg(10)=86.34s | ETA@30cpus=27537.63s(458.96min)
+2025-06-13 07:03:16,732 INFO: XANZAQ_clean, uptake: 0.002247
+2025-06-13 07:03:22,476 INFO: 276/9843 completed: XANZAQ02_clean took 82.87s | win_avg(10)=88.77s | ETA@30cpus=28307.37s(471.79min)
+2025-06-13 07:03:22,476 INFO: XANZAQ02_clean, uptake: 0.002140
+2025-06-13 07:03:25,069 INFO: 277/9843 completed: XANZAQ01_clean took 85.92s | win_avg(10)=92.84s | ETA@30cpus=29602.12s(493.37min)
+2025-06-13 07:03:25,069 INFO: XANZAQ01_clean, uptake: 0.002091
+2025-06-13 07:03:38,375 INFO: 278/9843 completed: XINFUW_clean took 49.70s | win_avg(10)=91.88s | ETA@30cpus=29294.99s(488.25min)
+2025-06-13 07:03:38,375 INFO: XINFUW_clean, uptake: 0.003186
+2025-06-13 07:03:39,059 INFO: 279/9843 completed: XIDMED_clean took 67.64s | win_avg(10)=92.84s | ETA@30cpus=29596.49s(493.27min)
+2025-06-13 07:03:39,059 INFO: XIDMED_clean, uptake: 0.002283
+2025-06-13 07:03:42,851 INFO: 280/9843 completed: XEKJIH_clean took 83.40s | win_avg(10)=66.07s | ETA@30cpus=21060.45s(351.01min)
+2025-06-13 07:03:42,851 INFO: XEKJIH_clean, uptake: 0.001688
+2025-06-13 07:03:56,955 INFO: 281/9843 completed: XEMHOM_clean took 93.20s | win_avg(10)=69.53s | ETA@30cpus=22162.91s(369.38min)
+2025-06-13 07:03:56,955 INFO: XEMHOM_clean, uptake: 0.000322
+2025-06-13 07:03:57,221 INFO: 282/9843 completed: XEKJON_clean took 97.27s | win_avg(10)=73.34s | ETA@30cpus=23373.81s(389.56min)
+2025-06-13 07:03:57,221 INFO: XEKJON_clean, uptake: 0.001722
+2025-06-13 07:03:58,028 INFO: 283/9843 completed: XILDUT_clean took 72.90s | win_avg(10)=74.76s | ETA@30cpus=23823.02s(397.05min)
+2025-06-13 07:03:58,028 INFO: XILDUT_clean, uptake: 0.001249
+2025-06-13 07:03:59,386 INFO: 284/9843 completed: XEKJUT_clean took 98.95s | win_avg(10)=78.92s | ETA@30cpus=25145.20s(419.09min)
+2025-06-13 07:03:59,386 INFO: XEKJUT_clean, uptake: 0.001993
+2025-06-13 07:04:01,048 INFO: 285/9843 completed: XIFLUV_clean took 86.82s | win_avg(10)=81.87s | ETA@30cpus=26083.36s(434.72min)
+2025-06-13 07:04:01,048 INFO: XIFLUV_clean, uptake: 0.000305
+2025-06-13 07:04:06,840 INFO: 286/9843 completed: QUYRAF_clean took 1797.24s | win_avg(10)=253.31s | ETA@30cpus=80694.63s(1344.91min)
+2025-06-13 07:04:06,841 INFO: QUYRAF_clean, uptake: 0.003200
+2025-06-13 07:04:14,747 INFO: 287/9843 completed: UGOCAW_clean took 1803.69s | win_avg(10)=425.08s | ETA@30cpus=135402.85s(2256.71min)
+2025-06-13 07:04:14,747 INFO: UGOCAW_clean, uptake: 0.003152
+2025-06-13 07:04:15,704 INFO: 288/9843 completed: XIJPAI_clean took 94.26s | win_avg(10)=429.54s | ETA@30cpus=136807.69s(2280.13min)
+2025-06-13 07:04:15,704 INFO: XIJPAI_clean, uptake: 0.000304
+2025-06-13 07:04:20,564 INFO: 289/9843 completed: XENZEX_clean took 114.52s | win_avg(10)=434.23s | ETA@30cpus=138286.30s(2304.77min)
+2025-06-13 07:04:20,564 INFO: XENZEX_clean, uptake: 0.000271
+2025-06-13 07:04:21,974 INFO: 290/9843 completed: XIVVEF_clean took 68.12s | win_avg(10)=432.70s | ETA@30cpus=137785.35s(2296.42min)
+2025-06-13 07:04:21,974 INFO: XIVVEF_clean, uptake: 0.003006
+2025-06-13 07:04:25,056 INFO: 291/9843 completed: XOBDUO_clean took 59.98s | win_avg(10)=429.38s | ETA@30cpus=136713.18s(2278.55min)
+2025-06-13 07:04:25,056 INFO: XOBDUO_clean, uptake: 0.000393
+2025-06-13 07:04:26,254 INFO: 292/9843 completed: XINXAV_clean took 94.24s | win_avg(10)=429.07s | ETA@30cpus=136602.26s(2276.70min)
+2025-06-13 07:04:26,254 INFO: XINXAV_clean, uptake: 0.000929
+2025-06-13 07:04:29,338 INFO: 293/9843 completed: XEVHAJ_clean took 121.73s | win_avg(10)=433.96s | ETA@30cpus=138142.43s(2302.37min)
+2025-06-13 07:04:29,338 INFO: XEVHAJ_clean, uptake: 0.000652
+2025-06-13 07:04:36,373 INFO: 294/9843 completed: XEVHEN_clean took 125.24s | win_avg(10)=436.58s | ETA@30cpus=138964.80s(2316.08min)
+2025-06-13 07:04:36,373 INFO: XEVHEN_clean, uptake: 0.000650
+2025-06-13 07:04:44,258 INFO: 295/9843 completed: XIZJEW_clean took 81.78s | win_avg(10)=436.08s | ETA@30cpus=138789.73s(2313.16min)
+2025-06-13 07:04:44,259 INFO: XIZJEW_clean, uptake: 0.000784
+2025-06-13 07:04:59,031 INFO: 296/9843 completed: XOMCUZ_clean took 61.80s | win_avg(10)=262.54s | ETA@30cpus=83547.65s(1392.46min)
+2025-06-13 07:04:59,031 INFO: XOMCUZ_clean, uptake: 0.000338
+2025-06-13 07:05:10,118 INFO: 297/9843 completed: XIZCUG_clean took 113.34s | win_avg(10)=93.50s | ETA@30cpus=29751.80s(495.86min)
+2025-06-13 07:05:10,118 INFO: XIZCUG_clean, uptake: 0.002229
+2025-06-13 07:05:16,894 INFO: 298/9843 completed: XOMHEO_clean took 78.84s | win_avg(10)=91.96s | ETA@30cpus=29258.13s(487.64min)
+2025-06-13 07:05:16,894 INFO: XOMHEO_clean, uptake: 0.002309
+2025-06-13 07:05:21,820 INFO: 299/9843 completed: VIXLEU_clean took 1172.18s | win_avg(10)=197.72s | ETA@30cpus=62902.52s(1048.38min)
+2025-06-13 07:05:21,820 INFO: VIXLEU_clean, uptake: 0.000738
