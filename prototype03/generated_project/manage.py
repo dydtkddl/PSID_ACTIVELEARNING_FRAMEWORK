@@ -162,7 +162,8 @@ def main():
         'base.input',
         "active_learning_config.json",
         "prediction_gcmc.py",
-        "pyrascont.py"
+        "pyrascont.py",
+        "shutdown.py"
     ]:
         src = bat_dir / fname
         if not src.exists():
