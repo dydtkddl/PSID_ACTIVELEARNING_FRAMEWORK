@@ -92,7 +92,8 @@ def run_simulation(mof: str, raspa_dir: Path, base_dir: Path):
 # Initial GCMC phase
 
 def initial_create(db_path: Path, config_path: Path, base_input: Path, mode: str):
-    df = pd.read_csv("active_learning_gcmc.csv")
+    conn = get_db_connection(db_path)
+    df = pd.read_sql(f"SELECT * FROM {TABLE}", conn)
     cfg = json.loads(config_path.read_text(encoding='utf-8'))
     raspa = Path(cfg['RASPA_DIR'])
     tpl = base_input.read_text(encoding='utf-8')
@@ -117,36 +118,35 @@ def initial_create(db_path: Path, config_path: Path, base_input: Path, mode: str
 
     for mof in sample['mof']:
         make_simulation_input(mof, tpl, cfg, out, raspa)
-    df.loc[df['mof'].isin(sample['mof']), 'initial_sample'] = True
-    df.to_csv("active_learning_gcmc.csv", index=False)
+        conn.execute(f"UPDATE {TABLE} SET initial_sample=1 WHERE mof=?", (mof,))
+
+    conn.commit()
+    conn.close()
     print(f"✅ Added {remaining} new initial inputs (mode={mode}).")
 
 
 def initial_run(db_path: Path, config_path: Path, ncpus: int):
-    df = pd.read_csv("active_learning_gcmc.csv")
+    conn = get_db_connection(db_path)
+    df = pd.read_sql(f"SELECT * FROM {TABLE}", conn)
     cfg = json.loads(config_path.read_text(encoding='utf-8'))
     raspa = Path(cfg['RASPA_DIR'])
     base_dir = Path("initial_gcmc")
-    targets = df[(df['initial_sample'] == True) & (df['iteration'].isna())]['mof'].tolist()
+    targets = df[(df['initial_sample'] == 1) & (df['iteration'].isna())]['mof'].tolist()
 
     results = Parallel(n_jobs=ncpus)(
         delayed(run_simulation)(mof, raspa, base_dir) for mof in targets
     )
 
-    conn = get_db_connection(db_path)
     for mof, uptake, time_spent in results:
         if uptake is not None:
-            df.loc[df['mof'] == mof, 'uptake[mol/kg framework]'] = uptake
-            df.loc[df['mof'] == mof, 'calculation_time'] = time_spent
-            df.loc[df['mof'] == mof, 'iteration'] = 0
-            uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
             conn.execute(
                 f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE mof=?",
                 (uptake, time_spent, mof)
             )
+            uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+
     conn.commit()
     conn.close()
-    df.to_csv("active_learning_gcmc.csv", index=False)
     print("✅ Initial GCMC run complete.")
 
 # Main dispatcher
