@@ -149,35 +149,42 @@ def main():
     conn.close()
     print(f"✅ SQLite DB 생성 완료: {db_path}")
 
-    # 6) 스크립트·설정 파일 복사
-    bat_dir = Path(cfg['isotherm-config.bat']).parent
-    files_to_copy = [
-        'low_pressure_gcmc.py', 'active_learning_gcmc.py',
-        'gcmcconfig.json', 'base.input',
-        'active_learning_config.json', 'prediction_gcmc.py', 'pyrascont.py'
-    ]
-    for fname in files_to_copy:
+
+    # 8) 스크립트·설정 파일 복사
+    bat_path = Path(cfg['isotherm-config.bat'])
+    bat_dir  = bat_path
+
+    for fname in [
+        'low_pressure_gcmc.py',
+        'active_learning_gcmc.py',
+        'gcmcconfig.json',
+        'base.input',
+        "active_learning_config.json",
+        "prediction_gcmc.py",
+        "pyrascont.py"
+    ]:
         src = bat_dir / fname
         if not src.exists():
-            print(f"⚠️ 파일 미발견: {src}")
+            print(f"⚠️ 복사할 파일이 없습니다: {src}")
             continue
+        
         if fname == 'gcmcconfig.json':
-            cfg_json = json.loads(src.read_text(encoding='utf-8'))
-            cfg_json.update({
-                'GAS': sim_gas,
-                'ExternalPressure': float(P),
-                'ExternalTemperature': float(T),
-                'RASPA_DIR': str(Path(cfg['RASPA_DIR']).resolve())
+            # JSON 로드 → 필드 업데이트 → 저장
+            config = json.loads(src.read_text(encoding='utf-8'))
+            config.update({
+                "GAS": sim_gas,
+                "ExternalPressure": float(P),
+                "ExternalTemperature": float(T),
+                "RASPA_DIR": str(Path(cfg['RASPA_DIR']).resolve())  # 절대 경로로 변환
             })
             (out_dir / fname).write_text(
-                json.dumps(cfg_json, indent=4, ensure_ascii=False),
+                json.dumps(config, indent=4, ensure_ascii=False),
                 encoding='utf-8'
             )
         else:
             shutil.copy(src, out_dir / fname)
 
-    print(f"\n✅ 완료! 생성된 폴더 및 DB: {out_dir}")
-
+    print(f"\n✅ 완료! 생성된 폴더: {out_dir}")
 
 if __name__ == '__main__':
     main()
