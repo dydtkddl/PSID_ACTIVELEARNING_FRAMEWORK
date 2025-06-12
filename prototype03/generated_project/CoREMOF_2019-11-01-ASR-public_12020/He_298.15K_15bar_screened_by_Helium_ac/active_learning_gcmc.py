@@ -99,7 +99,8 @@ def parse_output(mof_dir: Path) -> dict:
         raise ValueError(f"Parse failed for {mof_dir.name}")
     return res
 
-def run_simulation(mof: str, raspa_dir: Path, base_dir: Path):
+def run_simulation(mof: str, raspa_dir: Path):
+    base_dir = Path('initial_gcmc')
     d = base_dir / mof
     start = time.time()
     subprocess.run(f"{raspa_dir}/bin/simulate simulation.input", shell=True, cwd=d, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
