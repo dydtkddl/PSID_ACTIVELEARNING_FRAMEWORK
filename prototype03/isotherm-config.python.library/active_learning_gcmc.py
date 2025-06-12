@@ -117,7 +117,7 @@ def initial_create(db_path: Path, config_path: Path, base_input: Path, mode: str
     else:
         raise ValueError("Unsupported mode")
 
-    for mof in sample['mof']:
+    for mof in sample[sample.columns[0]]:
         make_simulation_input(mof, tpl, cfg, out, raspa)
         conn.execute(f"UPDATE {TABLE} SET initial_sample=1 WHERE mof=?", (mof,))
 
