@@ -24,34 +24,16 @@ TABLE = 'low_pressure_gcmc'
 FIRST_COL = None
 WINDOW_SIZE = 10  # for moving average ETA
 
-# Setup log directory
+# Setup logger
 LOG_DIR = Path.cwd() / 'logs'
 LOG_DIR.mkdir(exist_ok=True)
-
-# Main run logger (run.log)
 LOG_FILE = LOG_DIR / 'run.log'
 logging.basicConfig(
     filename=str(LOG_FILE),
     level=logging.INFO,
     format='%(asctime)s %(levelname)s: %(message)s'
 )
-run_logger = logging.getLogger('gcmc_run')
-
-# Uptake logger (uptake.log)
-uptake_log_file = LOG_DIR / 'uptake.log'
-uptake_logger = logging.getLogger('gcmc_uptake')
-uptake_handler = logging.FileHandler(uptake_log_file)
-uptake_handler.setFormatter(logging.Formatter('%(asctime)s %(message)s'))
-uptake_logger.addHandler(uptake_handler)
-uptake_logger.setLevel(logging.INFO)
-
-# Error logger (error.log)
-error_log_file = LOG_DIR / 'error.log'
-error_logger = logging.getLogger('gcmc_error')
-error_handler = logging.FileHandler(error_log_file)
-error_handler.setFormatter(logging.Formatter('%(asctime)s %(levelname)s: %(message)s'))
-error_logger.addHandler(error_handler)
-error_logger.setLevel(logging.ERROR)
+logger = logging.getLogger('gcmc')
 
 
 def get_db_connection(db_path: Path) -> sqlite3.Connection:
@@ -82,7 +64,7 @@ def make_simulation_input(mof: str,
         )
         unitcell_str = ' '.join(map(str, ucell))
     except Exception as e:
-        error_logger.error(f"Input gen failed for {mof}: {e}", exc_info=True)
+        logger.error(f"Input gen failed for {mof}: {e}")
         return
 
     content = base_template.format(
@@ -92,7 +74,7 @@ def make_simulation_input(mof: str,
         UseChargesFromCIFFile=params['UseChargesFromCIFFile'],
         Forcefield=params['Forcefield'],
         TEMP=params['ExternalTemperature'],
-        PRESSURE=float(params['ExternalPressure_LOW']) * 1e5,
+        PRESSURE=float(params['ExternalPressure']) * 1e5,
         GAS=params['GAS'],
         MoleculeDefinition=params.get('MoleculeDefinition', ''),
         MOF=mof,
@@ -179,7 +161,7 @@ def cmd_run(db_path: Path, config_path: Path, ncpus: int):
     to_run = len(pend)
 
     print(f"▶ RUN: {to_run}/{total} pending using {ncpus} CPUs")
-    run_logger.info(f"Start run: {to_run}/{total}, CPUs={ncpus}")
+    logger.info(f"Start run: {to_run}/{total}, CPUs={ncpus}")
     time.sleep(1)
     if to_run == 0:
         return
@@ -187,16 +169,17 @@ def cmd_run(db_path: Path, config_path: Path, ncpus: int):
     recent = deque(maxlen=WINDOW_SIZE)
     done = 0
 
+    # with logging.root.manager.disable(False): pass
     import concurrent.futures
-    with concurrent.futures.ThreadPoolExecutor(max_workers=ncpus) as executor:
-        futures = {executor.submit(run_simulation, mof, raspa): mof for mof in pend}
-        for future in concurrent.futures.as_completed(futures):
-            mof = futures[future]
+    with concurrent.futures.ThreadPoolExecutor(max_workers=ncpus) as exe:
+        futures = {exe.submit(run_simulation, mof, raspa): mof for mof in pend}
+        for fut in concurrent.futures.as_completed(futures):
+            mof = futures[fut]
             try:
-                mof, uptake, elapsed = future.result()
+                mof, uptake, elapsed = fut.result()
                 done += 1
                 recent.append(elapsed)
-                win_avg = sum(recent) / len(recent)
+                win_avg = sum(recent)/len(recent)
                 remain = to_run - done
                 eta_sec = win_avg * remain / ncpus
                 eta_min = eta_sec / 60
@@ -204,11 +187,10 @@ def cmd_run(db_path: Path, config_path: Path, ncpus: int):
                 msg = (
                     f"{done}/{to_run} completed: {mof} took {elapsed:.2f}s | "
                     f"win_avg({len(recent)})={win_avg:.2f}s | "
-                    f"ETA@{ncpus}cpus={eta_sec:.2f}s({eta_min:.2f}min)"
+                    f"ETA={eta_sec:.2f}s({eta_min:.2f}min)"
                 )
-                run_logger.info(msg)
+                logger.info(msg)
                 print(msg)
-                uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
 
                 # update DB
                 conn = get_db_connection(db_path)
@@ -221,7 +203,7 @@ def cmd_run(db_path: Path, config_path: Path, ncpus: int):
                 conn.close()
 
             except Exception as e:
-                error_logger.error(f"Error processing {mof}: {e}", exc_info=True)
+                logger.error(f"Error {mof}: {e}")
     print("✅ Simulations and DB update complete.")
 
 
@@ -239,10 +221,15 @@ def main():
     cfg = base / 'gcmcconfig.json'
     binput = base / 'base.input'
 
+    #try:
     if args.cmd == 'create':
         cmd_create(dbp, cfg, binput, args.ncpus)
     else:
         cmd_run(dbp, cfg, args.ncpus)
+ #   except Exception as e:
+  #      logger.error(f"Fatal: {e}")
+   #     print(f"Fatal error: {e}", file=sys.stderr)
+    #    sys.exit(1)
 
 
 if __name__ == '__main__':

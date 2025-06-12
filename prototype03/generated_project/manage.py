@@ -153,7 +153,8 @@ def main():
     # 8) 스크립트·설정 파일 복사
     bat_path = Path(cfg['isotherm-config.bat'])
     bat_dir  = bat_path
-
+    active_learning_config = bat_dir / "active_learning_config.json"
+    active_learning_config = json.loads(active_learning_config.read_text(encoding='utf-8'))
     for fname in [
         'low_pressure_gcmc.py',
         'active_learning_gcmc.py',
@@ -173,6 +174,7 @@ def main():
             config = json.loads(src.read_text(encoding='utf-8'))
             config.update({
                 "GAS": sim_gas,
+                "ExternalPressure_LOW" : active_learning_config["low_pressure"],
                 "ExternalPressure": float(P),
                 "ExternalTemperature": float(T),
                 "RASPA_DIR": str(Path(cfg['RASPA_DIR']).resolve())  # 절대 경로로 변환

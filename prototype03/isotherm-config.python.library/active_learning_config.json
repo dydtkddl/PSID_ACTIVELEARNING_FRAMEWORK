@@ -1,5 +1,6 @@
 {
-					"initial_fraction" : 0.01,
+    "low_pressure" : 0.1,    
+    "initial_fraction" : 0.01,
           "target_fraction" : 0.1,
           "n_samples" : 10,
           "neural_network":{
