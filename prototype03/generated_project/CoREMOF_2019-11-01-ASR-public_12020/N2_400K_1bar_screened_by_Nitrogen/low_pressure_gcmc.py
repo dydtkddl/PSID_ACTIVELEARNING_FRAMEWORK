@@ -11,7 +11,7 @@ import sqlite3
 import time
 import logging
 from pathlib import Path
-from concurrent.futures import ProcessPoolExecutor, as_completed
+from concurrent.futures import ProcessPoolExecutor
 import pyrascont
 import pandas as pd
 from tqdm import tqdm
@@ -19,224 +19,148 @@ from tqdm import tqdm
 # Constants
 DB_PATH = Path.cwd() / 'mof_project.db'
 TABLE = 'low_pressure_gcmc'
-CSV_NAME = './low_pressure_gcmc.csv'  # kept for fallback or legacy reference
-FIRST_COL = None  # will be set after loading table
+FIRST_COL = None
+
+# Prepare logs directory and rotate if exists
+def _prepare_log(path: Path):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if path.exists():
+        idx = 1
+        while True:
+            new_path = path.with_name(f"{path.stem}.{idx}{path.suffix}")
+            if not new_path.exists():
+                path.rename(new_path)
+                break
+            idx += 1
 
 # Logging setup
-logging.basicConfig(level=logging.INFO)
+# ensure logs directory exists and rotate existing logs
+logs_dir = Path('logs/low_pressure_gcmc')
+logs_dir.mkdir(parents=True, exist_ok=True)
+
+def _rotate(path: Path):
+    if path.exists():
+        idx = 1
+        while True:
+            new = path.with_name(f"{path.stem}.{idx}{path.suffix}")
+            if not new.exists():
+                path.rename(new)
+                break
+            idx += 1
+
+progress_log = logs_dir / 'progress.log'
+complete_log = logs_dir / 'completed.log'
+_rotate(progress_log)
+_rotate(complete_log)
+
 progress_logger = logging.getLogger('progress')
-progress_handler = logging.FileHandler('low_pressure_gcmc_progress.log', mode='w')
+progress_handler = logging.FileHandler(progress_log)
 progress_handler.setFormatter(logging.Formatter('%(asctime)s | %(message)s'))
 progress_logger.addHandler(progress_handler)
+progress_logger.setLevel(logging.INFO)
 
 complete_logger = logging.getLogger('complete')
-complete_handler = logging.FileHandler('low_pressure_gcmc_completed.log', mode='w')
+complete_handler = logging.FileHandler(complete_log)
 complete_handler.setFormatter(logging.Formatter('%(message)s'))
 complete_logger.addHandler(complete_handler)
-
+complete_logger.setLevel(logging.INFO)
 
 def get_connection():
-    """
-    SQLite 연결을 반환
-    """
     if not DB_PATH.exists():
         print(f"✖ DB 파일이 없습니다: {DB_PATH}")
         sys.exit(1)
-    conn = sqlite3.connect(DB_PATH)
-    return conn
+    return sqlite3.connect(DB_PATH)
 
 
-def _make_simulation_input(mof, base_tpl, gcmc_params, out_root, raspa_dir):
-    """
-    단일 MOF 폴더에 simulation.input 생성
-    """
-    cif_file = raspa_dir / 'share' / 'raspa' / 'structures' / 'cif' / f"{mof}"
+def _make_simulation_input(mof, base_tpl, params, out_root, raspa_dir):
+    cif = raspa_dir / 'share/raspa/structures/cif' / mof
     try:
-        res_ucell = pyrascont.cif2Ucell(str(cif_file), float(gcmc_params.get("CUTOFFVDW", 12.8)), Display=False)
-        unitcell_str = ' '.join(map(str, res_ucell))
+        ucell = pyrascont.cif2Ucell(str(cif), float(params["CUTOFFVDW"]), Display=False)
+        uc = ' '.join(map(str, ucell))
     except Exception as e:
-        print(f"⚠ CIF 변환 실패 for {mof}: {e}")
+        print(f"⚠ CIF 실패: {mof}: {e}")
         return mof
-
     try:
-        sim_content = base_tpl.format(
-            NumberOfCycles=gcmc_params["NumberOfCycles"],
-            NumberOfInitializationCycles=gcmc_params["NumberOfInitializationCycles"],
-            PrintEvery=gcmc_params["PrintEvery"],
-            UseChargesFromCIFFile=gcmc_params["UseChargesFromCIFFile"],
-            Forcefield=gcmc_params["Forcefield"],
-            TEMP=gcmc_params["ExternalTemperature"],
-            PRESSURE=float(gcmc_params["ExternalPressure"]) * 100000,
-            GAS=gcmc_params["GAS"],
-            MoleculeDefinition=gcmc_params.get("MoleculeDefinition", ""),
-            MOF=mof,
-            UNITCELL=unitcell_str
-        )
-        mof_dir = out_root / mof
-        mof_dir.mkdir(exist_ok=True)
-        with open(mof_dir / 'simulation.input', 'w') as fw:
-            fw.write(sim_content)
+        content = base_tpl.format(**{
+            'NumberOfCycles': params['NumberOfCycles'],
+            'NumberOfInitializationCycles': params['NumberOfInitializationCycles'],
+            'PrintEvery': params['PrintEvery'],
+            'UseChargesFromCIFFile': params['UseChargesFromCIFFile'],
+            'Forcefield': params['Forcefield'],
+            'TEMP': params['ExternalTemperature'],
+            'PRESSURE': float(params['ExternalPressure'])*1e5,
+            'GAS': params['GAS'],
+            'MoleculeDefinition': params.get('MoleculeDefinition',''),
+            'MOF': mof,
+            'UNITCELL': uc
+        })
+        d = out_root / mof
+        d.mkdir(exist_ok=True)
+        with open(d/'simulation.input','w') as f:
+            f.write(content)
     except Exception as e:
-        print(f"⚠ simulation.input 생성 실패 for {mof}: {e}")
+        print(f"⚠ 시뮬생성 실패: {mof}: {e}")
     return mof
 
 
 def parse_data_file(mof_dir: Path):
-    """
-    .data 파일에서 uptake 정보 추출
-    """
-    data_root = mof_dir / 'Output' / 'System_0'
-    files = [f for f in os.listdir(data_root) if f.endswith('.data')]
-    if not files:
-        raise FileNotFoundError(".data 파일을 찾을 수 없습니다")
-    text = (data_root / files[0]).read_text()
-    dic = {}
+    root = mof_dir/'Output'/'System_0'
+    files = list(root.glob('*.data'))
+    if not files: raise FileNotFoundError(files)
+    text = files[0].read_text()
     keys = [
-        "Average loading absolute [mol/kg framework]",
-        "Average loading excess [mol/kg framework]",
-        "Average loading absolute [molecules/unit cell]",
-        "Average loading excess [molecules/unit cell]"
+        'Average loading absolute [mol/kg framework]'
     ]
-    for key in keys:
+    for k in keys:
         try:
-            val = float(text.split(key)[1].split("+/-")[0].split()[-1])
-            dic[key] = val
+            val = float(text.split(k)[1].split('+/-')[0].split()[-1])
+            return val
         except:
             pass
-    if not dic:
-        raise ValueError("데이터 파싱 실패")
-    return dic
+    raise ValueError('parse 실패')
 
 
 def run_one(task):
-    """
-    GCMC 실행 및 결과 반환
-    task: tuple(mof, index, raspa_dir)
-    """
-    mof, idx, raspa_dir = task
-    mof_dir = Path('low_pressure_gcmc') / mof
-    cmd = f"{raspa_dir}/bin/simulate simulation.input"
-    start = time.time()
-    subprocess.run(cmd, shell=True, check=True, cwd=mof_dir)
-    elapsed = time.time() - start
-    uptake_dic = parse_data_file(mof_dir)
-    return mof, uptake_dic.get("Average loading absolute [mol/kg framework]"), elapsed
+    mof, idx, raspa = task
+    d = Path('low_pressure_gcmc')/mof
+    cmd = f"{raspa}/bin/simulate simulation.input"
+    start=time.time(); subprocess.run(cmd, shell=True, cwd=d, check=True)
+    t=time.time()-start
+    uptake=parse_data_file(d)
+    return mof, uptake, t
 
 
-def cmd_create(ncpus):
-    """
-    DB에서 MOF 목록을 불러와 simulation.input 생성
-    """
-    conn = get_connection()
-    df = pd.read_sql_query(f"SELECT * FROM {TABLE}", conn)
-    conn.close()
-
-    global FIRST_COL
-    FIRST_COL = df.columns[0]
-
-    cfg_path = Path('gcmcconfig.json')
-    if not cfg_path.exists():
-        print("✖ gcmcconfig.json 파일이 없습니다.")
-        sys.exit(1)
-    with open(cfg_path) as f:
-        gcmc_params = json.load(f)
-    raspa_dir = Path(gcmc_params.get("RASPA_DIR", ""))
-
-    base_tpl_path = Path('base.input')
-    if not base_tpl_path.exists():
-        print("✖ base.input 파일이 없습니다.")
-        sys.exit(1)
-    base_tpl = base_tpl_path.read_text()
-
-    out_root = Path('low_pressure_gcmc')
-    out_root.mkdir(exist_ok=True)
-
-    mo_list = df[FIRST_COL].astype(str).tolist()
-    total = len(mo_list)
-    print(f"▶ CREATE: {total}개 MOF, {ncpus}개 프로세스로 simulation.input 생성 시작")
-
-    if ncpus > 1:
-        with ProcessPoolExecutor(max_workers=ncpus) as exe:
-            futures = {exe.submit(_make_simulation_input, mof, base_tpl, gcmc_params, out_root, raspa_dir): mof for mof in mo_list}
-            for fut in tqdm(as_completed(futures), total=total, desc="📁 CREATE 시뮬레이션 입력 파일 생성 중"):
-                mof = futures[fut]
-                try:
-                    fut.result()
-                except Exception as e:
-                    print(f"✖ {mof} 생성 실패: {e}")
-    else:
-        for mof in tqdm(mo_list, desc="📁 CREATE 시뮬레이션 입력 파일 생성 중"):
-            try:
-                _make_simulation_input(mof, base_tpl, gcmc_params, out_root, raspa_dir)
-            except Exception as e:
-                print(f"✖ {mof} 생성 실패: {e}")
-
-    print("✅ CREATE 완료")
+def cmd_create(n):
+    conn=get_connection(); df=pd.read_sql(f'SELECT * FROM {TABLE}',conn); conn.close()
+    global FIRST_COL; FIRST_COL=df.columns[0]
+    cfg=json.load(open('gcmcconfig.json')); raspa=Path(cfg['RASPA_DIR'])
+    base=open('base.input').read(); out=Path('low_pressure_gcmc'); out.mkdir(exist_ok=True)
+    ms=list(df[FIRST_COL].astype(str)); print(f"▶ CREATE {len(ms)} MOFs on {n} CPUs")
+    with ProcessPoolExecutor(n) as e:
+        list(tqdm(e.map(lambda m: _make_simulation_input(m,base,cfg,out,raspa),ms),total=len(ms)))
+    print('✅ CREATE 완료')
 
 
-def cmd_run(ncpus):
-    """
-    DB에서 completed IS NULL인 MOF 실행 후 결과 DB 업데이트 및 로그 작성
-    """
-    conn = get_connection()
-    df = pd.read_sql_query(f"SELECT * FROM {TABLE}", conn)
-    conn.close()
+def cmd_run(n):
+    conn=get_connection(); df=pd.read_sql(f'SELECT * FROM {TABLE}',conn); conn.close()
+    global FIRST_COL; FIRST_COL=df.columns[0]
+    pending=list(df[df['completed'].isna()][FIRST_COL].astype(str)); total=len(pending)
+    print(f"▶ RUN {total} MOFs on {n} CPUs")
+    cfg=json.load(open('gcmcconfig.json')); raspa=cfg['RASPA_DIR']
+    tasks=[(m,i,raspa) for i,m in enumerate(pending,1)]
+    done=0; tot_t=0
+    with ProcessPoolExecutor(n) as e:
+        for mof,upt,t in tqdm(e.map(run_one,tasks),total=total):
+            done+=1; tot_t+=t; avg=tot_t/done; rem=total-done; eta=avg*rem; peta=eta/n
+            conn2=sqlite3.connect(DB_PATH)
+            conn2.execute(f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?,calculation_time=?,completed=1 WHERE {FIRST_COL}=?",(upt,t,mof)); conn2.commit(); conn2.close()
+            progress_logger.info(f"{done}/{total} | time={t:.1f}s | avg={avg:.1f}s | rem={rem} | ETA={peta:.1f}s")
+            complete_logger.info(mof)
+            print(f"✔ {mof} t={t:.1f}s uptake={upt}")
+    print('✅ RUN 완료')
 
-    global FIRST_COL
-    FIRST_COL = df.columns[0]
-
-    pending = df[df['completed'].isna()][FIRST_COL].astype(str).tolist()
-    total = len(pending)
-    print("전체 %s개 중 %s개 완료 %s개 진행"%(total, total - len(pending), len(pending)))
-    print(f"▶ RUN: {total}개 MOF, {ncpus}개 CPU로 실행 시작")
-    if total == 0:
-        print("✔ 처리할 MOF가 없습니다.")
-        return
-
-    random.shuffle(pending)
-    
-    tasks = [(mof, i+1, Path(json.load(open('gcmcconfig.json'))['RASPA_DIR'])) for i, mof in enumerate(pending)]
-
-    completed_count = 0
-    total_time = 0.0
-
-    with ProcessPoolExecutor(max_workers=ncpus) as exe:
-        for mof_name, uptake, ctime in tqdm(exe.map(run_one, tasks), total=total, desc="🚀 RUN simulations"):
-            completed_count += 1
-            total_time += ctime
-            avg_time = total_time / completed_count
-            remaining = total - completed_count
-            eta = avg_time * remaining
-            conn2 = sqlite3.connect(DB_PATH)
-            conn2.execute(
-                f"UPDATE {TABLE} SET `uptake[mol/kg framework]` = ?, calculation_time = ?, completed = 1 WHERE {FIRST_COL} = ?",
-                (uptake, ctime, mof_name)
-            )
-            conn2.commit()
-            conn2.close()
-            progress_logger.info(f"{completed_count}/{total} | avg_time={avg_time:.1f}s | remaining={remaining} | ETA={eta:.1f}s")
-            complete_logger.info(f"{mof_name}")
-            print(f"✔ {mof_name}: uptake={uptake}, time={ctime:.1f}s")
-
-    print("✅ RUN 완료")
-
-
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser(prog="low_pressure_gcmc.py")
-    sub = parser.add_subparsers(dest='cmd', required=True)
-
-    p_create = sub.add_parser('create', help='simulation.input 생성')
-    p_create.add_argument('-n', '--ncpus', type=int, default=1,
-                          help='simulation.input 생성 병렬 프로세스 수')
-
-    p_run = sub.add_parser('run', help='GCMC 실행')
-    p_run.add_argument('-n', '--ncpus', type=int, default=1,
-                       help='GCMC 실행 병렬 프로세스 수')
-
-    args = parser.parse_args()
-    if args.cmd == 'create':
-        cmd_create(args.ncpus)
-    elif args.cmd == 'run':
-        cmd_run(args.ncpus)
-    else:
-        parser.print_help()
+if __name__=='__main__':
+    p=argparse.ArgumentParser();s=p.add_subparsers(dest='cmd',required=True)
+    s.add_parser('create').add_argument('-n','--ncpus',type=int,default=1)
+    s.add_parser('run').add_argument('-n','--ncpus',type=int,default=1)
+    args=p.parse_args(); cmd_create(args.ncpus) if args.cmd=='create' else cmd_run(args.ncpus)
