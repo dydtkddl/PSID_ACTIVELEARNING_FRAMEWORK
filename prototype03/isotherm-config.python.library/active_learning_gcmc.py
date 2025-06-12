@@ -91,11 +91,12 @@ def run_simulation(mof: str, raspa_dir: Path, base_dir: Path):
 
 # Initial GCMC phase
 
-def initial_create(db_path: Path, config_path: Path, base_input: Path, mode: str):
+def initial_create(db_path: Path, config_path: Path, base_input: Path, mode: str, gcfg : Path):
     conn = get_db_connection(db_path)
     df = pd.read_sql(f"SELECT * FROM {TABLE}", conn)
     cfg = json.loads(config_path.read_text(encoding='utf-8'))
-    raspa = Path(cfg['RASPA_DIR'])
+    gcfg = json.loads(gcfg.read_text(encoding='utf-8'))
+    raspa = Path(gcfg['RASPA_DIR'])
     tpl = base_input.read_text(encoding='utf-8')
     out = Path('initial_gcmc')
     frac = cfg['initial_fraction']
@@ -161,11 +162,12 @@ def main():
 
     dbp = Path('mof_project.db')
     cfg = Path('active_learning_config.json')
+    gcfg = Path('gcmcconfig.json')
     binput = Path('base.input')
-
+    
     if args.phase == 'initial_gcmc':
         if args.action == 'create':
-            initial_create(dbp, cfg, binput, args.initial_mode)
+            initial_create(dbp, cfg, binput, args.initial_mode,gcfg)
         elif args.action == 'run':
             initial_run(dbp, cfg, args.ncpus)
 
