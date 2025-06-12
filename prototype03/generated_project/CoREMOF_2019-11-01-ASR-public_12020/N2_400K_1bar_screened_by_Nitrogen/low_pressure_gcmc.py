@@ -187,7 +187,7 @@ def cmd_run(ncpus):
 
     pending = df[df['completed'].isna()][FIRST_COL].astype(str).tolist()
     total = len(pending)
-    print("전체 %s개 중 %s개 완료 %s개 진행"%(total, total - pending, pending))
+    print("전체 %s개 중 %s개 완료 %s개 진행"%(total, total - len(pending), len(pending)))
     print(f"▶ RUN: {total}개 MOF, {ncpus}개 CPU로 실행 시작")
     if total == 0:
         print("✔ 처리할 MOF가 없습니다.")
