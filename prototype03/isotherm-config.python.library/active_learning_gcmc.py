@@ -105,11 +105,11 @@ def initial_create(db_path: Path, config_path: Path, base_input: Path, mode: str
     total_needed = int(len(df) * frac)
     remaining = total_needed - len(completed_initial)
 
-    if remaining <= 0:
+    if remaining <= 0 or len(df[df["iteration"] > 0 ]) > 0:
         print("✅ Enough initial samples already exist. Skipping create.")
         return
 
-    eligible = df[(df['initial_sample'] != True) & (df['iteration'].isna())]
+    eligible = df[df['iteration'].isna()]
     if mode == 'random':
         sample = eligible.sample(n=remaining)
     elif mode == 'quantile':
