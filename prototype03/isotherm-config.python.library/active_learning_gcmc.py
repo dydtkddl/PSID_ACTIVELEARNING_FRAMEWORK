@@ -45,7 +45,7 @@ def get_db_connection(db_path: Path) -> sqlite3.Connection:
 
 # Simulation input generator
 
-def make_simulation_input(mof: str, base_template: str, params: dict, out_root: Path, raspa_dir: Path) -> None:
+def make_simulation_input(mof: str, base_template: str, params: dict, out_root: Path, raspa_dir: Path, gcfg : dict) -> None:
     cif_path = raspa_dir / 'share' / 'raspa' / 'structures' / 'cif' / mof
     try:
         ucell = pyrascont.cif2Ucell(str(cif_path), float(params.get('CUTOFFVDW', 12.8)), Display=False)
@@ -55,15 +55,15 @@ def make_simulation_input(mof: str, base_template: str, params: dict, out_root: 
         return
 
     content = base_template.format(
-        NumberOfCycles=params['NumberOfCycles'],
-        NumberOfInitializationCycles=params['NumberOfInitializationCycles'],
-        PrintEvery=params['PrintEvery'],
-        UseChargesFromCIFFile=params['UseChargesFromCIFFile'],
-        Forcefield=params['Forcefield'],
-        TEMP=params['ExternalTemperature'],
-        PRESSURE=float(params['ExternalPressure']) * 1e5,
-        GAS=params['GAS'],
-        MoleculeDefinition=params.get('MoleculeDefinition', ''),
+        NumberOfCycles=gcfg['NumberOfCycles'],
+        NumberOfInitializationCycles=gcfg['NumberOfInitializationCycles'],
+        PrintEvery=gcfg['PrintEvery'],
+        UseChargesFromCIFFile=gcfg['UseChargesFromCIFFile'],
+        Forcefield=gcfg['Forcefield'],
+        TEMP=gcfg['ExternalTemperature'],
+        PRESSURE=float(gcfg['ExternalPressure']) * 1e5,
+        GAS=gcfg['GAS'],
+        MoleculeDefinition=gcfg.get('MoleculeDefinition', ''),
         MOF=mof,
         UNITCELL=unitcell_str
     )
@@ -118,7 +118,7 @@ def initial_create(db_path: Path, config_path: Path, base_input: Path, mode: str
         raise ValueError("Unsupported mode")
 
     for mof in sample[sample.columns[0]]:
-        make_simulation_input(mof, tpl, cfg, out, raspa)
+        make_simulation_input(mof, tpl, cfg, out, raspa,gcfg)
         conn.execute(f"UPDATE {TABLE} SET initial_sample=1 WHERE mof=?", (mof,))
 
     conn.commit()
