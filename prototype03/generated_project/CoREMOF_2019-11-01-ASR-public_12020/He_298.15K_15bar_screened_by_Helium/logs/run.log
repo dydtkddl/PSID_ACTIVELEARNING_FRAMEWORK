@@ -6280,3 +6280,106 @@ FileNotFoundError: No .data file in low_pressure_gcmc/RUBLEH_clean/Output/System
 2025-06-13 04:42:16,629 INFO: DATHAJ_clean, uptake: 0.000518
 2025-06-13 04:42:25,800 INFO: 3121/11211 completed: DAWWIJ_clean took 86.95s | win_avg(10)=92.55s | ETA@30cpus=24957.40s(415.96min)
 2025-06-13 04:42:25,800 INFO: DAWWIJ_clean, uptake: 0.000868
+2025-06-13 06:34:06,128 INFO: Start run: 9843/11211, CPUs=30
+2025-06-13 06:34:14,129 ERROR: Error processing FEKBED_clean: No .data file in low_pressure_gcmc/FEKBED_clean/Output/System_0
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium/low_pressure_gcmc.py", line 196, in cmd_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium/low_pressure_gcmc.py", line 146, in run_simulation
+    uptake = parse_output(d)["Average loading absolute [mol/kg framework]"]
+             ^^^^^^^^^^^^^^^
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium/low_pressure_gcmc.py", line 114, in parse_output
+    raise FileNotFoundError(f"No .data file in {data_dir}")
+FileNotFoundError: No .data file in low_pressure_gcmc/FEKBED_clean/Output/System_0
+2025-06-13 06:34:21,564 ERROR: Error processing RUBLEH_clean: No .data file in low_pressure_gcmc/RUBLEH_clean/Output/System_0
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium/low_pressure_gcmc.py", line 196, in cmd_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium/low_pressure_gcmc.py", line 146, in run_simulation
+    uptake = parse_output(d)["Average loading absolute [mol/kg framework]"]
+             ^^^^^^^^^^^^^^^
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium/low_pressure_gcmc.py", line 114, in parse_output
+    raise FileNotFoundError(f"No .data file in {data_dir}")
+FileNotFoundError: No .data file in low_pressure_gcmc/RUBLEH_clean/Output/System_0
+2025-06-13 06:35:37,189 INFO: 1/9843 completed: UKIQUB_clean took 90.00s | win_avg(1)=90.00s | ETA@30cpus=29526.61s(492.11min)
+2025-06-13 06:35:37,189 INFO: UKIQUB_clean, uptake: 0.004660
+2025-06-13 06:35:40,444 INFO: 2/9843 completed: ULOKOX_clean took 93.19s | win_avg(2)=91.60s | ETA@30cpus=30047.14s(500.79min)
+2025-06-13 06:35:40,444 INFO: ULOKOX_clean, uptake: 0.001475
+2025-06-13 06:35:42,722 INFO: 3/9843 completed: UKAZAI_clean took 95.56s | win_avg(3)=92.92s | ETA@30cpus=30477.24s(507.95min)
+2025-06-13 06:35:42,723 INFO: UKAZAI_clean, uptake: 0.000861
+2025-06-13 06:35:44,411 INFO: 4/9843 completed: ULOJUC_clean took 97.17s | win_avg(4)=93.98s | ETA@30cpus=30823.14s(513.72min)
+2025-06-13 06:35:44,411 INFO: ULOJUC_clean, uptake: 0.001406
+2025-06-13 06:35:44,573 INFO: 5/9843 completed: ULOKEN_clean took 97.32s | win_avg(5)=94.65s | ETA@30cpus=31039.04s(517.32min)
+2025-06-13 06:35:44,573 INFO: ULOKEN_clean, uptake: 0.001563
+2025-06-13 06:35:45,053 INFO: 6/9843 completed: ULOJUC01_clean took 97.81s | win_avg(6)=95.18s | ETA@30cpus=31208.47s(520.14min)
+2025-06-13 06:35:45,053 INFO: ULOJUC01_clean, uptake: 0.001209
+2025-06-13 06:35:46,923 INFO: 7/9843 completed: ULOKUD_clean took 99.67s | win_avg(7)=95.82s | ETA@30cpus=31415.60s(523.59min)
+2025-06-13 06:35:46,923 INFO: ULOKUD_clean, uptake: 0.001358
+2025-06-13 06:35:51,264 INFO: 8/9843 completed: ULOLAK_clean took 97.03s | win_avg(8)=95.97s | ETA@30cpus=31461.89s(524.36min)
+2025-06-13 06:35:51,265 INFO: ULOLAK_clean, uptake: 0.001543
+2025-06-13 06:35:51,615 INFO: 9/9843 completed: UKOZOL_clean took 104.45s | win_avg(9)=96.91s | ETA@30cpus=31767.67s(529.46min)
+2025-06-13 06:35:51,615 INFO: UKOZOL_clean, uptake: 0.002505
+2025-06-13 06:35:54,455 INFO: 10/9843 completed: ULOKUD01_clean took 107.17s | win_avg(10)=97.94s | ETA@30cpus=32100.73s(535.01min)
+2025-06-13 06:35:54,456 INFO: ULOKUD01_clean, uptake: 0.001282
+2025-06-13 06:36:11,605 INFO: 11/9843 completed: UMEJUT_clean took 34.41s | win_avg(10)=92.38s | ETA@30cpus=30275.54s(504.59min)
+2025-06-13 06:36:11,605 INFO: UMEJUT_clean, uptake: 0.002917
+2025-06-13 06:36:16,858 INFO: 12/9843 completed: ULOLUE_clean took 115.18s | win_avg(10)=94.58s | ETA@30cpus=30993.10s(516.55min)
+2025-06-13 06:36:16,858 INFO: ULOLUE_clean, uptake: 0.000431
+2025-06-13 06:36:20,374 INFO: 13/9843 completed: ULILEI_clean took 133.14s | win_avg(10)=98.34s | ETA@30cpus=32221.49s(537.02min)
+2025-06-13 06:36:20,375 INFO: ULILEI_clean, uptake: 0.001079
+2025-06-13 06:37:01,494 INFO: 14/9843 completed: UMEKAA_clean took 81.04s | win_avg(10)=96.72s | ETA@30cpus=31689.64s(528.16min)
+2025-06-13 06:37:01,495 INFO: UMEKAA_clean, uptake: 0.002873
+2025-06-13 06:37:30,155 INFO: 15/9843 completed: UMOYOM12_clean took 98.42s | win_avg(10)=96.83s | ETA@30cpus=31722.45s(528.71min)
+2025-06-13 06:37:30,155 INFO: UMOYOM12_clean, uptake: 0.004943
+2025-06-13 06:37:32,594 INFO: 16/9843 completed: UJUMUJ_clean took 205.41s | win_avg(10)=107.59s | ETA@30cpus=35243.89s(587.40min)
+2025-06-13 06:37:32,594 INFO: UJUMUJ_clean, uptake: 0.001177
+2025-06-13 06:37:34,589 INFO: 17/9843 completed: UFEXOT_clean took 207.43s | win_avg(10)=118.37s | ETA@30cpus=38770.01s(646.17min)
+2025-06-13 06:37:34,589 INFO: UFEXOT_clean, uptake: 0.000637
+2025-06-13 06:37:43,452 INFO: 18/9843 completed: UMOYOM01_clean took 118.76s | win_avg(10)=120.54s | ETA@30cpus=39477.79s(657.96min)
+2025-06-13 06:37:43,452 INFO: UMOYOM01_clean, uptake: 0.004904
+2025-06-13 06:37:46,961 INFO: 19/9843 completed: UMOYOM04_clean took 119.92s | win_avg(10)=122.09s | ETA@30cpus=39980.25s(666.34min)
+2025-06-13 06:37:46,961 INFO: UMOYOM04_clean, uptake: 0.005196
+2025-06-13 06:37:49,215 INFO: 20/9843 completed: UMOYOM14_clean took 114.63s | win_avg(10)=122.84s | ETA@30cpus=40220.35s(670.34min)
+2025-06-13 06:37:49,215 INFO: UMOYOM14_clean, uptake: 0.003877
+2025-06-13 06:37:50,116 INFO: 21/9843 completed: UMOYOM02_clean took 124.95s | win_avg(10)=131.89s | ETA@30cpus=43180.65s(719.68min)
+2025-06-13 06:37:50,116 INFO: UMOYOM02_clean, uptake: 0.005077
+2025-06-13 06:37:55,404 INFO: 22/9843 completed: UMOYOM09_clean took 124.02s | win_avg(10)=132.77s | ETA@30cpus=43465.57s(724.43min)
+2025-06-13 06:37:55,404 INFO: UMOYOM09_clean, uptake: 0.005092
+2025-06-13 06:37:59,148 INFO: 23/9843 completed: UMODEH05_clean took 134.61s | win_avg(10)=132.92s | ETA@30cpus=43509.16s(725.15min)
+2025-06-13 06:37:59,148 INFO: UMODEH05_clean, uptake: 0.005442
+2025-06-13 06:38:05,908 INFO: 24/9843 completed: UMOYOM15_clean took 114.12s | win_avg(10)=136.23s | ETA@30cpus=44587.47s(743.12min)
+2025-06-13 06:38:05,908 INFO: UMOYOM15_clean, uptake: 0.003513
+2025-06-13 06:38:09,844 INFO: 25/9843 completed: UMOYOM18_clean took 112.88s | win_avg(10)=137.67s | ETA@30cpus=45056.03s(750.93min)
+2025-06-13 06:38:09,845 INFO: UMOYOM18_clean, uptake: 0.003223
+2025-06-13 06:38:12,571 INFO: 26/9843 completed: UMOYOM19_clean took 112.08s | win_avg(10)=128.34s | ETA@30cpus=41997.33s(699.96min)
+2025-06-13 06:38:12,572 INFO: UMOYOM19_clean, uptake: 0.002956
+2025-06-13 06:38:20,053 INFO: 27/9843 completed: UNIGEE_clean took 36.60s | win_avg(10)=111.26s | ETA@30cpus=36403.33s(606.72min)
+2025-06-13 06:38:20,054 INFO: UNIGEE_clean, uptake: 0.005284
+2025-06-13 06:38:24,411 INFO: 28/9843 completed: UHOHEG_clean took 257.24s | win_avg(10)=125.11s | ETA@30cpus=40930.19s(682.17min)
+2025-06-13 06:38:24,411 INFO: UHOHEG_clean, uptake: 0.000667
+2025-06-13 06:38:40,752 INFO: 29/9843 completed: UTULEB_clean took 34.84s | win_avg(10)=116.60s | ETA@30cpus=38142.83s(635.71min)
+2025-06-13 06:38:40,752 INFO: UTULEB_clean, uptake: 0.001419
+2025-06-13 06:39:03,835 INFO: 30/9843 completed: UMOYOM_clean took 122.22s | win_avg(10)=117.36s | ETA@30cpus=38387.30s(639.79min)
+2025-06-13 06:39:03,835 INFO: UMOYOM_clean, uptake: 0.004746
+2025-06-13 06:39:05,889 INFO: 31/9843 completed: UTEXAT_clean took 66.73s | win_avg(10)=111.53s | ETA@30cpus=36479.13s(607.99min)
+2025-06-13 06:39:05,889 INFO: UTEXAT_clean, uptake: 0.002064
+2025-06-13 06:39:11,646 INFO: 32/9843 completed: UVEXAV_clean took 61.80s | win_avg(10)=105.31s | ETA@30cpus=34440.53s(574.01min)
+2025-06-13 06:39:11,646 INFO: UVEXAV_clean, uptake: 0.001065
