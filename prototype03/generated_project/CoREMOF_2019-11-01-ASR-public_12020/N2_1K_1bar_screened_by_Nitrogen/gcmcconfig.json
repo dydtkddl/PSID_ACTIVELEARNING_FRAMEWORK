@@ -1,0 +1,16 @@
+{
+    "NumberOfCycles": 20000,
+    "NumberOfInitializationCycles": 10000,
+    "PrintEvery": 1000,
+    "UseChargesFromCIFFile": null,
+    "ExternalTemperature": 1.0,
+    "ExternalPressure": 1.0,
+    "Forcefield": "GarciaPerez2006ForceField",
+    "GAS": "N2",
+    "MoleculeDefinition": "ExampleDefinitions",
+    "CUTOFFVDW": 14,
+    "CUTOFFCHARGECHARGE": 14,
+    "CUTOFFCHARGEBONDDIPOLE": 14,
+    "CUTOFFBONDDIPOLEBONDDIPOLE": 14,
+    "RASPA_DIR": "/home/yongsang/PSID_SIMULATION_TOOLS/RASPA"
+}
