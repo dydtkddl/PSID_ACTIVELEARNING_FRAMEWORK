@@ -1,0 +1,4 @@
+*.data
+**/VTK
+**/Movies
+**/low_pressure_gcmc/**/simulation.input
