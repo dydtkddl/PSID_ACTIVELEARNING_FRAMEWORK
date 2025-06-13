@@ -176,32 +176,77 @@ def initial_create(db_path: Path, config_path: Path, base_input: Path, mode: str
     conn.commit()
     conn.close()
     print(f"✅ Added {remaining} new initial inputs (mode={mode}).")
-def initial_run(db_path: Path, config_path: Path, ncpus: int, gcfg : Path):
+def initial_run(db_path: Path, config_path: Path, ncpus: int, gcfg_path: Path, node_map: dict,mof_list:Path):
+    """
+    Run initial GCMC locally or distributed across nodes via SSH using node_map keys.
+    node_map: dict mapping node_name to cpu_count.
+    """
+    import subprocess
+    from pathlib import Path
+    import json
+    import time
+    from collections import deque
+    import concurrent.futures
+
+    # Load database and config
     conn = get_db_connection(db_path)
     df = pd.read_sql(f"SELECT * FROM {TABLE}", conn)
-    cfg = json.loads(config_path.read_text(encoding='utf-8'))
-    gcfg = json.loads(gcfg.read_text(encoding='utf-8'))
+    conn.close()
+    gcfg = json.loads(gcfg_path.read_text(encoding='utf-8'))
     raspa = Path(gcfg['RASPA_DIR'])
-    base_dir = Path("initial_gcmc")
 
-
-    targets = df[(df['initial_sample'] == str(1)) & (df['iteration'].isna())][df.columns[0]].tolist()
-
-    total = len(df[df["initial_sample"] == str(1)])
-    to_run = len(targets)
-    print(f"▶ RUN: {to_run}/{total} pending using {ncpus} CPUs")
-    run_logger.info(f"Start run: {to_run}/{total}, CPUs={ncpus}")
-#    results = Parallel(n_jobs=ncpus)(
- #       delayed(run_simulation)(mof, raspa) for mof in targets
- #   )
-    time.sleep(1)
-    if to_run == 0:
+    # Prepare full target list
+    all_targets = df[(df['initial_sample'] == 1) & (df['iteration'].isna())][df.columns[0]].tolist()
+    total = len(all_targets)
+    if total == 0:
+        print("▶ No pending MOFs to run.")
         return
+
+    # Distributed mode
+    if node_map:
+        total_cpus = sum(node_map.values())
+        assigned = {}
+        start = 0
+        # partition all_targets based on cpu ratios
+        for node, cpus in node_map.items():
+            count = round(total * cpus / total_cpus)
+            assigned[node] = all_targets[start:start+count]
+            start += count
+        # assign any remainder to last node
+        if start < total:
+            last_node = list(node_map.keys())[-1]
+            assigned[last_node] += all_targets[start:]
+
+        procs = []
+        project_dir = Path.cwd()
+        # dispatch SSH commands
+        for node, cpus in node_map.items():
+            mofs = assigned[node]
+            # inline command passes MOF subset via environment var or file
+            list_file = project_dir / f'mofs_{node}.txt'
+            list_file.write_text("\n".join(mofs), encoding='utf-8')
+            ssh_cmd = (
+                f"ssh {node} 'cd {project_dir} && "
+                f"python active_learning_gcmc.py initial_gcmc run "
+                f"--pal_nodes none --ncpus {cpus} --mof_list {list_file}'"
+            )
+            procs.append(subprocess.Popen(ssh_cmd, shell=True))
+        for p in procs:
+            p.wait()
+        print("✅ Distributed initial_run complete.")
+        return
+    # Local mode
+    if mof_list is not None:
+        targets = Path(mof_list).read_text().splitlines()
+    else:
+        targets = all_targets
+    cpus = ncpus
+    print(f"▶ Local   {len(targets)}/{total} MOFs → {cpus} CPUs")
+    run_logger.info(f"Start run: {len(targets)}/{total}, CPUs={cpus}")
+
     recent = deque(maxlen=WINDOW_SIZE)
     done = 0
-
-    import concurrent.futures
-    with concurrent.futures.ThreadPoolExecutor(max_workers=ncpus) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=cpus) as executor:
         futures = {executor.submit(run_simulation, mof, raspa): mof for mof in targets}
         for future in concurrent.futures.as_completed(futures):
             mof = futures[future]
@@ -210,19 +255,17 @@ def initial_run(db_path: Path, config_path: Path, ncpus: int, gcfg : Path):
                 done += 1
                 recent.append(elapsed)
                 win_avg = sum(recent) / len(recent)
-                remain = to_run - done
-                eta_sec = win_avg * remain / ncpus
+                remain = len(targets) - done
+                eta_sec = win_avg * remain / cpus
                 eta_min = eta_sec / 60
-
                 msg = (
-                    f"{done}/{to_run} completed: {mof} took {elapsed:.2f}s | "
+                    f"{done}/{len(targets)} completed: {mof} took {elapsed:.2f}s | "
                     f"win_avg({len(recent)})={win_avg:.2f}s | "
-                    f"ETA@{ncpus}cpus={eta_sec:.2f}s({eta_min:.2f}min)"
+                    f"ETA@{cpus}cpus={eta_sec:.2f}s({eta_min:.2f}min)"
                 )
                 run_logger.info(msg)
                 print(msg)
                 uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
-
                 # update DB
                 conn = get_db_connection(db_path)
                 conn.execute(
@@ -231,12 +274,9 @@ def initial_run(db_path: Path, config_path: Path, ncpus: int, gcfg : Path):
                 )
                 conn.commit()
                 conn.close()
-
             except Exception as e:
                 error_logger.error(f"Error processing {mof}: {e}", exc_info=True)
-    print("✅ Simulations and DB update complete.")
-
-
+    print("✅ Local initial_run complete.")
 
 
 
@@ -408,18 +448,31 @@ def main():
     parser.add_argument('action', nargs='?', default=None)
     parser.add_argument('--initial_mode', default='random')
     parser.add_argument('-n', '--ncpus', type=int, default=1)
+
+    ################################################################################################
+    parser.add_argument('--pal_nodes', type=str, default=None,
+                    help='JSON map of node:cpu_count for distributed run')
+    parser.add_argument('--mof_list', type=Path, default=None,
+                    help='Path to file listing MOFs to run (for distributed or testing)')
+
+    ##################################################################################################
+
     args = parser.parse_args()
 
     dbp = Path('mof_project.db')
     cfg = Path('active_learning_config.json')
     gcfg = Path('gcmcconfig.json')
     binput = Path('base.input')
+    node_map = {}
+    if args.pal_nodes:
+        node_map = json.loads(args.pal_nodes)
+    mof_list = args.mof_list
     print(args.phase) 
     if args.phase == 'initial_gcmc':
         if args.action == 'create':
             initial_create(dbp, cfg, binput, args.initial_mode,gcfg)
         elif args.action == 'run':
-            initial_run(dbp, cfg, args.ncpus, gcfg)
+            initial_run(dbp, cfg, args.ncpus, gcfg, node_map,mof_list)
 
     elif args.phase == 'init_model':
         print("🔧 Placeholder: init_model not implemented yet.")
