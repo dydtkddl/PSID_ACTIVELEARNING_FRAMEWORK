@@ -42,7 +42,13 @@ LOG_FILE = LOG_DIR / f'run_{hostname}.log'
 uptake_log_file = LOG_DIR / f'uptake_{hostname}.log'
 error_log_file = LOG_DIR / f'error_{hostname}.log'
 # Uptake logger (uptake.log)
+# Run logger (run.log)
 run_logger = logging.getLogger('gcmc_run')
+run_handler = logging.FileHandler(LOG_FILE)
+run_handler.setFormatter(logging.Formatter('%(asctime)s %(levelname)s: %(message)s'))
+run_logger.addHandler(run_handler)
+run_logger.setLevel(logging.INFO)
+
 uptake_logger = logging.getLogger('gcmc_uptake')
 uptake_handler = logging.FileHandler(uptake_log_file)
 uptake_handler.setFormatter(logging.Formatter('%(asctime)s %(message)s'))
