@@ -3,7 +3,7 @@
     "initial_fraction" : 0.01,
           "target_fraction" : 0.1,
           "n_samples" : 10,
-          "input_features" :[ "LCD", "PLD", "LFPD", "cm3_g", "ASA_m2_cm3", "ASA_m2_g", "NASA_m2_cm3", "NASA_m2_g", "AV_VF", "AV_cm3_g", "NAV_cm3_g"], ,
+          "input_features" :[ "LCD", "PLD", "LFPD", "cm3_g", "ASA_m2_cm3", "ASA_m2_g", "NASA_m2_cm3", "NASA_m2_g", "AV_VF", "AV_cm3_g", "NAV_cm3_g"], 
           "neural_network": {
             "model_spec" : {
                   "hidden_layers" : [

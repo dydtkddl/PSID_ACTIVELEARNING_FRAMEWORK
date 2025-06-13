@@ -243,6 +243,8 @@ def cmd_run(db_path: Path, config_path: Path, ncpus: int, node_map: dict, mof_li
 
     recent = deque(maxlen=WINDOW_SIZE)
     done = 0
+    batch_updates = []
+    BATCH_SIZE = 40
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=ncpus) as executor:
         futures = {executor.submit(run_simulation, mof, raspa): mof for mof in targets}
@@ -266,21 +268,34 @@ def cmd_run(db_path: Path, config_path: Path, ncpus: int, node_map: dict, mof_li
                 print(msg)
                 uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
 
-                # update DB
-                conn = get_db_connection(db_path)
-                conn.execute(
-                    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, completed=1 "
-                    f"WHERE {df.columns[0]}=?",
-                    (uptake, elapsed, mof)
-                )
-                conn.commit()
-                conn.close()
+                batch_updates.append((uptake, elapsed, mof))
+
+                if len(batch_updates) >= BATCH_SIZE:
+                    conn = get_db_connection(db_path)
+                    conn.executemany(
+                        f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, completed=1 "
+                        f"WHERE {df.columns[0]}=?",
+                        batch_updates
+                    )
+                    conn.commit()
+                    conn.close()
+                    batch_updates.clear()
 
             except Exception as e:
                 error_logger.error(f"Error processing {mof}: {e}", exc_info=True)
 
-    print("✅ Simulations and DB update complete.")
+    # 최종 남은 업데이트 실행
+    if batch_updates:
+        conn = get_db_connection(db_path)
+        conn.executemany(
+            f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, completed=1 "
+            f"WHERE {df.columns[0]}=?",
+            batch_updates
+        )
+        conn.commit()
+        conn.close()
 
+    print("✅ Simulations and DB update complete.")
 def main():
     import argparse
     import json
