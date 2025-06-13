@@ -78,7 +78,11 @@ def get_db_connection(db_path: Path) -> sqlite3.Connection:
 run_logger = logging.getLogger('active_run')
 uptake_logger = logging.getLogger('active_uptake')
 error_logger = logging.getLogger('active_error')
-for logger, name in [(run_logger, 'run.log'), (uptake_logger, 'uptake.log'), (error_logger, 'error.log')]:
+import socket
+hostname = socket.gethostname()
+for logger, name in [(run_logger, f'run_{hostname}.log'),
+                     (uptake_logger, f'uptake_{hostname}.log'),
+                     (error_logger, f'error_{hostname}.log')]:
     handler = logging.FileHandler(LOG_DIR / name)
     fmt = logging.Formatter('%(asctime)s %(levelname)s: %(message)s')
     handler.setFormatter(fmt)

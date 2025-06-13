@@ -35,10 +35,13 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s %(levelname)s: %(message)s'
 )
-run_logger = logging.getLogger('gcmc_run')
+import socket
 
+hostname = socket.gethostname()
+LOG_FILE = LOG_DIR / f'run_{hostname}.log'
+uptake_log_file = LOG_DIR / f'uptake_{hostname}.log'
+error_log_file = LOG_DIR / f'error_{hostname}.log'
 # Uptake logger (uptake.log)
-uptake_log_file = LOG_DIR / 'uptake.log'
 uptake_logger = logging.getLogger('gcmc_uptake')
 uptake_handler = logging.FileHandler(uptake_log_file)
 uptake_handler.setFormatter(logging.Formatter('%(asctime)s %(message)s'))
@@ -46,7 +49,6 @@ uptake_logger.addHandler(uptake_handler)
 uptake_logger.setLevel(logging.INFO)
 
 # Error logger (error.log)
-error_log_file = LOG_DIR / 'error.log'
 error_logger = logging.getLogger('gcmc_error')
 error_handler = logging.FileHandler(error_log_file)
 error_handler.setFormatter(logging.Formatter('%(asctime)s %(levelname)s: %(message)s'))
