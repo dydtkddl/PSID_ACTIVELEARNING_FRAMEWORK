@@ -1,0 +1,54 @@
+2025-06-13 15:33:44,587 INFO: Start run (ga00): 4226/8451, CPUs=28
+2025-06-13 15:34:43,715 INFO: Start run (ga02): 4225/8451, CPUs=28
+2025-06-13 15:35:50,119 INFO: (ga02) 1/4225 completed: JIYXUL_clean took 65.39s | win_avg(1)=65.39s | ETA@28cpus=9864.65s(164.41min)
+2025-06-13 15:35:50,119 INFO: JIYXUL_clean, uptake: 0.002007
+2025-06-13 15:35:57,896 INFO: (ga02) 2/4225 completed: j.inoche.2015.03.054_CIFs_clean took 73.17s | win_avg(2)=69.28s | ETA@28cpus=10448.87s(174.15min)
+2025-06-13 15:35:57,897 INFO: j.inoche.2015.03.054_CIFs_clean, uptake: 0.023427
+2025-06-13 15:36:23,303 INFO: (ga02) 3/4225 completed: JIZJEJ_clean took 98.57s | win_avg(3)=79.04s | ETA@28cpus=11918.37s(198.64min)
+2025-06-13 15:36:23,303 INFO: JIZJEJ_clean, uptake: 0.015062
+2025-06-13 15:36:26,475 INFO: (ga02) 4/4225 completed: JIZJAF_clean took 101.74s | win_avg(4)=84.72s | ETA@28cpus=12770.94s(212.85min)
+2025-06-13 15:36:26,475 INFO: JIZJAF_clean, uptake: 0.015101
+2025-06-13 15:36:37,195 INFO: (ga02) 5/4225 completed: JEJWOL_clean took 112.47s | win_avg(5)=90.27s | ETA@28cpus=13604.49s(226.74min)
+2025-06-13 15:36:37,195 INFO: JEJWOL_clean, uptake: 0.028137
+2025-06-13 15:36:51,588 INFO: (ga02) 6/4225 completed: JIXWUJ02_clean took 126.86s | win_avg(6)=96.37s | ETA@28cpus=14520.29s(242.00min)
+2025-06-13 15:36:51,588 INFO: JIXWUJ02_clean, uptake: 0.014616
+2025-06-13 15:36:53,342 INFO: (ga02) 7/4225 completed: JIZJOT_clean took 128.61s | win_avg(7)=100.97s | ETA@28cpus=15210.65s(253.51min)
+2025-06-13 15:36:53,342 INFO: JIZJOT_clean, uptake: 0.014895
+2025-06-13 15:36:58,505 INFO: (ga02) 8/4225 completed: JIXWUJ_clean took 133.78s | win_avg(8)=105.07s | ETA@28cpus=15824.68s(263.74min)
+2025-06-13 15:36:58,505 INFO: JIXWUJ_clean, uptake: 0.015282
+5b00188_5013797_clean, uptake: 0.031817
+2025-06-13 15:37:00,274 INFO: (ga02) 9/4225 completed: JIXWUJ01_clean took 135.55s | win_avg(9)=108.46s | ETA@28cpus=16330.80s(272.18min)
+2025-06-13 15:37:00,274 INFO: JIXWUJ01_clean, uptake: 0.015170
+2025-06-13 15:37:02,896 INFO: (ga02) 10/4225 completed: JIVSEN_clean took 138.17s | win_avg(10)=111.43s | ETA@28cpus=16774.19s(279.57min)
+2025-06-13 15:37:02,896 INFO: JIVSEN_clean, uptake: 0.013314
+2025-06-13 15:37:04,880 INFO: (ga02) 11/4225 completed: JEWYAM_charged took 140.15s | win_avg(10)=118.91s | ETA@28cpus=17895.36s(298.26min)
+2025-06-13 15:37:04,880 INFO: JEWYAM_charged, uptake: 0.027652
+2025-06-13 15:37:05,077 INFO: (ga02) 12/4225 completed: JISVAJ_clean took 140.35s | win_avg(10)=125.62s | ETA@28cpus=18902.01s(315.03min)
+2025-06-13 15:37:05,077 INFO: JISVAJ_clean, uptake: 0.025491
+2025-06-13 15:37:15,141 INFO: (ga02) 13/4225 completed: JIVFUQ_clean took 150.42s | win_avg(10)=130.81s | ETA@28cpus=19677.54s(327.96min)
+2025-06-13 15:37:15,141 INFO: JIVFUQ_clean, uptake: 0.042939
+cs.inorgchem.6b01762_ic6b01762_si_002_clean, uptake: 0.004373
+2025-06-13 15:37:26,696 INFO: (ga02) 14/4225 completed: JILWIL_clean took 161.97s | win_avg(10)=136.83s | ETA@28cpus=20578.72s(342.98min)
+2025-06-13 15:37:26,696 INFO: JILWIL_clean, uptake: 0.261407
+25-06-13 15:36:18,410 INFO: (ga00) 4/4226 completed: AHUFIU_clean took 152.77s | win_avg(4)=146.21s | ETA@28cpus=22046.55s(367.44min)
+2025-06-13 15:36:18,410 INFO: AHUFIU_clean, uptake: 0.015629
+2025-06-13 15:36:22,626 INFO: (ga00) 5/4226 completed: ADOBIF_clean took 157.02s | win_avg(5)=148.37s | ETA@28cpus=22367.27s(372.79min)
+2025-06-13 15:36:22,626 INFO: ADOBIF_clean, uptake: 0.025144
+2025-06-13 15:37:28,463 INFO: (ga02) 15/4225 completed: j.ica.2016.08.030_3_clean took 163.74s | win_avg(10)=141.96s | ETA@28cpus=21344.67s(355.74min)
+2025-06-13 15:37:28,463 INFO: j.ica.2016.08.030_3_clean, uptake: 0.044815
+2025-06-13 15:37:50,360 INFO: (ga02) 16/4225 completed: JIZJUZ_clean took 120.19s | win_avg(10)=141.29s | ETA@28cpus=21239.37s(353.99min)
+2025-06-13 15:37:50,360 INFO: JIZJUZ_clean, uptake: 0.014469
+2025-06-13 15:37:50,440 INFO: (ga02) 17/4225 completed: JENKET_SL took 185.58s | win_avg(10)=146.99s | ETA@28cpus=22090.64s(368.18min)
+2025-06-13 15:37:50,440 INFO: JENKET_SL, uptake: 0.026653
+583
+2025-06-13 15:36:59,537 INFO: (ga00) 8/4226 completed: acs.inorgchem.6b01211_ic6b01211_si_002_clean took 193.90s | win_avg(8)=161.16s | ETA@28cpus=24278.01s(404.63min)
+2025-06-13 15:36:59,537 INFO: acs.inorgchem.6b01211_ic6b01211_si_002_clean, uptake: 0.050770
+2025-06-13 15:37:04,345 INFO: (ga00) 9/4226 completed: acs.chemmater.5b03723_cm5b03723_si_005_clean took 198.48s | win_avg(9)=165.31s | ETA@28cpus=24896.74s(414.95min)
+2025-06-13 15:37:04,345 INFO: acs.chemmater.5b03723_cm5b03723_si_005_clean, uptake: 0.054194
+2025-06-13 15:37:21,938 INFO: (ga00) 10/4226 completed: acs.cgd.5b01554_VAGNUP1452791_clean took 216.32s | win_avg(10)=170.41s | ETA@28cpus=25658.88s(427.65min)
+2025-06-13 15:37:21,938 INFO: acs.cgd.5b01554_VAGNUP1452791_clean, uptake: 0.012124
+2025-06-13 15:37:45,880 INFO: (ga00) 11/4226 completed: acscombsci.5b00188_34903_clean took 240.29s | win_avg(10)=181.04s | ETA@28cpus=27253.05s(454.22min)
+2025-06-13 15:37:45,880 INFO: acscombsci.5b00188_34903_clean, uptake: 0.171629
+2025-06-13 15:37:48,394 INFO: (ga00) 12/4226 completed: AFEKAX_clean took 242.80s | win_avg(10)=190.69s | ETA@28cpus=28698.80s(478.31min)
+2025-06-13 15:37:48,394 INFO: AFEKAX_clean, uptake: 0.112281
+2025-06-13 15:39:18,174 INFO: Start run (ga02): 8422/8451, CPUs=28

@@ -187,6 +187,9 @@ def initial_run(db_path: Path, config_path: Path, ncpus: int, gcfg_path: Path, n
     import time
     from collections import deque
     import concurrent.futures
+    import socket
+    hostname = socket.gethostname()
+
 
     # Load database and config
     conn = get_db_connection(db_path)
@@ -196,7 +199,7 @@ def initial_run(db_path: Path, config_path: Path, ncpus: int, gcfg_path: Path, n
     raspa = Path(gcfg['RASPA_DIR'])
 
     # Prepare full target list
-    all_targets = df[(df['initial_sample'] == 1) & (df['iteration'].isna())][df.columns[0]].tolist()
+    all_targets = df[(df['initial_sample'] == str(1)) & (df['iteration'].isna())][df.columns[0]].tolist()
     total = len(all_targets)
     if total == 0:
         print("▶ No pending MOFs to run.")
@@ -242,7 +245,7 @@ def initial_run(db_path: Path, config_path: Path, ncpus: int, gcfg_path: Path, n
         targets = all_targets
     cpus = ncpus
     print(f"▶ Local   {len(targets)}/{total} MOFs → {cpus} CPUs")
-    run_logger.info(f"Start run: {len(targets)}/{total}, CPUs={cpus}")
+    run_logger.info(f"Start run ({hostname}): {len(targets)}/{total}, CPUs={cpus}")
 
     recent = deque(maxlen=WINDOW_SIZE)
     done = 0
@@ -259,7 +262,7 @@ def initial_run(db_path: Path, config_path: Path, ncpus: int, gcfg_path: Path, n
                 eta_sec = win_avg * remain / cpus
                 eta_min = eta_sec / 60
                 msg = (
-                    f"{done}/{len(targets)} completed: {mof} took {elapsed:.2f}s | "
+                    f"({hostname}) {done}/{len(targets)} completed: {mof} took {elapsed:.2f}s | "
                     f"win_avg({len(recent)})={win_avg:.2f}s | "
                     f"ETA@{cpus}cpus={eta_sec:.2f}s({eta_min:.2f}min)"
                 )
@@ -464,8 +467,10 @@ def main():
     gcfg = Path('gcmcconfig.json')
     binput = Path('base.input')
     node_map = {}
-    if args.pal_nodes:
+    if args.pal_nodes and args.pal_nodes.lower() != "none":
         node_map = json.loads(args.pal_nodes)
+    else:   
+        node_map = {}
     mof_list = args.mof_list
     print(args.phase) 
     if args.phase == 'initial_gcmc':

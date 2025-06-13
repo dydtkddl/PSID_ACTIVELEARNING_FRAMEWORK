@@ -282,26 +282,31 @@ def cmd_run(db_path: Path, config_path: Path, ncpus: int, node_map: dict, mof_li
     print("✅ Simulations and DB update complete.")
 
 def main():
+    import argparse
+    import json
+    from pathlib import Path
+
     parser = argparse.ArgumentParser()
     sp = parser.add_subparsers(dest='cmd', required=True)
+
     c = sp.add_parser('create', help='Generate simulation inputs')
     c.add_argument('-n', '--ncpus', type=int, default=1)
+
     r = sp.add_parser('run', help='Run simulations and update DB')
     r.add_argument('-n', '--ncpus', type=int, default=1)
+    r.add_argument('--pal_nodes', type=str, default=None,
+                  help='JSON map of node:cpu_count for distributed run')
+    r.add_argument('--mof_list', type=Path, default=None,
+                  help='Path to file listing MOFs to run (for distributed or testing)')
 
-    ################################################################################################
-    parser.add_argument('--pal_nodes', type=str, default=None,
-                    help='JSON map of node:cpu_count for distributed run')
-    parser.add_argument('--mof_list', type=Path, default=None,
-                    help='Path to file listing MOFs to run (for distributed or testing)')
-    node_map = {}
-    if args.pal_nodes and args.pal_nodes.lower() != "none":
-        node_map = json.loads(args.pal_nodes)
-    else:   
-        node_map = {}
-    mof_list = args.mof_list
-    ##################################################################################################
     args = parser.parse_args()
+
+    node_map = {}
+    if hasattr(args, 'pal_nodes') and args.pal_nodes and args.pal_nodes.lower() != "none":
+        node_map = json.loads(args.pal_nodes)
+
+    mof_list = getattr(args, 'mof_list', None)
+
     base = Path.cwd()
     dbp = base / 'mof_project.db'
     cfg = base / 'gcmcconfig.json'
@@ -310,8 +315,7 @@ def main():
     if args.cmd == 'create':
         cmd_create(dbp, cfg, binput, args.ncpus)
     else:
-        cmd_run(dbp, cfg, args.ncpus,node_map,mof_list)
-
+        cmd_run(dbp, cfg, args.ncpus, node_map, mof_list)
 
 if __name__ == '__main__':
     main()
