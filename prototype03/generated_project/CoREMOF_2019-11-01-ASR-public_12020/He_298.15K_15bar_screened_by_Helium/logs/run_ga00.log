@@ -12,3 +12,26 @@
 2025-06-13 17:08:44,950 INFO: (ga00) 11/28 completed: ZOXTOX_clean took 117.98s | win_avg(10)=110.87s | ETA@30cpus=62.83s(1.05min)
 2025-06-13 17:08:45,187 INFO: (ga00) 12/28 completed: ZOTKAW_clean took 118.43s | win_avg(10)=112.54s | ETA@30cpus=60.02s(1.00min)
 2025-06-13 17:08:45,392 INFO: (ga00) 13/28 completed: ZOXVEP_clean took 118.46s | win_avg(10)=114.19s | ETA@30cpus=57.10s(0.95min)
+2025-06-13 21:09:10,363 INFO: Start run (ga00): 2/11211, CPUs=1
+2025-06-13 21:09:35,057 INFO: Start run (ga00): 2/11211, CPUs=2
+2025-06-13 21:11:21,936 INFO: Start run (ga00): 2/11211, CPUs=2
+2025-06-13 21:11:47,011 INFO: Start run (ga00): 2/11211, CPUs=2
+2025-06-13 23:20:39,515 INFO: Start run (ga00): 2/11211, CPUs=2
+2025-06-13 23:20:47,295 INFO: (ga00) 1/2 completed: FEKBED_clean took 6.78s | win_avg(1)=6.78s | ETA@2cpus=3.39s(0.06min)
+2025-06-13 23:20:54,548 INFO: (ga00) 2/2 completed: RUBLEH_clean took 14.03s | win_avg(2)=10.41s | ETA@2cpus=0.00s(0.00min)
+2025-06-13 23:21:00,277 INFO: Start run (ga00): 2/11211, CPUs=2
+2025-06-13 23:21:07,860 INFO: (ga00) 1/2 completed: FEKBED_clean took 6.58s | win_avg(1)=6.58s | ETA@2cpus=3.29s(0.05min)
+2025-06-13 23:21:15,479 INFO: (ga00) 2/2 completed: RUBLEH_clean took 14.20s | win_avg(2)=10.39s | ETA@2cpus=0.00s(0.00min)
+2025-06-13 23:21:31,657 INFO: Start run (ga00): 2/11211, CPUs=2
+2025-06-13 23:21:49,672 INFO: Start run (ga00): 2/11211, CPUs=2
+2025-06-13 23:22:51,791 INFO: Start run (ga00): 2/11211, CPUs=2
+2025-06-13 23:24:03,665 INFO: Start run (ga00): 2/11211, CPUs=2
+2025-06-13 23:26:09,514 INFO: Start run (ga00): 2/11211, CPUs=2
+2025-06-13 23:26:17,016 INFO: (ga00) 1/2 completed: FEKBED_clean took 6.50s | win_avg(1)=6.50s | ETA@2cpus=3.25s(0.05min)
+2025-06-13 23:26:24,482 INFO: (ga00) 2/2 completed: RUBLEH_clean took 13.97s | win_avg(2)=10.23s | ETA@2cpus=0.00s(0.00min)
+2025-06-13 23:26:26,028 INFO: Start run (ga00): 2/11211, CPUs=2
+2025-06-13 23:26:33,868 INFO: (ga00) 1/2 completed: FEKBED_clean took 6.84s | win_avg(1)=6.84s | ETA@2cpus=3.42s(0.06min)
+2025-06-13 23:26:41,222 INFO: (ga00) 2/2 completed: RUBLEH_clean took 14.19s | win_avg(2)=10.52s | ETA@2cpus=0.00s(0.00min)
+2025-06-13 23:31:29,159 INFO: Start run (ga00): 2/11211, CPUs=2
+2025-06-13 23:31:36,903 INFO: (ga00) 1/2 completed: FEKBED_clean took 6.74s | win_avg(1)=6.74s | ETA@2cpus=3.37s(0.06min)
+2025-06-13 23:31:44,104 INFO: (ga00) 2/2 completed: RUBLEH_clean took 13.94s | win_avg(2)=10.34s | ETA@2cpus=0.00s(0.00min)
