@@ -294,6 +294,7 @@ def main():
                     help='JSON map of node:cpu_count for distributed run')
     parser.add_argument('--mof_list', type=Path, default=None,
                     help='Path to file listing MOFs to run (for distributed or testing)')
+    args = parser.parse_args()
     node_map = {}
     if args.pal_nodes and args.pal_nodes.lower() != "none":
         node_map = json.loads(args.pal_nodes)
@@ -301,7 +302,6 @@ def main():
         node_map = {}
     mof_list = args.mof_list
     ##################################################################################################
-    args = parser.parse_args()
     base = Path.cwd()
     dbp = base / 'mof_project.db'
     cfg = base / 'gcmcconfig.json'
