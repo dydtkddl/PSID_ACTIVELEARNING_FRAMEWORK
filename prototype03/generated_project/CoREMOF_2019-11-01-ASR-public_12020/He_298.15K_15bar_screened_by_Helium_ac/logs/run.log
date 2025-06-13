@@ -340,3 +340,5 @@
 2025-06-13 07:16:50,634 INFO: 110/112 completed: YATDUV_clean took 2.96s | win_avg(10)=3.49s | ETA@10cpus=0.70s(0.01min)
 2025-06-13 07:16:54,184 INFO: 111/112 completed: YINDOQ_clean took 6.49s | win_avg(10)=3.78s | ETA@10cpus=0.38s(0.01min)
 2025-06-13 07:16:56,437 INFO: 112/112 completed: UHUPOD01_clean took 14.69s | win_avg(10)=4.69s | ETA@10cpus=0.00s(0.00min)
+2025-06-13 13:03:24,655 INFO: Start run: 112/112, CPUs=30
+2025-06-13 13:07:11,165 INFO: Start run: 112/112, CPUs=30
