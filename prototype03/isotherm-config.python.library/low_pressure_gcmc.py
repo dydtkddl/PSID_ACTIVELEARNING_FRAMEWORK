@@ -144,18 +144,31 @@ def parse_output(mof_dir: Path) -> dict:
 def run_simulation(mof: str, raspa_dir: Path):
     """
     Run RASPA simulate and return uptake and elapsed time.
+    If failed (e.g., core dump), return uptake = None and log the error.
     """
     d = Path('low_pressure_gcmc') / mof
     start = time.time()
-    subprocess.run(
+    result = subprocess.run(
         f"{raspa_dir}/bin/simulate simulation.input",
-        shell=True, cwd=d, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+        shell=True, cwd=d,
+        stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, text=True
     )
     elapsed = time.time() - start
-    uptake = parse_output(d)["Average loading absolute [mol/kg framework]"]
+
+    uptake = None
+    if result.returncode != 0:
+        stderr_output = result.stderr.strip()
+        if "core dumped" in stderr_output.lower() or "malloc(): corrupted" in stderr_output.lower():
+            error_logger.error(f"[CORE DUMP] Simulation failed for {mof}: {stderr_output}")
+        else:
+            error_logger.error(f"Simulation failed for {mof} (code={result.returncode}): {stderr_output}")
+    else:
+        # try:
+        uptake = parse_output(d)["Average loading absolute [mol/kg framework]"]
+        # except Exception as e:
+        #     error_logger.error(f"Failed to parse output for {mof}: {e}", exc_info=True)
+        #     uptake = None
     return mof, uptake, elapsed
-
-
 def cmd_create(db_path: Path, config_path: Path, base_input: Path, ncpus: int):
     conn = get_db_connection(db_path)
     df = pd.read_sql(f"SELECT * FROM {TABLE}", conn)
@@ -275,16 +288,20 @@ def cmd_run(db_path: Path, config_path: Path, ncpus: int, node_map: dict, mof_li
                 )
                 run_logger.info(msg)
                 print(msg)
-                uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
 
-                batch_updates.append((uptake, elapsed, mof))
+                if uptake is not None:
+                    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                    batch_updates.append((uptake, elapsed, mof, 1))
+                else:
+                    error_logger.error(f"{mof} failed, saving as -1")
+                    batch_updates.append((-1, -1, mof, -1))
 
                 if len(batch_updates) >= BATCH_SIZE:
                     conn = get_db_connection(db_path)
                     conn.executemany(
-                        f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, completed=1 "
+                        f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, completed=? "
                         f"WHERE {df.columns[0]}=?",
-                        batch_updates
+                        [(u, t, c, m) for (u, t, m, c) in batch_updates]
                     )
                     conn.commit()
                     conn.close()
