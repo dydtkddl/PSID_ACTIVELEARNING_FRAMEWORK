@@ -35,10 +35,20 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s %(levelname)s: %(message)s'
 )
-run_logger = logging.getLogger('gcmc_run')
+import socket
 
+hostname = socket.gethostname()
+LOG_FILE = LOG_DIR / f'run_{hostname}.log'
+uptake_log_file = LOG_DIR / f'uptake_{hostname}.log'
+error_log_file = LOG_DIR / f'error_{hostname}.log'
 # Uptake logger (uptake.log)
-uptake_log_file = LOG_DIR / 'uptake.log'
+# Run logger (run.log)
+run_logger = logging.getLogger('gcmc_run')
+run_handler = logging.FileHandler(LOG_FILE)
+run_handler.setFormatter(logging.Formatter('%(asctime)s %(levelname)s: %(message)s'))
+run_logger.addHandler(run_handler)
+run_logger.setLevel(logging.INFO)
+
 uptake_logger = logging.getLogger('gcmc_uptake')
 uptake_handler = logging.FileHandler(uptake_log_file)
 uptake_handler.setFormatter(logging.Formatter('%(asctime)s %(message)s'))
@@ -46,7 +56,6 @@ uptake_logger.addHandler(uptake_handler)
 uptake_logger.setLevel(logging.INFO)
 
 # Error logger (error.log)
-error_log_file = LOG_DIR / 'error.log'
 error_logger = logging.getLogger('gcmc_error')
 error_handler = logging.FileHandler(error_log_file)
 error_handler.setFormatter(logging.Formatter('%(asctime)s %(levelname)s: %(message)s'))
@@ -167,29 +176,87 @@ def cmd_create(db_path: Path, config_path: Path, base_input: Path, ncpus: int):
     print("✅ Input generation complete.")
 
 
-def cmd_run(db_path: Path, config_path: Path, ncpus: int):
-    conn0 = get_db_connection(db_path)
-    df = pd.read_sql(f"SELECT * FROM {TABLE}", conn0)
-    conn0.close()
+def cmd_run(db_path: Path, config_path: Path, ncpus: int, node_map: dict, mof_list: Path):
+    """
+    Run GCMC simulations either locally or in distributed mode.
+    node_map: dict mapping node_name to cpu_count.
+    """
+    import subprocess
+    from pathlib import Path
+    import json
+    import time
+    from collections import deque
+    import concurrent.futures
+    import socket
 
-    first_col = df.columns[0]
-    raspa = Path(json.loads(config_path.read_text(encoding='utf-8'))['RASPA_DIR'])
-    pend = df[df['completed'].isna()][first_col].astype(str).tolist()
+    hostname = socket.gethostname()
+
+    # Load database and config
+    conn = get_db_connection(db_path)
+    df = pd.read_sql(f"SELECT * FROM {TABLE}", conn)
+    conn.close()
+    gcfg = json.loads(config_path.read_text(encoding='utf-8'))
+    raspa = Path(gcfg['RASPA_DIR'])
+
+    # Prepare full target list
+    all_targets = df[df['completed'].isna()][df.columns[0]].astype(str).tolist()
+
+    if not all_targets:
+        print(f"▶ No pending MOFs to run .")
+        return
+
+    # Distributed mode
+    if node_map:
+        total_cpus = sum(node_map.values())
+        assigned = {}
+        start = 0
+        for node, cpus in node_map.items():
+            count = round(len(all_targets) * cpus / total_cpus)
+            assigned[node] = all_targets[start:start + count]
+            start += count
+        if start < len(all_targets):
+            last_node = list(node_map.keys())[-1]
+            assigned[last_node] += all_targets[start:]
+
+        procs = []
+        project_dir = Path.cwd()
+        for node, cpus in node_map.items():
+            mofs = assigned[node]
+            list_file = project_dir / f'mofs_{node}.txt'
+            list_file.write_text("\n".join(mofs), encoding='utf-8')
+            ssh_cmd = (
+                f"ssh {node} 'cd {project_dir} && "
+                f"python low_pressure_gcmc.py run "
+                f"--pal_nodes none --ncpus {cpus} --mof_list {list_file}'"
+            )
+            procs.append(subprocess.Popen(ssh_cmd, shell=True))
+        for p in procs:
+            p.wait()
+        print("✅ Distributed run complete.")
+        return
+
+    # Local mode
+    if mof_list is not None:
+        targets = Path(mof_list).read_text().splitlines()
+    else:
+        targets = all_targets
+
     total = len(df)
-    to_run = len(pend)
+    to_run = len(targets)
 
-    print(f"▶ RUN: {to_run}/{total} pending using {ncpus} CPUs")
-    run_logger.info(f"Start run: {to_run}/{total}, CPUs={ncpus}")
+    print(f"▶ RUN ({hostname}): {to_run}/{total} pending using {ncpus} CPUs")
+    run_logger.info(f"Start run ({hostname}): {to_run}/{total}, CPUs={ncpus}")
     time.sleep(1)
     if to_run == 0:
         return
 
     recent = deque(maxlen=WINDOW_SIZE)
     done = 0
+    batch_updates = []
+    BATCH_SIZE = 40
 
-    import concurrent.futures
     with concurrent.futures.ThreadPoolExecutor(max_workers=ncpus) as executor:
-        futures = {executor.submit(run_simulation, mof, raspa): mof for mof in pend}
+        futures = {executor.submit(run_simulation, mof, raspa): mof for mof in targets}
         for future in concurrent.futures.as_completed(futures):
             mof = futures[future]
             try:
@@ -202,7 +269,7 @@ def cmd_run(db_path: Path, config_path: Path, ncpus: int):
                 eta_min = eta_sec / 60
 
                 msg = (
-                    f"{done}/{to_run} completed: {mof} took {elapsed:.2f}s | "
+                    f"({hostname}) {done}/{to_run} completed: {mof} took {elapsed:.2f}s | "
                     f"win_avg({len(recent)})={win_avg:.2f}s | "
                     f"ETA@{ncpus}cpus={eta_sec:.2f}s({eta_min:.2f}min)"
                 )
@@ -210,30 +277,60 @@ def cmd_run(db_path: Path, config_path: Path, ncpus: int):
                 print(msg)
                 uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
 
-                # update DB
-                conn = get_db_connection(db_path)
-                conn.execute(
-                    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, completed=1 "
-                    f"WHERE {first_col}=?",
-                    (uptake, elapsed, mof)
-                )
-                conn.commit()
-                conn.close()
+                batch_updates.append((uptake, elapsed, mof))
+
+                if len(batch_updates) >= BATCH_SIZE:
+                    conn = get_db_connection(db_path)
+                    conn.executemany(
+                        f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, completed=1 "
+                        f"WHERE {df.columns[0]}=?",
+                        batch_updates
+                    )
+                    conn.commit()
+                    conn.close()
+                    batch_updates.clear()
 
             except Exception as e:
                 error_logger.error(f"Error processing {mof}: {e}", exc_info=True)
+
+    # 최종 남은 업데이트 실행
+    if batch_updates:
+        conn = get_db_connection(db_path)
+        conn.executemany(
+            f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, completed=1 "
+            f"WHERE {df.columns[0]}=?",
+            batch_updates
+        )
+        conn.commit()
+        conn.close()
+
     print("✅ Simulations and DB update complete.")
-
-
 def main():
+    import argparse
+    import json
+    from pathlib import Path
+
     parser = argparse.ArgumentParser()
     sp = parser.add_subparsers(dest='cmd', required=True)
+
     c = sp.add_parser('create', help='Generate simulation inputs')
     c.add_argument('-n', '--ncpus', type=int, default=1)
+
     r = sp.add_parser('run', help='Run simulations and update DB')
     r.add_argument('-n', '--ncpus', type=int, default=1)
+    r.add_argument('--pal_nodes', type=str, default=None,
+                  help='JSON map of node:cpu_count for distributed run')
+    r.add_argument('--mof_list', type=Path, default=None,
+                  help='Path to file listing MOFs to run (for distributed or testing)')
 
     args = parser.parse_args()
+
+    node_map = {}
+    if hasattr(args, 'pal_nodes') and args.pal_nodes and args.pal_nodes.lower() != "none":
+        node_map = json.loads(args.pal_nodes)
+
+    mof_list = getattr(args, 'mof_list', None)
+
     base = Path.cwd()
     dbp = base / 'mof_project.db'
     cfg = base / 'gcmcconfig.json'
@@ -242,8 +339,7 @@ def main():
     if args.cmd == 'create':
         cmd_create(dbp, cfg, binput, args.ncpus)
     else:
-        cmd_run(dbp, cfg, args.ncpus)
-
+        cmd_run(dbp, cfg, args.ncpus, node_map, mof_list)
 
 if __name__ == '__main__':
     main()
