@@ -125,7 +125,7 @@ def main():
     cifs     = [Path(x).stem for x in os.listdir(cif_path) if x.endswith('.cif')]
     missing  = len(screened) - sum(screened.iloc[:, 0].isin(cifs))
     if missing:
-        print(f">> error : 스크리닝된 {len(screened)}개의 MOF 중 {missing}개의 CIF가 존재하지 않습니다.")
+        print(f">> error : 스크리닝된 {len(screened)}개의 MOF 중 {missing}개의 CIF가{cif_path}에  존재하지 않습니다.")
         sys.exit(1)
 
     # 데이터프레임 구조화
