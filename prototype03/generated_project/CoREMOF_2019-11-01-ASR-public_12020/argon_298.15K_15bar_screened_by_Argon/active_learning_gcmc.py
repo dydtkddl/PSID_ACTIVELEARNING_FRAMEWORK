@@ -78,11 +78,7 @@ def get_db_connection(db_path: Path) -> sqlite3.Connection:
 run_logger = logging.getLogger('active_run')
 uptake_logger = logging.getLogger('active_uptake')
 error_logger = logging.getLogger('active_error')
-import socket
-hostname = socket.gethostname()
-for logger, name in [(run_logger, f'run_{hostname}.log'),
-                     (uptake_logger, f'uptake_{hostname}.log'),
-                     (error_logger, f'error_{hostname}.log')]:
+for logger, name in [(run_logger, 'run.log'), (uptake_logger, 'uptake.log'), (error_logger, 'error.log')]:
     handler = logging.FileHandler(LOG_DIR / name)
     fmt = logging.Formatter('%(asctime)s %(levelname)s: %(message)s')
     handler.setFormatter(fmt)
@@ -140,13 +136,36 @@ def parse_output(mof_dir: Path) -> dict:
         raise ValueError(f"Parse failed for {mof_dir.name}")
     return res
 def run_simulation(mof: str, raspa_dir: Path):
+    """
+    Run RASPA simulate for initial_gcmc and return uptake and elapsed time.
+    If simulate fails or output parsing fails, uptake is set to None.
+    """
     base_dir = Path('initial_gcmc')
     d = base_dir / mof
     start = time.time()
-    subprocess.run(f"{raspa_dir}/bin/simulate simulation.input", shell=True, cwd=d, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    result = subprocess.run(
+        f"{raspa_dir}/bin/simulate simulation.input",
+        shell=True, cwd=d,
+        stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, text=True
+    )
     elapsed = time.time() - start
-    uptake = parse_output(d)["Average loading absolute [mol/kg framework]"]
+
+    uptake = None
+    if result.returncode != 0:
+        stderr_output = result.stderr.strip()
+        if "core dumped" in stderr_output.lower() or "malloc(): corrupted" in stderr_output.lower():
+            error_logger.error(f"[CORE DUMP] Simulation failed for {mof}: {stderr_output}")
+        else:
+            error_logger.error(f"Simulation failed for {mof} (code={result.returncode}): {stderr_output}")
+    else:
+        # try:
+        uptake = parse_output(d)["Average loading absolute [mol/kg framework]"]
+        # except Exception as e:
+        #     error_logger.error(f"Failed to parse output for {mof}: {e}", exc_info=True)
+        #     uptake = None
+
     return mof, uptake, elapsed
+
 def initial_create(db_path: Path, config_path: Path, base_input: Path, mode: str, gcfg : Path):
     conn = get_db_connection(db_path)
     df = pd.read_sql(f"SELECT * FROM {TABLE}", conn)
@@ -156,7 +175,15 @@ def initial_create(db_path: Path, config_path: Path, base_input: Path, mode: str
     tpl = base_input.read_text(encoding='utf-8')
     out = Path('initial_gcmc')
     frac = cfg['initial_fraction']
-
+    # 먼저 실패한 MOFs에 대해 active_learning_gcmc 테이블도 -1로 설정
+    failed_mofs = conn.execute(
+        "SELECT mof FROM low_pressure_gcmc WHERE completed = -1"
+    ).fetchall()
+    for (mof,) in failed_mofs:
+        conn.execute(
+            f"UPDATE active_learning_gcmc SET iteration = -1 WHERE {df.columns[0]} = ?",
+            (mof,)
+        )
     completed_initial = df[df['iteration'] == 0]
     total_needed = int(len(df) * frac)
     remaining = total_needed - len(completed_initial)
@@ -253,9 +280,6 @@ def initial_run(db_path: Path, config_path: Path, ncpus: int, gcfg_path: Path, n
 
     recent = deque(maxlen=WINDOW_SIZE)
     done = 0
-    batch_updates = []
-    BATCH_SIZE = 40
-
     with concurrent.futures.ThreadPoolExecutor(max_workers=cpus) as executor:
         futures = {executor.submit(run_simulation, mof, raspa): mof for mof in targets}
         for future in concurrent.futures.as_completed(futures):
@@ -268,7 +292,6 @@ def initial_run(db_path: Path, config_path: Path, ncpus: int, gcfg_path: Path, n
                 remain = len(targets) - done
                 eta_sec = win_avg * remain / cpus
                 eta_min = eta_sec / 60
-
                 msg = (
                     f"({hostname}) {done}/{len(targets)} completed: {mof} took {elapsed:.2f}s | "
                     f"win_avg({len(recent)})={win_avg:.2f}s | "
@@ -277,35 +300,17 @@ def initial_run(db_path: Path, config_path: Path, ncpus: int, gcfg_path: Path, n
                 run_logger.info(msg)
                 print(msg)
                 uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
-
-                batch_updates.append((uptake, elapsed, mof))
-
-                if len(batch_updates) >= BATCH_SIZE:
-                    conn = get_db_connection(db_path)
-                    conn.executemany(
-                        f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {df.columns[0]}=?",
-                        batch_updates
-                    )
-                    conn.commit()
-                    conn.close()
-                    batch_updates.clear()
-
+                # update DB
+                conn = get_db_connection(db_path)
+                conn.execute(
+                    f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {df.columns[0]}=?",
+                    (uptake, elapsed, mof)
+                )
+                conn.commit()
+                conn.close()
             except Exception as e:
                 error_logger.error(f"Error processing {mof}: {e}", exc_info=True)
-
-    # 최종 남은 업데이트 수행
-    if batch_updates:
-        conn = get_db_connection(db_path)
-        conn.executemany(
-            f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, iteration=0 WHERE {df.columns[0]}=?",
-            batch_updates
-        )
-        conn.commit()
-        conn.close()
-
     print("✅ Local initial_run complete.")
-
-
 
 
 

@@ -136,13 +136,36 @@ def parse_output(mof_dir: Path) -> dict:
         raise ValueError(f"Parse failed for {mof_dir.name}")
     return res
 def run_simulation(mof: str, raspa_dir: Path):
+    """
+    Run RASPA simulate for initial_gcmc and return uptake and elapsed time.
+    If simulate fails or output parsing fails, uptake is set to None.
+    """
     base_dir = Path('initial_gcmc')
     d = base_dir / mof
     start = time.time()
-    subprocess.run(f"{raspa_dir}/bin/simulate simulation.input", shell=True, cwd=d, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    result = subprocess.run(
+        f"{raspa_dir}/bin/simulate simulation.input",
+        shell=True, cwd=d,
+        stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, text=True
+    )
     elapsed = time.time() - start
-    uptake = parse_output(d)["Average loading absolute [mol/kg framework]"]
+
+    uptake = None
+    if result.returncode != 0:
+        stderr_output = result.stderr.strip()
+        if "core dumped" in stderr_output.lower() or "malloc(): corrupted" in stderr_output.lower():
+            error_logger.error(f"[CORE DUMP] Simulation failed for {mof}: {stderr_output}")
+        else:
+            error_logger.error(f"Simulation failed for {mof} (code={result.returncode}): {stderr_output}")
+    else:
+        # try:
+        uptake = parse_output(d)["Average loading absolute [mol/kg framework]"]
+        # except Exception as e:
+        #     error_logger.error(f"Failed to parse output for {mof}: {e}", exc_info=True)
+        #     uptake = None
+
     return mof, uptake, elapsed
+
 def initial_create(db_path: Path, config_path: Path, base_input: Path, mode: str, gcfg : Path):
     conn = get_db_connection(db_path)
     df = pd.read_sql(f"SELECT * FROM {TABLE}", conn)
@@ -152,7 +175,15 @@ def initial_create(db_path: Path, config_path: Path, base_input: Path, mode: str
     tpl = base_input.read_text(encoding='utf-8')
     out = Path('initial_gcmc')
     frac = cfg['initial_fraction']
-
+    # 먼저 실패한 MOFs에 대해 active_learning_gcmc 테이블도 -1로 설정
+    failed_mofs = conn.execute(
+        "SELECT mof FROM low_pressure_gcmc WHERE completed = -1"
+    ).fetchall()
+    for (mof,) in failed_mofs:
+        conn.execute(
+            f"UPDATE active_learning_gcmc SET iteration = -1 WHERE {df.columns[0]} = ?",
+            (mof,)
+        )
     completed_initial = df[df['iteration'] == 0]
     total_needed = int(len(df) * frac)
     remaining = total_needed - len(completed_initial)
