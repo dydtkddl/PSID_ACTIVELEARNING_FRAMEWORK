@@ -196,7 +196,7 @@ def initial_run(db_path: Path, config_path: Path, ncpus: int, gcfg_path: Path, n
     raspa = Path(gcfg['RASPA_DIR'])
 
     # Prepare full target list
-    all_targets = df[(df['initial_sample'] == 1) & (df['iteration'].isna())][df.columns[0]].tolist()
+    all_targets = df[(df['initial_sample'] == str(1)) & (df['iteration'].isna())][df.columns[0]].tolist()
     total = len(all_targets)
     if total == 0:
         print("▶ No pending MOFs to run.")
