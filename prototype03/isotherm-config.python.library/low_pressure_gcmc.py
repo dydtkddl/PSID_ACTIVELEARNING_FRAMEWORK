@@ -303,6 +303,7 @@ def cmd_run(db_path: Path, config_path: Path, ncpus: int, node_map: dict, mof_li
                         f"WHERE {df.columns[0]}=?",
                         [(u, t, c, m) for (u, t, m, c) in batch_updates]
                     )
+
                     conn.commit()
                     conn.close()
                     batch_updates.clear()
@@ -314,14 +315,13 @@ def cmd_run(db_path: Path, config_path: Path, ncpus: int, node_map: dict, mof_li
     if batch_updates:
         conn = get_db_connection(db_path)
         conn.executemany(
-            f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, completed=1 "
+            f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, completed=? "
             f"WHERE {df.columns[0]}=?",
-            batch_updates
+            [(u, t, c, m) for (u, t, m, c) in batch_updates]
         )
         conn.commit()
         conn.close()
-
-    print("✅ Simulations and DB update complete.")
+        print("✅ Simulations and DB update complete.")
 def main():
     import argparse
     import json
