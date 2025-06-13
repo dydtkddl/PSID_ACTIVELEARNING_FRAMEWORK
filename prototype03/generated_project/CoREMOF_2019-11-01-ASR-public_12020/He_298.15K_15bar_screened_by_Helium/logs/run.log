@@ -9063,3 +9063,258 @@ FileNotFoundError: No .data file in low_pressure_gcmc/RUBLEH_clean/Output/System
 2025-06-13 14:17:12,139 INFO: ROQMER_clean, uptake: 0.001182
 2025-06-13 14:17:15,864 INFO: 742/3497 completed: RORLIV_clean took 49.94s | win_avg(10)=72.13s | ETA@30cpus=6624.37s(110.41min)
 2025-06-13 14:17:15,864 INFO: RORLIV_clean, uptake: 0.001183
+2025-06-13 14:19:44,056 INFO: Start run: 2706/11211, CPUs=30
+2025-06-13 14:19:52,476 ERROR: Error processing FEKBED_clean: No .data file in low_pressure_gcmc/FEKBED_clean/Output/System_0
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium/low_pressure_gcmc.py", line 196, in cmd_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium/low_pressure_gcmc.py", line 146, in run_simulation
+    uptake = parse_output(d)["Average loading absolute [mol/kg framework]"]
+             ^^^^^^^^^^^^^^^
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium/low_pressure_gcmc.py", line 114, in parse_output
+    raise FileNotFoundError(f"No .data file in {data_dir}")
+FileNotFoundError: No .data file in low_pressure_gcmc/FEKBED_clean/Output/System_0
+2025-06-13 14:19:59,424 ERROR: Error processing RUBLEH_clean: No .data file in low_pressure_gcmc/RUBLEH_clean/Output/System_0
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium/low_pressure_gcmc.py", line 196, in cmd_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium/low_pressure_gcmc.py", line 146, in run_simulation
+    uptake = parse_output(d)["Average loading absolute [mol/kg framework]"]
+             ^^^^^^^^^^^^^^^
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium/low_pressure_gcmc.py", line 114, in parse_output
+    raise FileNotFoundError(f"No .data file in {data_dir}")
+FileNotFoundError: No .data file in low_pressure_gcmc/RUBLEH_clean/Output/System_0
+2025-06-13 14:20:20,972 INFO: 1/2706 completed: RURPAW_clean took 35.91s | win_avg(1)=35.91s | ETA@30cpus=3237.63s(53.96min)
+2025-06-13 14:20:20,972 INFO: RURPAW_clean, uptake: 0.000702
+2025-06-13 14:20:24,226 INFO: 2/2706 completed: RUHFUX_clean took 39.16s | win_avg(2)=37.53s | ETA@30cpus=3383.06s(56.38min)
+2025-06-13 14:20:24,226 INFO: RUHFUX_clean, uptake: 0.003493
+2025-06-13 14:20:25,574 INFO: 3/2706 completed: RURPEA_clean took 40.51s | win_avg(3)=38.53s | ETA@30cpus=3471.16s(57.85min)
+2025-06-13 14:20:25,574 INFO: RURPEA_clean, uptake: 0.000824
+2025-06-13 14:20:32,427 INFO: 4/2706 completed: RULQIY_clean took 47.36s | win_avg(4)=40.73s | ETA@30cpus=3668.83s(61.15min)
+2025-06-13 14:20:32,428 INFO: RULQIY_clean, uptake: 0.000867
+2025-06-13 14:20:33,922 INFO: 5/2706 completed: RUPTED_clean took 48.84s | win_avg(5)=42.36s | ETA@30cpus=3813.50s(63.56min)
+2025-06-13 14:20:33,922 INFO: RUPTED_clean, uptake: 0.000222
+2025-06-13 14:20:45,222 INFO: 6/2706 completed: RUPNEW_clean took 60.14s | win_avg(6)=45.32s | ETA@30cpus=4078.89s(67.98min)
+2025-06-13 14:20:45,222 INFO: RUPNEW_clean, uptake: 0.001888
+2025-06-13 14:20:46,301 INFO: 7/2706 completed: RUGXOI_clean took 61.24s | win_avg(7)=47.59s | ETA@30cpus=4281.92s(71.37min)
+2025-06-13 14:20:46,301 INFO: RUGXOI_clean, uptake: 0.001815
+2025-06-13 14:20:50,132 INFO: 8/2706 completed: RUMRUO_clean took 65.07s | win_avg(8)=49.78s | ETA@30cpus=4476.76s(74.61min)
+2025-06-13 14:20:50,132 INFO: RUMRUO_clean, uptake: 0.000459
+2025-06-13 14:20:56,021 INFO: 9/2706 completed: RUPZIM_clean took 70.95s | win_avg(9)=52.13s | ETA@30cpus=4686.61s(78.11min)
+2025-06-13 14:20:56,021 INFO: RUPZIM_clean, uptake: 0.000283
+2025-06-13 14:20:56,696 INFO: 10/2706 completed: RUHCED_SL took 71.63s | win_avg(10)=54.08s | ETA@30cpus=4860.13s(81.00min)
+2025-06-13 14:20:56,696 INFO: RUHCED_SL, uptake: 0.001824
+2025-06-13 14:20:56,835 INFO: 11/2706 completed: RUJGOT_clean took 71.77s | win_avg(10)=57.67s | ETA@30cpus=5180.50s(86.34min)
+2025-06-13 14:20:56,835 INFO: RUJGOT_clean, uptake: 0.000356
+2025-06-13 14:21:10,037 INFO: 12/2706 completed: RULBOQ_clean took 84.97s | win_avg(10)=62.25s | ETA@30cpus=5589.91s(93.17min)
+2025-06-13 14:21:10,037 INFO: RULBOQ_clean, uptake: 0.001295
+2025-06-13 14:21:12,771 INFO: 13/2706 completed: RUGXOI01_clean took 87.71s | win_avg(10)=66.97s | ETA@30cpus=6011.50s(100.19min)
+2025-06-13 14:21:12,771 INFO: RUGXOI01_clean, uptake: 0.002281
+2025-06-13 14:21:13,510 INFO: 14/2706 completed: RUMROI_clean took 88.45s | win_avg(10)=71.08s | ETA@30cpus=6377.93s(106.30min)
+2025-06-13 14:21:13,511 INFO: RUMROI_clean, uptake: 0.000566
+2025-06-13 14:21:14,371 INFO: 15/2706 completed: RUSWIN_clean took 74.94s | win_avg(10)=73.69s | ETA@30cpus=6609.67s(110.16min)
+2025-06-13 14:21:14,371 INFO: RUSWIN_clean, uptake: 0.001476
+2025-06-13 14:21:18,227 INFO: 16/2706 completed: RUVCES_clean took 28.09s | win_avg(10)=70.48s | ETA@30cpus=6319.84s(105.33min)
+2025-06-13 14:21:18,228 INFO: RUVCES_clean, uptake: 0.001968
+2025-06-13 14:21:22,049 INFO: 17/2706 completed: RUNXUV_clean took 96.98s | win_avg(10)=74.06s | ETA@30cpus=6637.91s(110.63min)
+2025-06-13 14:21:22,049 INFO: RUNXUV_clean, uptake: 0.001557
+2025-06-13 14:21:23,020 INFO: 18/2706 completed: RUGYOJ_clean took 97.93s | win_avg(10)=77.34s | ETA@30cpus=6929.92s(115.50min)
+2025-06-13 14:21:23,020 INFO: RUGYOJ_clean, uptake: 0.001156
+2025-06-13 14:21:29,194 INFO: 19/2706 completed: RUGZAW_clean took 104.11s | win_avg(10)=80.66s | ETA@30cpus=7224.31s(120.41min)
+2025-06-13 14:21:29,194 INFO: RUGZAW_clean, uptake: 0.002295
+2025-06-13 14:21:30,856 INFO: 20/2706 completed: RULVUP_clean took 105.79s | win_avg(10)=84.07s | ETA@30cpus=7527.45s(125.46min)
+2025-06-13 14:21:30,856 INFO: RULVUP_clean, uptake: 0.001117
+2025-06-13 14:21:33,847 INFO: 21/2706 completed: RUVKAV_clean took 37.82s | win_avg(10)=80.68s | ETA@30cpus=7220.82s(120.35min)
+2025-06-13 14:21:33,847 INFO: RUVKAV_clean, uptake: 0.005398
+2025-06-13 14:21:36,520 INFO: 22/2706 completed: RUTBUE_clean took 62.60s | win_avg(10)=78.44s | ETA@30cpus=7017.99s(116.97min)
+2025-06-13 14:21:36,520 INFO: RUTBUE_clean, uptake: 0.000920
+2025-06-13 14:21:37,538 INFO: 23/2706 completed: RUSWOT_clean took 76.56s | win_avg(10)=77.33s | ETA@30cpus=6915.72s(115.26min)
+2025-06-13 14:21:37,538 INFO: RUSWOT_clean, uptake: 0.001517
+2025-06-13 14:21:39,907 INFO: 24/2706 completed: RUSWUZ_clean took 75.68s | win_avg(10)=76.05s | ETA@30cpus=6799.00s(113.32min)
+2025-06-13 14:21:39,907 INFO: RUSWUZ_clean, uptake: 0.001598
+2025-06-13 14:21:40,102 INFO: 25/2706 completed: RUSXAG_clean took 74.53s | win_avg(10)=76.01s | ETA@30cpus=6792.72s(113.21min)
+2025-06-13 14:21:40,102 INFO: RUSXAG_clean, uptake: 0.001477
+2025-06-13 14:21:50,338 INFO: 26/2706 completed: RUSXEK_clean took 77.91s | win_avg(10)=80.99s | ETA@30cpus=7235.19s(120.59min)
+2025-06-13 14:21:50,338 INFO: RUSXEK_clean, uptake: 0.001526
+2025-06-13 14:21:52,170 INFO: 27/2706 completed: RUVKOJ_clean took 55.47s | win_avg(10)=76.84s | ETA@30cpus=6861.79s(114.36min)
+2025-06-13 14:21:52,170 INFO: RUVKOJ_clean, uptake: 0.001047
+2025-06-13 14:21:52,624 INFO: 28/2706 completed: RULXOM_clean took 127.53s | win_avg(10)=79.80s | ETA@30cpus=7123.45s(118.72min)
+2025-06-13 14:21:52,624 INFO: RULXOM_clean, uptake: 0.002946
+2025-06-13 14:22:00,242 INFO: 29/2706 completed: RUTNOK_manual took 75.00s | win_avg(10)=76.89s | ETA@30cpus=6861.07s(114.35min)
+2025-06-13 14:22:00,242 INFO: RUTNOK_manual, uptake: 0.014367
+2025-06-13 14:22:04,584 INFO: 30/2706 completed: RUSSAA_clean took 132.10s | win_avg(10)=79.52s | ETA@30cpus=7093.20s(118.22min)
+2025-06-13 14:22:04,585 INFO: RUSSAA_clean, uptake: 0.000445
+2025-06-13 14:22:14,381 INFO: 31/2706 completed: RUWXAJ_clean took 56.15s | win_avg(10)=81.35s | ETA@30cpus=7253.98s(120.90min)
+2025-06-13 14:22:14,382 INFO: RUWXAJ_clean, uptake: 0.000735
+2025-06-13 14:22:15,446 INFO: 32/2706 completed: RUVMUR_clean took 65.40s | win_avg(10)=81.63s | ETA@30cpus=7276.25s(121.27min)
+2025-06-13 14:22:15,447 INFO: RUVMUR_clean, uptake: 0.000454
+2025-06-13 14:22:16,294 INFO: 33/2706 completed: RUWXEN_clean took 54.24s | win_avg(10)=79.40s | ETA@30cpus=7074.66s(117.91min)
+2025-06-13 14:22:16,294 INFO: RUWXEN_clean, uptake: 0.001029
+2025-06-13 14:22:21,122 INFO: 34/2706 completed: RUWWOW_clean took 67.61s | win_avg(10)=78.59s | ETA@30cpus=7000.15s(116.67min)
+2025-06-13 14:22:21,122 INFO: RUWWOW_clean, uptake: 0.001016
+2025-06-13 14:22:21,292 INFO: 35/2706 completed: RUWWOW01_clean took 68.52s | win_avg(10)=77.99s | ETA@30cpus=6944.06s(115.73min)
+2025-06-13 14:22:21,292 INFO: RUWWOW01_clean, uptake: 0.001030
+2025-06-13 14:22:22,797 INFO: 36/2706 completed: RUVMAX_clean took 85.96s | win_avg(10)=78.80s | ETA@30cpus=7013.10s(116.88min)
+2025-06-13 14:22:22,797 INFO: RUVMAX_clean, uptake: 0.001745
+2025-06-13 14:22:27,131 INFO: 37/2706 completed: RUGPEQ_clean took 161.95s | win_avg(10)=89.45s | ETA@30cpus=7957.79s(132.63min)
+2025-06-13 14:22:27,132 INFO: RUGPEQ_clean, uptake: 0.000914
+2025-06-13 14:22:29,669 INFO: 38/2706 completed: RUWWUC_clean took 75.30s | win_avg(10)=84.22s | ETA@30cpus=7490.25s(124.84min)
+2025-06-13 14:22:29,669 INFO: RUWWUC_clean, uptake: 0.000801
+2025-06-13 14:22:30,517 INFO: 39/2706 completed: RUVBOB_clean took 104.20s | win_avg(10)=87.14s | ETA@30cpus=7747.02s(129.12min)
+2025-06-13 14:22:30,517 INFO: RUVBOB_clean, uptake: 0.001117
+2025-06-13 14:22:46,843 INFO: 40/2706 completed: RUPVAB_clean took 181.72s | win_avg(10)=92.11s | ETA@30cpus=8185.07s(136.42min)
+2025-06-13 14:22:46,844 INFO: RUPVAB_clean, uptake: 0.002885
+2025-06-13 14:22:53,326 INFO: 41/2706 completed: RUYNIK_clean took 76.80s | win_avg(10)=94.17s | ETA@30cpus=8365.44s(139.42min)
+2025-06-13 14:22:53,326 INFO: RUYNIK_clean, uptake: 0.001278
+2025-06-13 14:22:53,427 INFO: 42/2706 completed: RORTAV_clean took 188.31s | win_avg(10)=106.46s | ETA@30cpus=9453.76s(157.56min)
+2025-06-13 14:22:53,427 INFO: RORTAV_clean, uptake: 0.004111
+2025-06-13 14:22:59,787 INFO: 43/2706 completed: RUZDAS_clean took 38.49s | win_avg(10)=104.89s | ETA@30cpus=9310.41s(155.17min)
+2025-06-13 14:22:59,788 INFO: RUZDAS_clean, uptake: 0.001064
+2025-06-13 14:23:09,073 INFO: 44/2706 completed: RUZCOF_clean took 47.95s | win_avg(10)=102.92s | ETA@30cpus=9132.44s(152.21min)
+2025-06-13 14:23:09,074 INFO: RUZCOF_clean, uptake: 0.001288
+2025-06-13 14:23:18,614 INFO: 45/2706 completed: S2052520616005515_bm5080sup1_clean took 55.81s | win_avg(10)=101.65s | ETA@30cpus=9016.29s(150.27min)
+2025-06-13 14:23:18,614 INFO: S2052520616005515_bm5080sup1_clean, uptake: 0.001856
+2025-06-13 14:23:24,154 INFO: 46/2706 completed: RUYZUH_clean took 67.85s | win_avg(10)=99.84s | ETA@30cpus=8852.39s(147.54min)
+2025-06-13 14:23:24,155 INFO: RUYZUH_clean, uptake: 0.000672
+2025-06-13 14:23:26,994 INFO: 47/2706 completed: SABKIS_clean took 57.31s | win_avg(10)=89.38s | ETA@30cpus=7921.62s(132.03min)
+2025-06-13 14:23:26,994 INFO: SABKIS_clean, uptake: 0.001749
+2025-06-13 14:23:28,983 INFO: 48/2706 completed: SABVOH01_clean took 58.46s | win_avg(10)=87.69s | ETA@30cpus=7769.51s(129.49min)
+2025-06-13 14:23:28,984 INFO: SABVOH01_clean, uptake: 0.002349
+2025-06-13 14:23:35,251 INFO: 49/2706 completed: S2056989016007027_zl2661sup1_clean took 68.12s | win_avg(10)=84.08s | ETA@30cpus=7446.99s(124.12min)
+2025-06-13 14:23:35,251 INFO: S2056989016007027_zl2661sup1_clean, uptake: 0.001830
+2025-06-13 14:23:35,610 INFO: 50/2706 completed: RUYVIS_clean took 80.11s | win_avg(10)=73.92s | ETA@30cpus=6544.57s(109.08min)
+2025-06-13 14:23:35,610 INFO: RUYVIS_clean, uptake: 0.004019
+2025-06-13 14:23:45,682 INFO: 51/2706 completed: SABVOH_manual took 58.84s | win_avg(10)=72.13s | ETA@30cpus=6383.11s(106.39min)
+2025-06-13 14:23:45,683 INFO: SABVOH_manual, uptake: 0.002437
+2025-06-13 14:23:54,143 INFO: 52/2706 completed: RUXKUS_clean took 140.26s | win_avg(10)=67.32s | ETA@30cpus=5955.66s(99.26min)
+2025-06-13 14:23:54,143 INFO: RUXKUS_clean, uptake: 0.001089
+2025-06-13 14:23:58,981 INFO: 53/2706 completed: SABWEA_clean took 65.55s | win_avg(10)=70.03s | ETA@30cpus=6192.69s(103.21min)
+2025-06-13 14:23:58,981 INFO: SABWEA_clean, uptake: 0.000627
+2025-06-13 14:24:04,586 INFO: 54/2706 completed: SABWUQ_clean took 64.80s | win_avg(10)=71.71s | ETA@30cpus=6339.29s(105.65min)
+2025-06-13 14:24:04,586 INFO: SABWUQ_clean, uptake: 0.000585
+2025-06-13 14:24:07,586 INFO: 55/2706 completed: RUYVEO_clean took 113.17s | win_avg(10)=77.45s | ETA@30cpus=6843.73s(114.06min)
+2025-06-13 14:24:07,586 INFO: RUYVEO_clean, uptake: 0.002467
+2025-06-13 14:24:16,070 INFO: 56/2706 completed: SABXEB_clean took 66.99s | win_avg(10)=77.36s | ETA@30cpus=6833.56s(113.89min)
+2025-06-13 14:24:16,070 INFO: SABXEB_clean, uptake: 0.000596
+2025-06-13 14:24:23,723 INFO: 57/2706 completed: SABXOL_clean took 65.11s | win_avg(10)=78.14s | ETA@30cpus=6899.80s(115.00min)
+2025-06-13 14:24:23,724 INFO: SABXOL_clean, uptake: 0.000566
+2025-06-13 14:24:27,167 INFO: 58/2706 completed: RUYQIN01_clean took 169.60s | win_avg(10)=89.25s | ETA@30cpus=7878.13s(131.30min)
+2025-06-13 14:24:27,167 INFO: RUYQIN01_clean, uptake: 0.001781
+2025-06-13 14:24:30,208 INFO: 59/2706 completed: RUYQIN02_clean took 170.27s | win_avg(10)=99.47s | ETA@30cpus=8776.53s(146.28min)
+2025-06-13 14:24:30,208 INFO: RUYQIN02_clean, uptake: 0.001808
+2025-06-13 14:24:31,126 INFO: 60/2706 completed: RUYQIN03_clean took 171.00s | win_avg(10)=108.56s | ETA@30cpus=9574.84s(159.58min)
+2025-06-13 14:24:31,126 INFO: RUYQIN03_clean, uptake: 0.001903
+2025-06-13 14:24:31,972 INFO: 61/2706 completed: SABYAY_clean took 67.82s | win_avg(10)=109.46s | ETA@30cpus=9650.38s(160.84min)
+2025-06-13 14:24:31,972 INFO: SABYAY_clean, uptake: 0.000684
+2025-06-13 14:24:32,115 INFO: 62/2706 completed: SABYIG_clean took 65.12s | win_avg(10)=101.94s | ETA@30cpus=8984.46s(149.74min)
+2025-06-13 14:24:32,115 INFO: SABYIG_clean, uptake: 0.000597
+2025-06-13 14:24:33,060 INFO: 63/2706 completed: SABYUS_clean took 64.07s | win_avg(10)=101.79s | ETA@30cpus=8968.05s(149.47min)
+2025-06-13 14:24:33,060 INFO: SABYUS_clean, uptake: 0.000578
+2025-06-13 14:24:35,729 INFO: 64/2706 completed: RUYQOT_clean took 163.53s | win_avg(10)=111.67s | ETA@30cpus=9834.19s(163.90min)
+2025-06-13 14:24:35,729 INFO: RUYQOT_clean, uptake: 0.001779
+2025-06-13 14:24:36,439 INFO: 65/2706 completed: RUWZIU_clean took 193.34s | win_avg(10)=119.68s | ETA@30cpus=10536.22s(175.60min)
+2025-06-13 14:24:36,439 INFO: RUWZIU_clean, uptake: 0.001088
+2025-06-13 14:24:38,214 INFO: 66/2706 completed: RUYQIN_clean took 167.85s | win_avg(10)=129.77s | ETA@30cpus=11419.74s(190.33min)
+2025-06-13 14:24:38,214 INFO: RUYQIN_clean, uptake: 0.001717
+2025-06-13 14:24:38,938 INFO: 67/2706 completed: RUYTIQ_clean took 166.29s | win_avg(10)=139.89s | ETA@30cpus=12305.47s(205.09min)
+2025-06-13 14:24:38,938 INFO: RUYTIQ_clean, uptake: 0.001843
+2025-06-13 14:24:41,700 INFO: 68/2706 completed: SABZON_clean took 66.09s | win_avg(10)=129.54s | ETA@30cpus=11390.60s(189.84min)
+2025-06-13 14:24:41,700 INFO: SABZON_clean, uptake: 0.000607
+2025-06-13 14:24:41,943 INFO: 69/2706 completed: SADLEQ_clean took 42.96s | win_avg(10)=116.81s | ETA@30cpus=10267.19s(171.12min)
+2025-06-13 14:24:41,943 INFO: SADLEQ_clean, uptake: 0.001571
+2025-06-13 14:24:44,340 INFO: 70/2706 completed: SABZED_clean took 69.09s | win_avg(10)=106.61s | ETA@30cpus=9367.85s(156.13min)
+2025-06-13 14:24:44,341 INFO: SABZED_clean, uptake: 0.000583
+2025-06-13 14:24:47,103 INFO: 71/2706 completed: SADLIU_clean took 42.51s | win_avg(10)=104.08s | ETA@30cpus=9142.08s(152.37min)
+2025-06-13 14:24:47,103 INFO: SADLIU_clean, uptake: 0.001461
+2025-06-13 14:24:50,277 INFO: 72/2706 completed: RUYVAK_clean took 165.66s | win_avg(10)=114.14s | ETA@30cpus=10021.38s(167.02min)
+2025-06-13 14:24:50,278 INFO: RUYVAK_clean, uptake: 0.001938
+2025-06-13 14:24:53,536 INFO: 73/2706 completed: RUYTUC_clean took 173.27s | win_avg(10)=125.06s | ETA@30cpus=10975.93s(182.93min)
+2025-06-13 14:24:53,536 INFO: RUYTUC_clean, uptake: 0.001761
+2025-06-13 14:24:55,107 INFO: 74/2706 completed: RUWZOA_clean took 205.82s | win_avg(10)=129.29s | ETA@30cpus=11342.75s(189.05min)
+2025-06-13 14:24:55,108 INFO: RUWZOA_clean, uptake: 0.001087
+2025-06-13 14:25:00,370 INFO: 75/2706 completed: SADMUH_SL took 44.30s | win_avg(10)=114.38s | ETA@30cpus=10031.38s(167.19min)
+2025-06-13 14:25:00,370 INFO: SADMUH_SL, uptake: 0.002326
+2025-06-13 14:25:06,539 INFO: 76/2706 completed: SABVUN_clean_h_min took 133.19s | win_avg(10)=110.92s | ETA@30cpus=9723.78s(162.06min)
+2025-06-13 14:25:06,539 INFO: SABVUN_clean_h_min, uptake: 0.002567
+2025-06-13 14:25:10,225 INFO: 77/2706 completed: SADMIV_clean took 62.64s | win_avg(10)=100.55s | ETA@30cpus=8811.74s(146.86min)
+2025-06-13 14:25:10,225 INFO: SADMIV_clean, uptake: 0.000332
+2025-06-13 14:25:17,610 INFO: 78/2706 completed: SAHXAD_clean took 45.64s | win_avg(10)=98.51s | ETA@30cpus=8629.24s(143.82min)
+2025-06-13 14:25:17,610 INFO: SAHXAD_clean, uptake: 0.003263
+2025-06-13 14:25:18,695 INFO: 79/2706 completed: RUWZUG_clean took 227.73s | win_avg(10)=116.98s | ETA@30cpus=10243.94s(170.73min)
+2025-06-13 14:25:18,696 INFO: RUWZUG_clean, uptake: 0.001023
+2025-06-13 14:25:26,554 INFO: 80/2706 completed: SAHBAF_clean took 59.38s | win_avg(10)=116.01s | ETA@30cpus=10155.11s(169.25min)
+2025-06-13 14:25:26,555 INFO: SAHBAF_clean, uptake: 0.001022
+2025-06-13 14:25:32,895 INFO: 81/2706 completed: SAJRAW10_clean took 42.62s | win_avg(10)=116.02s | ETA@30cpus=10152.13s(169.20min)
+2025-06-13 14:25:32,896 INFO: SAJRAW10_clean, uptake: 0.002455
+2025-06-13 14:25:34,250 INFO: 82/2706 completed: SAHBEJ_clean took 64.04s | win_avg(10)=105.86s | ETA@30cpus=9259.40s(154.32min)
+2025-06-13 14:25:34,251 INFO: SAHBEJ_clean, uptake: 0.001008
+2025-06-13 14:25:34,684 INFO: 83/2706 completed: SAJRAW_clean took 41.15s | win_avg(10)=92.65s | ETA@30cpus=8100.69s(135.01min)
+2025-06-13 14:25:34,684 INFO: SAJRAW_clean, uptake: 0.002395
+2025-06-13 14:25:46,599 INFO: 84/2706 completed: SAJLOH_clean took 59.50s | win_avg(10)=78.02s | ETA@30cpus=6818.74s(113.65min)
+2025-06-13 14:25:46,600 INFO: SAJLOH_clean, uptake: 0.001119
+2025-06-13 14:25:50,508 INFO: 85/2706 completed: SAHNIZ_charged took 79.37s | win_avg(10)=81.53s | ETA@30cpus=7122.57s(118.71min)
+2025-06-13 14:25:50,509 INFO: SAHNIZ_charged, uptake: 0.000864
+2025-06-13 14:26:09,798 INFO: 86/2706 completed: SAHYAD02_charged took 96.70s | win_avg(10)=77.88s | ETA@30cpus=6801.09s(113.35min)
+2025-06-13 14:26:09,799 INFO: SAHYAD02_charged, uptake: 0.001032
+2025-06-13 14:26:11,152 INFO: 87/2706 completed: SAHYAD03_charged took 95.40s | win_avg(10)=81.15s | ETA@30cpus=7084.51s(118.08min)
+2025-06-13 14:26:11,152 INFO: SAHYAD03_charged, uptake: 0.001023
+2025-06-13 14:26:12,860 INFO: 88/2706 completed: SAHYAD01_charged took 100.71s | win_avg(10)=86.66s | ETA@30cpus=7562.43s(126.04min)
+2025-06-13 14:26:12,860 INFO: SAHYAD01_charged, uptake: 0.000721
+2025-06-13 14:26:13,846 INFO: 89/2706 completed: SAHYAD_charged took 97.38s | win_avg(10)=73.62s | ETA@30cpus=6422.42s(107.04min)
+2025-06-13 14:26:13,846 INFO: SAHYAD_charged, uptake: 0.001129
+2025-06-13 14:26:14,692 INFO: 90/2706 completed: SAHYIL_charged took 96.45s | win_avg(10)=77.33s | ETA@30cpus=6743.22s(112.39min)
+2025-06-13 14:26:14,693 INFO: SAHYIL_charged, uptake: 0.000996
+2025-06-13 14:26:20,694 INFO: 91/2706 completed: SAJDIT_clean took 101.70s | win_avg(10)=83.24s | ETA@30cpus=7255.64s(120.93min)
+2025-06-13 14:26:20,695 INFO: SAJDIT_clean, uptake: 0.001409
+2025-06-13 14:26:23,540 INFO: 92/2706 completed: SADVEB_clean took 119.81s | win_avg(10)=88.82s | ETA@30cpus=7738.84s(128.98min)
+2025-06-13 14:26:23,540 INFO: SADVEB_clean, uptake: 0.000449
+2025-06-13 14:26:26,400 INFO: 93/2706 completed: SAJRUT_clean took 91.28s | win_avg(10)=93.83s | ETA@30cpus=8172.57s(136.21min)
+2025-06-13 14:26:26,400 INFO: SAJRUT_clean, uptake: 0.003384
+2025-06-13 14:26:30,659 INFO: 94/2706 completed: SAKRED_clean took 56.41s | win_avg(10)=93.52s | ETA@30cpus=8142.54s(135.71min)
+2025-06-13 14:26:30,659 INFO: SAKRED_clean, uptake: 0.002326
+2025-06-13 14:26:33,516 INFO: 95/2706 completed: SAKRAZ_clean took 60.62s | win_avg(10)=91.65s | ETA@30cpus=7976.20s(132.94min)
+2025-06-13 14:26:33,517 INFO: SAKRAZ_clean, uptake: 0.002395
+2025-06-13 14:26:34,825 INFO: 96/2706 completed: SACDOR_clean took 169.05s | win_avg(10)=98.88s | ETA@30cpus=8602.63s(143.38min)
+2025-06-13 14:26:34,826 INFO: SACDOR_clean, uptake: 0.001907
+2025-06-13 14:26:34,872 INFO: 97/2706 completed: SAJLAT_clean took 112.90s | win_avg(10)=100.63s | ETA@30cpus=8751.58s(145.86min)
+2025-06-13 14:26:34,872 INFO: SAJLAT_clean, uptake: 0.001029
+2025-06-13 14:26:35,671 INFO: 98/2706 completed: SAJLEX_clean took 111.30s | win_avg(10)=101.69s | ETA@30cpus=8840.26s(147.34min)
+2025-06-13 14:26:35,671 INFO: SAJLEX_clean, uptake: 0.001042
+2025-06-13 14:26:35,677 INFO: 99/2706 completed: SALLAT_clean took 60.98s | win_avg(10)=98.05s | ETA@30cpus=8520.58s(142.01min)
+2025-06-13 14:26:35,677 INFO: SALLAT_clean, uptake: 0.000583
+2025-06-13 14:26:42,033 INFO: 100/2706 completed: SACDUX_clean took 167.81s | win_avg(10)=105.19s | ETA@30cpus=9137.18s(152.29min)
+2025-06-13 14:26:42,033 INFO: SACDUX_clean, uptake: 0.001890
+2025-06-13 14:26:48,242 INFO: 101/2706 completed: SALRON_clean took 61.64s | win_avg(10)=101.18s | ETA@30cpus=8785.83s(146.43min)
+2025-06-13 14:26:48,242 INFO: SALRON_clean, uptake: 0.000661
+2025-06-13 14:26:54,343 INFO: 102/2706 completed: SAKDAM01_clean took 107.78s | win_avg(10)=99.98s | ETA@30cpus=8678.02s(144.63min)
+2025-06-13 14:26:54,343 INFO: SAKDAM01_clean, uptake: 0.001053
+2025-06-13 14:26:57,472 INFO: 103/2706 completed: SAJJOF_clean took 135.75s | win_avg(10)=104.42s | ETA@30cpus=9060.49s(151.01min)
+2025-06-13 14:26:57,473 INFO: SAJJOF_clean, uptake: 0.001391
+2025-06-13 14:27:00,973 INFO: 104/2706 completed: SAKDAM_clean took 110.72s | win_avg(10)=109.86s | ETA@30cpus=9528.12s(158.80min)
+2025-06-13 14:27:00,973 INFO: SAKDAM_clean, uptake: 0.000969
+2025-06-13 14:27:01,413 INFO: 105/2706 completed: SAJSAA_clean took 121.03s | win_avg(10)=115.90s | ETA@30cpus=10048.23s(167.47min)
+2025-06-13 14:27:01,413 INFO: SAJSAA_clean, uptake: 0.002187
+2025-06-13 14:27:06,383 INFO: 106/2706 completed: SAMLAV_manual took 53.52s | win_avg(10)=104.34s | ETA@30cpus=9043.10s(150.72min)
+2025-06-13 14:27:06,383 INFO: SAMLAV_manual, uptake: 0.001447
+2025-06-13 14:27:09,756 INFO: 107/2706 completed: SAMVEK_clean took 55.90s | win_avg(10)=98.64s | ETA@30cpus=8545.82s(142.43min)
+2025-06-13 14:27:09,756 INFO: SAMVEK_clean, uptake: 0.002332
+2025-06-13 14:27:12,650 INFO: 108/2706 completed: SAKDEQ_clean took 113.93s | win_avg(10)=98.91s | ETA@30cpus=8565.35s(142.76min)
+2025-06-13 14:27:12,650 INFO: SAKDEQ_clean, uptake: 0.000950
