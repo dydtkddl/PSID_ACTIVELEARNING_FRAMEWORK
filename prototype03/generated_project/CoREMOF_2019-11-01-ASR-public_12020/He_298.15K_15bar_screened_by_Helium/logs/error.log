@@ -112,3 +112,41 @@ Traceback (most recent call last):
   File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium/low_pressure_gcmc.py", line 114, in parse_output
     raise FileNotFoundError(f"No .data file in {data_dir}")
 FileNotFoundError: No .data file in low_pressure_gcmc/RUBLEH_clean/Output/System_0
+2025-06-13 13:29:36,606 ERROR: Error processing FEKBED_clean: No .data file in low_pressure_gcmc/FEKBED_clean/Output/System_0
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium/low_pressure_gcmc.py", line 196, in cmd_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium/low_pressure_gcmc.py", line 146, in run_simulation
+    uptake = parse_output(d)["Average loading absolute [mol/kg framework]"]
+             ^^^^^^^^^^^^^^^
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium/low_pressure_gcmc.py", line 114, in parse_output
+    raise FileNotFoundError(f"No .data file in {data_dir}")
+FileNotFoundError: No .data file in low_pressure_gcmc/FEKBED_clean/Output/System_0
+2025-06-13 13:29:44,162 ERROR: Error processing RUBLEH_clean: No .data file in low_pressure_gcmc/RUBLEH_clean/Output/System_0
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium/low_pressure_gcmc.py", line 196, in cmd_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium/low_pressure_gcmc.py", line 146, in run_simulation
+    uptake = parse_output(d)["Average loading absolute [mol/kg framework]"]
+             ^^^^^^^^^^^^^^^
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium/low_pressure_gcmc.py", line 114, in parse_output
+    raise FileNotFoundError(f"No .data file in {data_dir}")
+FileNotFoundError: No .data file in low_pressure_gcmc/RUBLEH_clean/Output/System_0

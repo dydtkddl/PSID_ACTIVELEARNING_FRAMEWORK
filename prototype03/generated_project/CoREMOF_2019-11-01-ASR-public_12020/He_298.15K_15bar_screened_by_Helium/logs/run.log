@@ -7268,3 +7268,320 @@ FileNotFoundError: No .data file in low_pressure_gcmc/RUBLEH_clean/Output/System
 2025-06-13 13:14:38,108 INFO: PAJSAX_clean, uptake: 0.002678
 2025-06-13 13:14:45,333 INFO: 156/3814 completed: PAMGIV_clean took 66.70s | win_avg(10)=169.35s | ETA@30cpus=20648.81s(344.15min)
 2025-06-13 13:14:45,334 INFO: PAMGIV_clean, uptake: 0.001106
+2025-06-13 13:14:49,566 INFO: 157/3814 completed: OZULUS_clean took 119.65s | win_avg(10)=167.72s | ETA@30cpus=20445.43s(340.76min)
+2025-06-13 13:14:49,566 INFO: OZULUS_clean, uptake: 0.002042
+2025-06-13 13:14:49,670 INFO: 158/3814 completed: PADBAZ_charged took 102.64s | win_avg(10)=168.29s | ETA@30cpus=20508.72s(341.81min)
+2025-06-13 13:14:49,670 INFO: PADBAZ_charged, uptake: 0.000509
+2025-06-13 13:14:51,564 INFO: 159/3814 completed: OZUMAZ01_clean took 119.42s | win_avg(10)=173.66s | ETA@30cpus=21157.57s(352.63min)
+2025-06-13 13:14:51,564 INFO: OZUMAZ01_clean, uptake: 0.002052
+2025-06-13 13:14:56,206 INFO: 160/3814 completed: PAKXIK_clean took 91.61s | win_avg(10)=164.64s | ETA@30cpus=20053.57s(334.23min)
+2025-06-13 13:14:56,206 INFO: PAKXIK_clean, uptake: 0.001361
+2025-06-13 13:14:56,241 INFO: 161/3814 completed: OZUMAZ_clean took 119.44s | win_avg(10)=166.48s | ETA@30cpus=20271.58s(337.86min)
+2025-06-13 13:14:56,241 INFO: OZUMAZ_clean, uptake: 0.002007
+2025-06-13 13:14:57,999 INFO: 162/3814 completed: PAMHES01_clean took 64.84s | win_avg(10)=163.23s | ETA@30cpus=19870.57s(331.18min)
+2025-06-13 13:14:57,999 INFO: PAMHES01_clean, uptake: 0.000902
+2025-06-13 13:14:59,682 INFO: 163/3814 completed: OZUMIH_clean took 120.06s | win_avg(10)=166.96s | ETA@30cpus=20318.62s(338.64min)
+2025-06-13 13:14:59,682 INFO: OZUMIH_clean, uptake: 0.002056
+2025-06-13 13:15:02,932 INFO: 164/3814 completed: PAKFAL_clean took 102.66s | win_avg(10)=99.04s | ETA@30cpus=12050.21s(200.84min)
+2025-06-13 13:15:02,933 INFO: PAKFAL_clean, uptake: 0.000260
+2025-06-13 13:15:04,951 INFO: 165/3814 completed: PACZUQ_clean took 117.95s | win_avg(10)=102.50s | ETA@30cpus=12467.10s(207.79min)
+2025-06-13 13:15:04,951 INFO: PACZUQ_clean, uptake: 0.000549
+2025-06-13 13:15:06,514 INFO: 166/3814 completed: OSOTUN_clean took 593.67s | win_avg(10)=155.19s | ETA@30cpus=18871.65s(314.53min)
+2025-06-13 13:15:06,514 INFO: OSOTUN_clean, uptake: 0.001914
+2025-06-13 13:15:06,524 INFO: 167/3814 completed: PAMTOO_clean took 57.58s | win_avg(10)=148.99s | ETA@30cpus=18111.85s(301.86min)
+2025-06-13 13:15:06,525 INFO: PAMTOO_clean, uptake: 0.003087
+2025-06-13 13:15:06,533 INFO: 168/3814 completed: PAMHES_clean took 65.82s | win_avg(10)=145.30s | ETA@30cpus=17659.36s(294.32min)
+2025-06-13 13:15:06,533 INFO: PAMHES_clean, uptake: 0.000862
+2025-06-13 13:15:06,552 INFO: 169/3814 completed: PAMTII_clean took 58.56s | win_avg(10)=139.22s | ETA@30cpus=16915.19s(281.92min)
+2025-06-13 13:15:06,552 INFO: PAMTII_clean, uptake: 0.002929
+2025-06-13 13:15:08,182 INFO: 170/3814 completed: PAKFEP_clean took 106.12s | win_avg(10)=140.67s | ETA@30cpus=17086.82s(284.78min)
+2025-06-13 13:15:08,182 INFO: PAKFEP_clean, uptake: 0.000347
+2025-06-13 13:15:13,230 INFO: 171/3814 completed: PAMTUU_clean took 60.02s | win_avg(10)=134.73s | ETA@30cpus=16360.50s(272.68min)
+2025-06-13 13:15:13,231 INFO: PAMTUU_clean, uptake: 0.002989
+2025-06-13 13:15:13,242 INFO: 172/3814 completed: OHUMEL_clean took 820.86s | win_avg(10)=210.33s | ETA@30cpus=25534.11s(425.57min)
+2025-06-13 13:15:13,242 INFO: OHUMEL_clean, uptake: 0.003978
+2025-06-13 13:15:30,180 INFO: 173/3814 completed: PANRUS01_clean took 66.70s | win_avg(10)=204.99s | ETA@30cpus=24879.47s(414.66min)
+2025-06-13 13:15:30,181 INFO: PANRUS01_clean, uptake: 0.002009
+2025-06-13 13:15:33,714 INFO: 174/3814 completed: PACGIM_clean took 149.58s | win_avg(10)=209.69s | ETA@30cpus=25442.02s(424.03min)
+2025-06-13 13:15:33,714 INFO: PACGIM_clean, uptake: 0.002243
+2025-06-13 13:15:38,741 INFO: 175/3814 completed: PAHPOG_clean took 146.03s | win_avg(10)=212.49s | ETA@30cpus=25775.58s(429.59min)
+2025-06-13 13:15:38,742 INFO: PAHPOG_clean, uptake: 0.002283
+2025-06-13 13:15:48,774 INFO: 176/3814 completed: PAMVEG_clean took 87.36s | win_avg(10)=161.86s | ETA@30cpus=19628.66s(327.14min)
+2025-06-13 13:15:48,774 INFO: PAMVEG_clean, uptake: 0.000313
+2025-06-13 13:15:49,829 INFO: 177/3814 completed: PARHAS_clean took 43.31s | win_avg(10)=160.44s | ETA@30cpus=19450.29s(324.17min)
+2025-06-13 13:15:49,829 INFO: PARHAS_clean, uptake: 0.003368
+2025-06-13 13:15:49,953 INFO: 178/3814 completed: PARHEW_clean took 43.40s | win_avg(10)=158.19s | ETA@30cpus=19173.19s(319.55min)
+2025-06-13 13:15:49,953 INFO: PARHEW_clean, uptake: 0.004059
+2025-06-13 13:15:50,036 INFO: 179/3814 completed: PALTON_clean took 143.40s | win_avg(10)=166.68s | ETA@30cpus=20195.79s(336.60min)
+2025-06-13 13:15:50,036 INFO: PALTON_clean, uptake: 0.003441
+2025-06-13 13:15:55,092 INFO: 180/3814 completed: PAPKOJ_clean took 76.95s | win_avg(10)=163.76s | ETA@30cpus=19836.88s(330.61min)
+2025-06-13 13:15:55,092 INFO: PAPKOJ_clean, uptake: 0.000134
+2025-06-13 13:15:56,704 INFO: 181/3814 completed: PARKUQ01_clean took 48.52s | win_avg(10)=162.61s | ETA@30cpus=19692.17s(328.20min)
+2025-06-13 13:15:56,704 INFO: PARKUQ01_clean, uptake: 0.002095
+2025-06-13 13:16:03,469 INFO: 182/3814 completed: PAMHIW_clean took 122.51s | win_avg(10)=92.78s | ETA@30cpus=11232.05s(187.20min)
+2025-06-13 13:16:03,469 INFO: PAMHIW_clean, uptake: 0.002476
+2025-06-13 13:16:05,607 INFO: 183/3814 completed: PAQPIG_clean took 59.09s | win_avg(10)=92.01s | ETA@30cpus=11136.85s(185.61min)
+2025-06-13 13:16:05,607 INFO: PAQPIG_clean, uptake: 0.000696
+2025-06-13 13:16:06,997 INFO: 184/3814 completed: PAQMEB_clean took 62.04s | win_avg(10)=83.26s | ETA@30cpus=10074.52s(167.91min)
+2025-06-13 13:16:06,997 INFO: PAQMEB_clean, uptake: 0.000690
+2025-06-13 13:16:15,029 INFO: 185/3814 completed: PARMIG_clean took 61.79s | win_avg(10)=74.84s | ETA@30cpus=9052.79s(150.88min)
+2025-06-13 13:16:15,029 INFO: PARMIG_clean, uptake: 0.001290
+2025-06-13 13:16:17,048 INFO: 186/3814 completed: PAQJUM_clean took 74.11s | win_avg(10)=73.51s | ETA@30cpus=8890.01s(148.17min)
+2025-06-13 13:16:17,048 INFO: PAQJUM_clean, uptake: 0.001651
+2025-06-13 13:16:23,081 INFO: 187/3814 completed: PARKUQ_charged took 69.86s | win_avg(10)=76.17s | ETA@30cpus=9208.51s(153.48min)
+2025-06-13 13:16:23,081 INFO: PARKUQ_charged, uptake: 0.001362
+2025-06-13 13:16:24,364 INFO: 188/3814 completed: PAPRUU_clean took 92.79s | win_avg(10)=81.11s | ETA@30cpus=9803.02s(163.38min)
+2025-06-13 13:16:24,364 INFO: PAPRUU_clean, uptake: 0.000554
+2025-06-13 13:16:28,763 INFO: 189/3814 completed: PAPROO_clean took 99.09s | win_avg(10)=76.68s | ETA@30cpus=9264.91s(154.42min)
+2025-06-13 13:16:28,763 INFO: PAPROO_clean, uptake: 0.000532
+2025-06-13 13:16:30,290 INFO: 190/3814 completed: PAPKUP_clean took 104.93s | win_avg(10)=79.47s | ETA@30cpus=9600.32s(160.01min)
+2025-06-13 13:16:30,290 INFO: PAPKUP_clean, uptake: 0.000206
+2025-06-13 13:16:34,509 INFO: 191/3814 completed: PAPXUB_clean took 94.82s | win_avg(10)=84.10s | ETA@30cpus=10156.87s(169.28min)
+2025-06-13 13:16:34,509 INFO: PAPXUB_clean, uptake: 0.000515
+2025-06-13 13:16:36,259 INFO: 192/3814 completed: PATNAB_clean took 39.55s | win_avg(10)=75.81s | ETA@30cpus=9152.51s(152.54min)
+2025-06-13 13:16:36,259 INFO: PATNAB_clean, uptake: 0.001862
+2025-06-13 13:16:40,207 INFO: 193/3814 completed: PANYOU_charged took 126.52s | win_avg(10)=82.55s | ETA@30cpus=9963.83s(166.06min)
+2025-06-13 13:16:40,207 INFO: PANYOU_charged, uptake: 0.001164
+2025-06-13 13:16:40,348 INFO: 194/3814 completed: PARNIH_clean took 70.15s | win_avg(10)=83.36s | ETA@30cpus=10058.97s(167.65min)
+2025-06-13 13:16:40,348 INFO: PARNIH_clean, uptake: 0.002689
+2025-06-13 13:16:40,413 INFO: 195/3814 completed: PACZOK_clean took 214.04s | win_avg(10)=98.59s | ETA@30cpus=11892.78s(198.21min)
+2025-06-13 13:16:40,413 INFO: PACZOK_clean, uptake: 0.002695
+2025-06-13 13:16:41,067 INFO: 196/3814 completed: PANYEL_clean took 131.21s | win_avg(10)=104.30s | ETA@30cpus=12578.09s(209.63min)
+2025-06-13 13:16:41,067 INFO: PANYEL_clean, uptake: 0.000728
+2025-06-13 13:16:42,560 INFO: 197/3814 completed: PAQVEK_clean took 96.03s | win_avg(10)=106.91s | ETA@30cpus=12890.14s(214.84min)
+2025-06-13 13:16:42,561 INFO: PAQVEK_clean, uptake: 0.001549
+2025-06-13 13:16:47,031 INFO: 198/3814 completed: PAPVAF_clean took 110.81s | win_avg(10)=108.71s | ETA@30cpus=13103.73s(218.40min)
+2025-06-13 13:16:47,031 INFO: PAPVAF_clean, uptake: 0.003618
+2025-06-13 13:16:55,042 INFO: 199/3814 completed: PAPVIN_clean took 117.03s | win_avg(10)=110.51s | ETA@30cpus=13316.29s(221.94min)
+2025-06-13 13:16:55,042 INFO: PAPVIN_clean, uptake: 0.000694
+2025-06-13 13:17:00,256 INFO: 200/3814 completed: PAXWOB_clean took 43.20s | win_avg(10)=104.34s | ETA@30cpus=12568.99s(209.48min)
+2025-06-13 13:17:00,257 INFO: PAXWOB_clean, uptake: 0.000960
+2025-06-13 13:17:00,470 INFO: 201/3814 completed: PAPVEJ_clean took 124.22s | win_avg(10)=107.28s | ETA@30cpus=12919.54s(215.33min)
+2025-06-13 13:17:00,471 INFO: PAPVEJ_clean, uptake: 0.000677
+2025-06-13 13:17:06,174 INFO: 202/3814 completed: PAVLOO_clean took 59.17s | win_avg(10)=109.24s | ETA@30cpus=13152.21s(219.20min)
+2025-06-13 13:17:06,174 INFO: PAVLOO_clean, uptake: 0.001100
+2025-06-13 13:17:06,639 INFO: 203/3814 completed: PASMUT_clean took 77.86s | win_avg(10)=104.37s | ETA@30cpus=12562.89s(209.38min)
+2025-06-13 13:17:06,639 INFO: PASMUT_clean, uptake: 0.001092
+2025-06-13 13:17:12,238 INFO: 204/3814 completed: PASKAX_clean took 93.49s | win_avg(10)=106.71s | ETA@30cpus=12840.27s(214.00min)
+2025-06-13 13:17:12,238 INFO: PASKAX_clean, uptake: 0.000307
+2025-06-13 13:17:14,482 INFO: 205/3814 completed: PARNON_clean took 100.75s | win_avg(10)=95.38s | ETA@30cpus=11473.84s(191.23min)
+2025-06-13 13:17:14,482 INFO: PARNON_clean, uptake: 0.002313
+2025-06-13 13:17:14,495 INFO: 206/3814 completed: PASNAA01_clean took 84.65s | win_avg(10)=90.72s | ETA@30cpus=10910.80s(181.85min)
+2025-06-13 13:17:14,495 INFO: PASNAA01_clean, uptake: 0.001221
+2025-06-13 13:17:16,028 INFO: 207/3814 completed: PASNAA_clean took 86.07s | win_avg(10)=89.73s | ETA@30cpus=10788.03s(179.80min)
+2025-06-13 13:17:16,028 INFO: PASNAA_clean, uptake: 0.001267
+2025-06-13 13:17:17,872 INFO: 208/3814 completed: PAVMAB_clean took 62.84s | win_avg(10)=84.93s | ETA@30cpus=10208.45s(170.14min)
+2025-06-13 13:17:17,873 INFO: PAVMAB_clean, uptake: 0.001213
+2025-06-13 13:17:22,210 INFO: 209/3814 completed: PATWOY_clean took 78.74s | win_avg(10)=81.10s | ETA@30cpus=9745.47s(162.42min)
+2025-06-13 13:17:22,210 INFO: PATWOY_clean, uptake: 0.002210
+2025-06-13 13:17:23,990 INFO: 210/3814 completed: PEFJUF_clean took 43.57s | win_avg(10)=81.14s | ETA@30cpus=9747.22s(162.45min)
+2025-06-13 13:17:23,990 INFO: PEFJUF_clean, uptake: 0.002383
+2025-06-13 13:17:24,949 INFO: 211/3814 completed: PAPPIH_clean took 155.37s | win_avg(10)=84.25s | ETA@30cpus=10118.63s(168.64min)
+2025-06-13 13:17:24,949 INFO: PAPPIH_clean, uptake: 0.000424
+2025-06-13 13:17:28,241 INFO: 212/3814 completed: PEBCAA_clean took 65.16s | win_avg(10)=84.85s | ETA@30cpus=10187.67s(169.79min)
+2025-06-13 13:17:28,241 INFO: PEBCAA_clean, uptake: 0.000861
+2025-06-13 13:17:33,167 INFO: 213/3814 completed: PEDMER_clean took 56.91s | win_avg(10)=82.75s | ETA@30cpus=9933.31s(165.56min)
+2025-06-13 13:17:33,168 INFO: PEDMER_clean, uptake: 0.000942
+2025-06-13 13:17:42,738 INFO: 214/3814 completed: PEDGUA_clean took 68.23s | win_avg(10)=80.23s | ETA@30cpus=9627.34s(160.46min)
+2025-06-13 13:17:42,738 INFO: PEDGUA_clean, uptake: 0.000643
+2025-06-13 13:17:54,948 INFO: 215/3814 completed: PASTOU_clean took 119.85s | win_avg(10)=82.14s | ETA@30cpus=9853.85s(164.23min)
+2025-06-13 13:17:54,948 INFO: PASTOU_clean, uptake: 0.000686
+2025-06-13 13:17:57,001 INFO: 216/3814 completed: PASNEE_clean took 126.96s | win_avg(10)=86.37s | ETA@30cpus=10358.52s(172.64min)
+2025-06-13 13:17:57,001 INFO: PASNEE_clean, uptake: 0.000431
+2025-06-13 13:18:04,160 INFO: 217/3814 completed: PECBOQ_clean took 95.37s | win_avg(10)=87.30s | ETA@30cpus=10467.17s(174.45min)
+2025-06-13 13:18:04,161 INFO: PECBOQ_clean, uptake: 0.000374
+2025-06-13 13:18:11,431 INFO: 218/3814 completed: PEDMOB_clean took 91.22s | win_avg(10)=90.14s | ETA@30cpus=10804.39s(180.07min)
+2025-06-13 13:18:11,431 INFO: PEDMOB_clean, uptake: 0.000884
+2025-06-13 13:18:15,674 INFO: 219/3814 completed: PEFRID_clean took 93.10s | win_avg(10)=91.57s | ETA@30cpus=10973.51s(182.89min)
+2025-06-13 13:18:15,674 INFO: PEFRID_clean, uptake: 0.002502
+2025-06-13 13:18:22,917 INFO: 220/3814 completed: PEGPUO_clean took 60.70s | win_avg(10)=93.29s | ETA@30cpus=11175.64s(186.26min)
+2025-06-13 13:18:22,917 INFO: PEGPUO_clean, uptake: 0.000486
+2025-06-13 13:18:22,986 INFO: 221/3814 completed: PEGQID_clean took 58.03s | win_avg(10)=83.55s | ETA@30cpus=10006.71s(166.78min)
+2025-06-13 13:18:22,986 INFO: PEGQID_clean, uptake: 0.000447
+2025-06-13 13:18:26,482 INFO: 222/3814 completed: PEGQOJ_clean took 58.23s | win_avg(10)=82.86s | ETA@30cpus=9921.03s(165.35min)
+2025-06-13 13:18:26,482 INFO: PEGQOJ_clean, uptake: 0.000439
+2025-06-13 13:18:28,513 INFO: 223/3814 completed: PEFRUP_clean took 93.45s | win_avg(10)=86.51s | ETA@30cpus=10355.69s(172.59min)
+2025-06-13 13:18:28,514 INFO: PEFRUP_clean, uptake: 0.002416
+2025-06-13 13:18:30,416 INFO: 224/3814 completed: OWIYUP_clean took 488.59s | win_avg(10)=128.55s | ETA@30cpus=15383.15s(256.39min)
+2025-06-13 13:18:30,416 INFO: OWIYUP_clean, uptake: 0.002176
+2025-06-13 13:18:33,228 INFO: 225/3814 completed: PEBNEP_clean took 128.86s | win_avg(10)=129.45s | ETA@30cpus=15486.58s(258.11min)
+2025-06-13 13:18:33,228 INFO: PEBNEP_clean, uptake: 0.000333
+2025-06-13 13:18:33,345 INFO: 226/3814 completed: PEGQUP_clean took 60.17s | win_avg(10)=122.77s | ETA@30cpus=14683.45s(244.72min)
+2025-06-13 13:18:33,345 INFO: PEGQUP_clean, uptake: 0.000396
+2025-06-13 13:18:38,367 INFO: 227/3814 completed: PECLEP_clean took 128.07s | win_avg(10)=126.04s | ETA@30cpus=15070.36s(251.17min)
+2025-06-13 13:18:38,367 INFO: PECLEP_clean, uptake: 0.001201
+2025-06-13 13:18:39,172 INFO: 228/3814 completed: PEFSUQ_clean took 98.70s | win_avg(10)=126.79s | ETA@30cpus=15155.57s(252.59min)
+2025-06-13 13:18:39,172 INFO: PEFSUQ_clean, uptake: 0.000857
+2025-06-13 13:18:41,278 INFO: 229/3814 completed: PEGBAG_clean took 94.63s | win_avg(10)=126.94s | ETA@30cpus=15169.69s(252.83min)
+2025-06-13 13:18:41,279 INFO: PEGBAG_clean, uptake: 0.000559
+2025-06-13 13:18:41,543 INFO: 230/3814 completed: PEFSEA_clean took 101.28s | win_avg(10)=131.00s | ETA@30cpus=15650.25s(260.84min)
+2025-06-13 13:18:41,544 INFO: PEFSEA_clean, uptake: 0.000676
+2025-06-13 13:18:43,410 INFO: 231/3814 completed: PEFTAX_clean took 97.23s | win_avg(10)=134.92s | ETA@30cpus=16114.05s(268.57min)
+2025-06-13 13:18:43,410 INFO: PEFTAX_clean, uptake: 0.000685
+2025-06-13 13:18:46,415 INFO: 232/3814 completed: PEGBUA_clean took 94.17s | win_avg(10)=138.51s | ETA@30cpus=16538.65s(275.64min)
+2025-06-13 13:18:46,415 INFO: PEGBUA_clean, uptake: 0.000555
+2025-06-13 13:18:49,337 INFO: 233/3814 completed: PEGCAH_clean took 94.85s | win_avg(10)=138.65s | ETA@30cpus=16550.74s(275.85min)
+2025-06-13 13:18:49,338 INFO: PEGCAH_clean, uptake: 0.000661
+2025-06-13 13:18:50,418 INFO: 234/3814 completed: PEFRID01_clean took 129.33s | win_avg(10)=102.73s | ETA@30cpus=12258.99s(204.32min)
+2025-06-13 13:18:50,418 INFO: PEFRID01_clean, uptake: 0.001514
+2025-06-13 13:18:50,924 INFO: 235/3814 completed: PEGCEL_clean took 96.43s | win_avg(10)=99.49s | ETA@30cpus=11868.69s(197.81min)
+2025-06-13 13:18:50,924 INFO: PEGCEL_clean, uptake: 0.000805
+2025-06-13 13:18:53,754 INFO: 236/3814 completed: PEGQAV_clean took 89.76s | win_avg(10)=102.44s | ETA@30cpus=12218.24s(203.64min)
+2025-06-13 13:18:53,754 INFO: PEGQAV_clean, uptake: 0.000419
+2025-06-13 13:18:56,168 INFO: 237/3814 completed: PEJFEQ_clean took 59.17s | win_avg(10)=95.55s | ETA@30cpus=11393.25s(189.89min)
+2025-06-13 13:18:56,168 INFO: PEJFEQ_clean, uptake: 0.000625
+2025-06-13 13:18:57,753 INFO: 238/3814 completed: PEGPOI_clean took 99.85s | win_avg(10)=95.67s | ETA@30cpus=11403.80s(190.06min)
+2025-06-13 13:18:57,753 INFO: PEGPOI_clean, uptake: 0.000520
+2025-06-13 13:18:59,113 INFO: 239/3814 completed: PEFRUP01_clean took 132.07s | win_avg(10)=99.41s | ETA@30cpus=11846.73s(197.45min)
+2025-06-13 13:18:59,113 INFO: PEFRUP01_clean, uptake: 0.001525
+2025-06-13 13:19:13,448 INFO: 240/3814 completed: PEGCIP_clean took 117.40s | win_avg(10)=101.02s | ETA@30cpus=12035.42s(200.59min)
+2025-06-13 13:19:13,448 INFO: PEGCIP_clean, uptake: 0.001549
+2025-06-13 13:19:15,107 INFO: 241/3814 completed: PEJFIU_clean took 70.94s | win_avg(10)=98.40s | ETA@30cpus=11718.99s(195.32min)
+2025-06-13 13:19:15,107 INFO: PEJFIU_clean, uptake: 0.000763
+2025-06-13 13:19:17,513 INFO: 242/3814 completed: PEJNUP_clean took 51.03s | win_avg(10)=94.08s | ETA@30cpus=11202.00s(186.70min)
+2025-06-13 13:19:17,513 INFO: PEJNUP_clean, uptake: 0.003866
+2025-06-13 13:19:19,759 INFO: 243/3814 completed: PEJFOA_clean took 68.32s | win_avg(10)=91.43s | ETA@30cpus=10883.11s(181.39min)
+2025-06-13 13:19:19,759 INFO: PEJFOA_clean, uptake: 0.000928
+2025-06-13 13:19:23,301 INFO: 244/3814 completed: PAVKIH_charged took 197.51s | win_avg(10)=98.25s | ETA@30cpus=11691.38s(194.86min)
+2025-06-13 13:19:23,301 INFO: PAVKIH_charged, uptake: 0.001142
+2025-06-13 13:19:23,389 INFO: 245/3814 completed: PEKWAF_clean took 42.11s | win_avg(10)=92.82s | ETA@30cpus=11041.89s(184.03min)
+2025-06-13 13:19:23,389 INFO: PEKWAF_clean, uptake: 0.000544
+2025-06-13 13:19:23,468 INFO: 246/3814 completed: PEJMOI_clean took 60.55s | win_avg(10)=89.89s | ETA@30cpus=10691.38s(178.19min)
+2025-06-13 13:19:23,469 INFO: PEJMOI_clean, uptake: 0.000895
+2025-06-13 13:19:26,920 INFO: 247/3814 completed: PEJPAX_charged took 58.40s | win_avg(10)=89.82s | ETA@30cpus=10679.29s(177.99min)
+2025-06-13 13:19:26,920 INFO: PEJPAX_charged, uptake: 0.002226
+2025-06-13 13:19:32,018 INFO: 248/3814 completed: PEJFUG_clean took 76.34s | win_avg(10)=87.47s | ETA@30cpus=10396.86s(173.28min)
+2025-06-13 13:19:32,019 INFO: PEJFUG_clean, uptake: 0.001175
+2025-06-13 13:19:33,786 INFO: 249/3814 completed: PEHQID_neutral took 111.04s | win_avg(10)=85.36s | ETA@30cpus=10144.08s(169.07min)
+2025-06-13 13:19:33,786 INFO: PEHQID_neutral, uptake: 0.000888
+2025-06-13 13:19:37,711 INFO: 250/3814 completed: PEDRIA_clean took 177.32s | win_avg(10)=91.36s | ETA@30cpus=10853.06s(180.88min)
+2025-06-13 13:19:37,712 INFO: PEDRIA_clean, uptake: 0.005484
+2025-06-13 13:19:38,419 INFO: 251/3814 completed: PEKKAS_clean took 59.25s | win_avg(10)=90.19s | ETA@30cpus=10711.10s(178.52min)
+2025-06-13 13:19:38,419 INFO: PEKKAS_clean, uptake: 0.001098
+2025-06-13 13:19:47,511 INFO: 252/3814 completed: PEKZIP_clean took 65.97s | win_avg(10)=91.68s | ETA@30cpus=10885.45s(181.42min)
+2025-06-13 13:19:47,511 INFO: PEKZIP_clean, uptake: 0.000503
+2025-06-13 13:19:51,657 INFO: 253/3814 completed: PEJPIF_charged took 81.24s | win_avg(10)=92.97s | ETA@30cpus=11035.66s(183.93min)
+2025-06-13 13:19:51,657 INFO: PEJPIF_charged, uptake: 0.001335
+2025-06-13 13:19:54,604 INFO: 254/3814 completed: PEKDAM_clean took 76.23s | win_avg(10)=80.84s | ETA@30cpus=9593.36s(159.89min)
+2025-06-13 13:19:54,604 INFO: PEKDAM_clean, uptake: 0.003090
+2025-06-13 13:19:58,692 INFO: 255/3814 completed: PELGOE_clean took 75.28s | win_avg(10)=84.16s | ETA@30cpus=9984.14s(166.40min)
+2025-06-13 13:19:58,693 INFO: PELGOE_clean, uptake: 0.001188
+2025-06-13 13:20:03,166 INFO: 256/3814 completed: PENNON_clean took 48.05s | win_avg(10)=82.91s | ETA@30cpus=9833.19s(163.89min)
+2025-06-13 13:20:03,166 INFO: PENNON_clean, uptake: 0.004483
+2025-06-13 13:20:18,619 INFO: 257/3814 completed: PEJRED_clean took 105.38s | win_avg(10)=87.61s | ETA@30cpus=10387.48s(173.12min)
+2025-06-13 13:20:18,619 INFO: PEJRED_clean, uptake: 0.000334
+2025-06-13 13:20:23,091 INFO: 258/3814 completed: PENXUC_clean took 63.33s | win_avg(10)=86.31s | ETA@30cpus=10230.34s(170.51min)
+2025-06-13 13:20:23,091 INFO: PENXUC_clean, uptake: 0.000690
+2025-06-13 13:20:23,563 INFO: 259/3814 completed: PENZIS_clean took 60.17s | win_avg(10)=81.22s | ETA@30cpus=9624.62s(160.41min)
+2025-06-13 13:20:23,563 INFO: PENZIS_clean, uptake: 0.001373
+2025-06-13 13:20:29,383 INFO: 260/3814 completed: PELNEA01_clean took 102.96s | win_avg(10)=73.79s | ETA@30cpus=8741.09s(145.68min)
+2025-06-13 13:20:29,383 INFO: PELNEA01_clean, uptake: 0.000210
+2025-06-13 13:20:29,441 INFO: 261/3814 completed: PEKCUF_clean took 116.06s | win_avg(10)=79.47s | ETA@30cpus=9411.56s(156.86min)
+2025-06-13 13:20:29,442 INFO: PEKCUF_clean, uptake: 0.003370
+2025-06-13 13:20:29,721 INFO: 262/3814 completed: PELRAB_clean took 99.30s | win_avg(10)=82.80s | ETA@30cpus=9803.54s(163.39min)
+2025-06-13 13:20:29,721 INFO: PELRAB_clean, uptake: 0.000250
+2025-06-13 13:20:29,822 INFO: 263/3814 completed: PELXIP_clean took 96.06s | win_avg(10)=84.28s | ETA@30cpus=9976.21s(166.27min)
+2025-06-13 13:20:29,822 INFO: PELXIP_clean, uptake: 0.000519
+2025-06-13 13:20:30,711 INFO: 264/3814 completed: PEHTON_clean took 155.74s | win_avg(10)=92.23s | ETA@30cpus=10914.30s(181.90min)
+2025-06-13 13:20:30,711 INFO: PEHTON_clean, uptake: 0.000806
+2025-06-13 13:20:32,815 INFO: 265/3814 completed: PEPLAY_clean took 54.39s | win_avg(10)=90.15s | ETA@30cpus=10664.20s(177.74min)
+2025-06-13 13:20:32,815 INFO: PEPLAY_clean, uptake: 0.002128
+2025-06-13 13:20:37,743 INFO: 266/3814 completed: PEJMUN_charged took 134.72s | win_avg(10)=98.81s | ETA@30cpus=11686.20s(194.77min)
+2025-06-13 13:20:37,743 INFO: PEJMUN_charged, uptake: 0.001557
+2025-06-13 13:20:38,478 INFO: 267/3814 completed: PENNAZ_clean took 85.02s | win_avg(10)=96.78s | ETA@30cpus=11442.11s(190.70min)
+2025-06-13 13:20:38,479 INFO: PENNAZ_clean, uptake: 0.002799
+2025-06-13 13:20:40,069 INFO: 268/3814 completed: PEMRIK_clean took 100.95s | win_avg(10)=100.54s | ETA@30cpus=11883.52s(198.06min)
+2025-06-13 13:20:40,069 INFO: PEMRIK_clean, uptake: 0.001449
+2025-06-13 13:20:41,111 INFO: 269/3814 completed: PENYIR_clean took 77.81s | win_avg(10)=102.30s | ETA@30cpus=12088.56s(201.48min)
+2025-06-13 13:20:41,111 INFO: PENYIR_clean, uptake: 0.000881
+2025-06-13 13:20:44,290 INFO: 270/3814 completed: PEPBAO_clean took 77.37s | win_avg(10)=99.74s | ETA@30cpus=11782.75s(196.38min)
+2025-06-13 13:20:44,291 INFO: PEPBAO_clean, uptake: 0.000741
+2025-06-13 13:20:48,337 INFO: 271/3814 completed: PEPLIG_clean took 56.68s | win_avg(10)=93.80s | ETA@30cpus=11078.08s(184.63min)
+2025-06-13 13:20:48,337 INFO: PEPLIG_clean, uptake: 0.002101
+2025-06-13 13:20:48,609 INFO: 272/3814 completed: PEPLEC_clean took 61.10s | win_avg(10)=89.98s | ETA@30cpus=10623.93s(177.07min)
+2025-06-13 13:20:48,609 INFO: PEPLEC_clean, uptake: 0.002290
+2025-06-13 13:20:50,425 INFO: 273/3814 completed: PEPLOM_clean took 55.82s | win_avg(10)=85.96s | ETA@30cpus=10146.01s(169.10min)
+2025-06-13 13:20:50,426 INFO: PEPLOM_clean, uptake: 0.001457
+2025-06-13 13:20:56,436 INFO: 274/3814 completed: PELRIJ_clean took 125.30s | win_avg(10)=82.91s | ETA@30cpus=9783.89s(163.06min)
+2025-06-13 13:20:56,436 INFO: PELRIJ_clean, uptake: 0.006115
+2025-06-13 13:20:57,300 INFO: 275/3814 completed: PENZUE_clean took 93.83s | win_avg(10)=86.86s | ETA@30cpus=10246.30s(170.77min)
+2025-06-13 13:20:57,300 INFO: PENZUE_clean, uptake: 0.000266
+2025-06-13 13:20:59,763 INFO: 276/3814 completed: PEMREG_clean took 121.99s | win_avg(10)=85.58s | ETA@30cpus=10093.18s(168.22min)
+2025-06-13 13:20:59,763 INFO: PEMREG_clean, uptake: 0.003520
+2025-06-13 13:21:05,525 INFO: 277/3814 completed: PEMGIZ_charged took 129.34s | win_avg(10)=90.02s | ETA@30cpus=10612.91s(176.88min)
+2025-06-13 13:21:05,526 INFO: PEMGIZ_charged, uptake: 0.000608
+2025-06-13 13:21:08,708 INFO: 278/3814 completed: PEPKUR_clean took 90.99s | win_avg(10)=89.02s | ETA@30cpus=10492.60s(174.88min)
+2025-06-13 13:21:08,708 INFO: PEPKUR_clean, uptake: 0.000570
+2025-06-13 13:21:09,560 INFO: 279/3814 completed: PELQII_clean took 140.11s | win_avg(10)=95.25s | ETA@30cpus=11223.80s(187.06min)
+2025-06-13 13:21:09,560 INFO: PELQII_clean, uptake: 0.003964
+2025-06-13 13:21:13,771 INFO: 280/3814 completed: PEQRUZ_clean took 75.07s | win_avg(10)=95.02s | ETA@30cpus=11193.63s(186.56min)
+2025-06-13 13:21:13,772 INFO: PEQRUZ_clean, uptake: 0.001506
+2025-06-13 13:21:18,054 INFO: 281/3814 completed: PENNUT_clean took 120.54s | win_avg(10)=101.41s | ETA@30cpus=11942.51s(199.04min)
+2025-06-13 13:21:18,055 INFO: PENNUT_clean, uptake: 0.001067
+2025-06-13 13:21:23,463 INFO: 282/3814 completed: PEPKOL_clean took 109.67s | win_avg(10)=106.27s | ETA@30cpus=12511.05s(208.52min)
+2025-06-13 13:21:23,463 INFO: PEPKOL_clean, uptake: 0.000575
+2025-06-13 13:21:30,629 INFO: 283/3814 completed: PETNOS_clean took 67.06s | win_avg(10)=107.39s | ETA@30cpus=12639.85s(210.66min)
+2025-06-13 13:21:30,630 INFO: PETNOS_clean, uptake: 0.000639
+2025-06-13 13:21:32,884 INFO: 284/3814 completed: PEQWAK_clean took 74.26s | win_avg(10)=102.29s | ETA@30cpus=12035.77s(200.60min)
+2025-06-13 13:21:32,884 INFO: PEQWAK_clean, uptake: 0.001715
+2025-06-13 13:21:38,145 INFO: 285/3814 completed: PEVLIN_clean took 65.33s | win_avg(10)=99.44s | ETA@30cpus=11697.12s(194.95min)
+2025-06-13 13:21:38,145 INFO: PEVLIN_clean, uptake: 0.000542
+2025-06-13 13:21:41,435 INFO: 286/3814 completed: PEVQIQ_clean took 63.69s | win_avg(10)=93.61s | ETA@30cpus=11008.23s(183.47min)
+2025-06-13 13:21:41,435 INFO: PEVQIQ_clean, uptake: 0.000907
+2025-06-13 13:21:42,888 INFO: 287/3814 completed: PEWFII_clean took 52.46s | win_avg(10)=85.92s | ETA@30cpus=10101.26s(168.35min)
+2025-06-13 13:21:42,888 INFO: PEWFII_clean, uptake: 0.000728
+2025-06-13 13:21:42,944 INFO: 288/3814 completed: PEWFII01_clean took 54.33s | win_avg(10)=82.25s | ETA@30cpus=9667.53s(161.13min)
+2025-06-13 13:21:42,944 INFO: PEWFII01_clean, uptake: 0.000792
+2025-06-13 13:21:46,568 INFO: 289/3814 completed: PETWOC_clean took 77.12s | win_avg(10)=75.95s | ETA@30cpus=8924.67s(148.74min)
+2025-06-13 13:21:46,568 INFO: PETWOC_clean, uptake: 0.001292
+2025-06-13 13:21:49,550 INFO: 290/3814 completed: PEVFON_clean took 79.72s | win_avg(10)=76.42s | ETA@30cpus=8976.68s(149.61min)
+2025-06-13 13:21:49,550 INFO: PEVFON_clean, uptake: 0.002190
+2025-06-13 13:21:54,017 INFO: 291/3814 completed: PEWGEF_clean took 57.57s | win_avg(10)=70.12s | ETA@30cpus=8234.75s(137.25min)
+2025-06-13 13:21:54,017 INFO: PEWGEF_clean, uptake: 0.002084
+2025-06-13 13:21:54,391 INFO: 292/3814 completed: PESTUD_clean took 91.30s | win_avg(10)=68.29s | ETA@30cpus=8016.66s(133.61min)
+2025-06-13 13:21:54,391 INFO: PESTUD_clean, uptake: 0.000616
+2025-06-13 13:29:28,836 INFO: Start run: 3497/11211, CPUs=30
+2025-06-13 13:29:36,606 ERROR: Error processing FEKBED_clean: No .data file in low_pressure_gcmc/FEKBED_clean/Output/System_0
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium/low_pressure_gcmc.py", line 196, in cmd_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium/low_pressure_gcmc.py", line 146, in run_simulation
+    uptake = parse_output(d)["Average loading absolute [mol/kg framework]"]
+             ^^^^^^^^^^^^^^^
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium/low_pressure_gcmc.py", line 114, in parse_output
+    raise FileNotFoundError(f"No .data file in {data_dir}")
+FileNotFoundError: No .data file in low_pressure_gcmc/FEKBED_clean/Output/System_0
+2025-06-13 13:29:44,162 ERROR: Error processing RUBLEH_clean: No .data file in low_pressure_gcmc/RUBLEH_clean/Output/System_0
+Traceback (most recent call last):
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium/low_pressure_gcmc.py", line 196, in cmd_run
+    mof, uptake, elapsed = future.result()
+                           ^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/yongsang/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium/low_pressure_gcmc.py", line 146, in run_simulation
+    uptake = parse_output(d)["Average loading absolute [mol/kg framework]"]
+             ^^^^^^^^^^^^^^^
+  File "/home/yongsang/PSID_ACTIVELEARNING_FRAMEWORK/prototype03/generated_project/CoREMOF_2019-11-01-ASR-public_12020/He_298.15K_15bar_screened_by_Helium/low_pressure_gcmc.py", line 114, in parse_output
+    raise FileNotFoundError(f"No .data file in {data_dir}")
+FileNotFoundError: No .data file in low_pressure_gcmc/RUBLEH_clean/Output/System_0
+2025-06-13 13:29:53,407 INFO: 1/3497 completed: PIYZAZ_clean took 23.56s | win_avg(1)=23.56s | ETA@30cpus=2745.68s(45.76min)
+2025-06-13 13:29:53,407 INFO: PIYZAZ_clean, uptake: 0.002590
+2025-06-13 13:30:11,138 INFO: 2/3497 completed: PIYZED01_clean took 41.29s | win_avg(2)=32.43s | ETA@30cpus=3777.66s(62.96min)
+2025-06-13 13:30:11,138 INFO: PIYZED01_clean, uptake: 0.002526
+2025-06-13 13:30:18,258 INFO: 3/3497 completed: PIYZED02_clean took 41.65s | win_avg(3)=35.50s | ETA@30cpus=4134.68s(68.91min)
+2025-06-13 13:30:18,258 INFO: PIYZED02_clean, uptake: 0.002401

@@ -160,9 +160,9 @@ def initial_run(db_path: Path, config_path: Path, ncpus: int, gcfg : Path):
     to_run = len(targets)
     print(f"▶ RUN: {to_run}/{total} pending using {ncpus} CPUs")
     run_logger.info(f"Start run: {to_run}/{total}, CPUs={ncpus}")
-    results = Parallel(n_jobs=ncpus)(
-        delayed(run_simulation)(mof, raspa) for mof in targets
-    )
+#    results = Parallel(n_jobs=ncpus)(
+ #       delayed(run_simulation)(mof, raspa) for mof in targets
+ #   )
     time.sleep(1)
     if to_run == 0:
         return
@@ -205,7 +205,7 @@ def initial_run(db_path: Path, config_path: Path, ncpus: int, gcfg : Path):
                 error_logger.error(f"Error processing {mof}: {e}", exc_info=True)
     print("✅ Simulations and DB update complete.")
 
-# Main dispatcher
+## Main dispatcher
 
 def main():
     parser = argparse.ArgumentParser()
