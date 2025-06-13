@@ -1,0 +1,15 @@
+2025-06-13 17:32:48,036 ERROR: Error processing ZODXAT_clean: No .data file in low_pressure_gcmc/ZODXAT_clean/Output/System_0
+Traceback (most recent call last):
+  File "low_pressure_gcmc.py", line 254, in cmd_run
+    mof, uptake, elapsed = future.result()
+  File "/usr/local/anaconda3/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/local/anaconda3/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+    raise self._exception
+  File "/usr/local/anaconda3/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "low_pressure_gcmc.py", line 146, in run_simulation
+    uptake = parse_output(d)["Average loading absolute [mol/kg framework]"]
+  File "low_pressure_gcmc.py", line 114, in parse_output
+    raise FileNotFoundError(f"No .data file in {data_dir}")
+FileNotFoundError: No .data file in low_pressure_gcmc/ZODXAT_clean/Output/System_0

@@ -1,4 +1,4 @@
 {
-    "RASPA_DIR" : "/home/yongsang/PSID_SIMULATION_TOOLS/RASPA",
+    "RASPA_DIR" : "/home/ys/PSID_SIMULATION_TOOLS/RASPA",
     "isotherm-config.bat" : "../isotherm-config.python.library/"
 }
