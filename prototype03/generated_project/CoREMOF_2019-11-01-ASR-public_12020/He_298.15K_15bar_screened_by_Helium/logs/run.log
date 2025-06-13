@@ -7585,3 +7585,53 @@ FileNotFoundError: No .data file in low_pressure_gcmc/RUBLEH_clean/Output/System
 2025-06-13 13:30:11,138 INFO: PIYZED01_clean, uptake: 0.002526
 2025-06-13 13:30:18,258 INFO: 3/3497 completed: PIYZED02_clean took 41.65s | win_avg(3)=35.50s | ETA@30cpus=4134.68s(68.91min)
 2025-06-13 13:30:18,258 INFO: PIYZED02_clean, uptake: 0.002401
+2025-06-13 13:30:24,817 INFO: 4/3497 completed: PIQFIG_clean took 54.97s | win_avg(4)=40.37s | ETA@30cpus=4700.12s(78.34min)
+2025-06-13 13:30:24,817 INFO: PIQFIG_clean, uptake: 0.004535
+2025-06-13 13:30:25,205 INFO: 5/3497 completed: PIJDIX_clean took 55.36s | win_avg(5)=43.37s | ETA@30cpus=5047.80s(84.13min)
+2025-06-13 13:30:25,206 INFO: PIJDIX_clean, uptake: 0.001092
+2025-06-13 13:30:25,842 INFO: 6/3497 completed: PIYZED03_clean took 41.68s | win_avg(6)=43.08s | ETA@30cpus=5013.62s(83.56min)
+2025-06-13 13:30:25,842 INFO: PIYZED03_clean, uptake: 0.002425
+2025-06-13 13:30:35,583 INFO: 7/3497 completed: PIJROR_clean took 65.74s | win_avg(7)=46.32s | ETA@30cpus=5388.64s(89.81min)
+2025-06-13 13:30:35,583 INFO: PIJROR_clean, uptake: 0.001516
+2025-06-13 13:30:38,135 INFO: 8/3497 completed: PIYZED_clean took 44.73s | win_avg(8)=46.12s | ETA@30cpus=5363.92s(89.40min)
+2025-06-13 13:30:38,135 INFO: PIYZED_clean, uptake: 0.002481
+2025-06-13 13:30:38,158 INFO: 9/3497 completed: PIWRAQ_clean took 68.31s | win_avg(9)=48.59s | ETA@30cpus=5648.97s(94.15min)
+2025-06-13 13:30:38,158 INFO: PIWRAQ_clean, uptake: 0.000685
+2025-06-13 13:30:54,608 INFO: 10/3497 completed: PIJJOI_clean took 84.74s | win_avg(10)=52.20s | ETA@30cpus=6067.59s(101.13min)
+2025-06-13 13:30:54,608 INFO: PIJJOI_clean, uptake: 0.001256
+2025-06-13 13:31:01,897 INFO: 11/3497 completed: PIKBUH_clean took 92.05s | win_avg(10)=59.05s | ETA@30cpus=6861.63s(114.36min)
+2025-06-13 13:31:01,897 INFO: PIKBUH_clean, uptake: 0.000193
+2025-06-13 13:31:08,571 INFO: 12/3497 completed: PIWSEV_clean took 98.71s | win_avg(10)=64.79s | ETA@30cpus=7526.65s(125.44min)
+2025-06-13 13:31:08,571 INFO: PIWSEV_clean, uptake: 0.002889
+2025-06-13 13:31:12,456 INFO: 13/3497 completed: PIZHOX_clean took 54.19s | win_avg(10)=66.05s | ETA@30cpus=7670.15s(127.84min)
+2025-06-13 13:31:12,456 INFO: PIZHOX_clean, uptake: 0.002211
+2025-06-13 13:31:14,529 INFO: 14/3497 completed: PIBPAS01_clean took 104.66s | win_avg(10)=71.02s | ETA@30cpus=8244.88s(137.41min)
+2025-06-13 13:31:14,529 INFO: PIBPAS01_clean, uptake: 0.002575
+2025-06-13 13:31:17,343 INFO: 15/3497 completed: PIZNOB_clean_h took 52.52s | win_avg(10)=70.73s | ETA@30cpus=8209.60s(136.83min)
+2025-06-13 13:31:17,343 INFO: PIZNOB_clean_h, uptake: 0.001354
+2025-06-13 13:31:22,206 INFO: 16/3497 completed: PIHNUQ_clean took 112.36s | win_avg(10)=77.80s | ETA@30cpus=9027.37s(150.46min)
+2025-06-13 13:31:22,207 INFO: PIHNUQ_clean, uptake: 0.000442
+2025-06-13 13:31:22,392 INFO: 17/3497 completed: PEZCII_clean took 112.52s | win_avg(10)=82.48s | ETA@30cpus=9567.43s(159.46min)
+2025-06-13 13:31:22,392 INFO: PEZCII_clean, uptake: 0.002386
+2025-06-13 13:31:23,518 INFO: 18/3497 completed: PIGXUZ_clean took 113.66s | win_avg(10)=89.37s | ETA@30cpus=10364.07s(172.73min)
+2025-06-13 13:31:23,519 INFO: PIGXUZ_clean, uptake: 0.000637
+2025-06-13 13:31:29,509 INFO: 19/3497 completed: PIQMOT_clean took 119.65s | win_avg(10)=94.51s | ETA@30cpus=10956.36s(182.61min)
+2025-06-13 13:31:29,509 INFO: PIQMOT_clean, uptake: 0.001304
+2025-06-13 13:31:29,571 INFO: 20/3497 completed: PITPEP_clean took 119.71s | win_avg(10)=98.00s | ETA@30cpus=11358.52s(189.31min)
+2025-06-13 13:31:29,571 INFO: PITPEP_clean, uptake: 0.002506
+2025-06-13 13:31:31,636 INFO: 21/3497 completed: PEYSIW_clean took 121.79s | win_avg(10)=100.98s | ETA@30cpus=11699.91s(195.00min)
+2025-06-13 13:31:31,636 INFO: PEYSIW_clean, uptake: 0.001245
+2025-06-13 13:31:32,039 INFO: 22/3497 completed: PIZPAP_clean_h took 66.83s | win_avg(10)=97.79s | ETA@30cpus=11327.32s(188.79min)
+2025-06-13 13:31:32,039 INFO: PIZPAP_clean_h, uptake: 0.001096
+2025-06-13 13:31:32,537 INFO: 23/3497 completed: PIZPET_clean_h took 66.69s | win_avg(10)=99.04s | ETA@30cpus=11468.80s(191.15min)
+2025-06-13 13:31:32,537 INFO: PIZPET_clean_h, uptake: 0.001445
+2025-06-13 13:31:33,636 INFO: 24/3497 completed: PIQMUZ_clean took 123.73s | win_avg(10)=100.95s | ETA@30cpus=11686.27s(194.77min)
+2025-06-13 13:31:33,636 INFO: PIQMUZ_clean, uptake: 0.000880
+2025-06-13 13:31:42,105 INFO: 25/3497 completed: PIZHEN_clean took 90.95s | win_avg(10)=104.79s | ETA@30cpus=12127.64s(202.13min)
+2025-06-13 13:31:42,105 INFO: PIZHEN_clean, uptake: 0.000272
+2025-06-13 13:31:42,571 INFO: 26/3497 completed: PIZPIX02_clean took 66.99s | win_avg(10)=100.25s | ETA@30cpus=11599.20s(193.32min)
+2025-06-13 13:31:42,571 INFO: PIZPIX02_clean, uptake: 0.001037
+2025-06-13 13:31:45,392 INFO: 27/3497 completed: PIZPOD_clean_h took 67.23s | win_avg(10)=95.72s | ETA@30cpus=11072.05s(184.53min)
+2025-06-13 13:31:45,392 INFO: PIZPOD_clean_h, uptake: 0.001061
+2025-06-13 13:31:48,578 INFO: 28/3497 completed: PIZPIX_clean_h took 70.44s | win_avg(10)=91.40s | ETA@30cpus=10569.11s(176.15min)
+2025-06-13 13:31:48,578 INFO: PIZPIX_clean_h, uptake: 0.001055

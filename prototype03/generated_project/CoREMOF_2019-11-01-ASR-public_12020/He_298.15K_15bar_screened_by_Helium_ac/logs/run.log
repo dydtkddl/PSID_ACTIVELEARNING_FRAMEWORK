@@ -372,3 +372,11 @@
 2025-06-13 13:25:07,386 INFO: 27/112 completed: FUMJAA_clean took 129.47s | win_avg(10)=251.03s | ETA@30cpus=711.25s(11.85min)
 2025-06-13 13:25:35,399 INFO: 28/112 completed: FIGXAU_clean took 160.17s | win_avg(10)=237.93s | ETA@30cpus=666.20s(11.10min)
 2025-06-13 13:25:45,466 INFO: 29/112 completed: APEBOO_clean took 429.92s | win_avg(10)=251.75s | ETA@30cpus=696.51s(11.61min)
+2025-06-13 13:25:48,639 INFO: 30/112 completed: ILOWAI_clean took 433.22s | win_avg(10)=273.05s | ETA@30cpus=746.33s(12.44min)
+2025-06-13 13:25:55,440 INFO: 31/112 completed: NACZUP_clean took 440.01s | win_avg(10)=285.47s | ETA@30cpus=770.78s(12.85min)
+2025-06-13 13:26:01,406 INFO: 32/112 completed: ETEKAQ01_manual took 206.68s | win_avg(10)=272.64s | ETA@30cpus=727.04s(12.12min)
+2025-06-13 13:26:11,792 INFO: 33/112 completed: DEFRIR_clean took 258.70s | win_avg(10)=283.85s | ETA@30cpus=747.47s(12.46min)
+2025-06-13 13:26:14,631 INFO: 34/112 completed: GUGNON_clean took 165.43s | win_avg(10)=277.51s | ETA@30cpus=721.53s(12.03min)
+2025-06-13 13:26:15,364 INFO: 35/112 completed: GOMREG_clean took 173.77s | win_avg(10)=256.86s | ETA@30cpus=659.28s(10.99min)
+2025-06-13 13:26:15,379 INFO: 36/112 completed: HEMVEB_clean took 144.84s | win_avg(10)=254.22s | ETA@30cpus=644.02s(10.73min)
+2025-06-13 13:26:53,612 INFO: Start run: 76/112, CPUs=30
