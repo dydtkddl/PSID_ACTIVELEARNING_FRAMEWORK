@@ -464,8 +464,10 @@ def main():
     gcfg = Path('gcmcconfig.json')
     binput = Path('base.input')
     node_map = {}
-    if args.pal_nodes:
+    if args.pal_nodes and args.pal_nodes.lower() != "none":
         node_map = json.loads(args.pal_nodes)
+    else:   
+        node_map = {}
     mof_list = args.mof_list
     print(args.phase) 
     if args.phase == 'initial_gcmc':
