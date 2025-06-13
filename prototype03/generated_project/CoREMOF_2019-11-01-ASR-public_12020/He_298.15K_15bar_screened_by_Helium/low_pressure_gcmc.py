@@ -288,16 +288,20 @@ def cmd_run(db_path: Path, config_path: Path, ncpus: int, node_map: dict, mof_li
                 )
                 run_logger.info(msg)
                 print(msg)
-                uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
 
-                batch_updates.append((uptake, elapsed, mof))
+                if uptake is not None:
+                    uptake_logger.info(f"{mof}, uptake: {uptake:.6f}")
+                    batch_updates.append((uptake, elapsed, mof, 1))
+                else:
+                    error_logger.error(f"{mof} failed, saving as -1")
+                    batch_updates.append((-1, -1, mof, -1))
 
                 if len(batch_updates) >= BATCH_SIZE:
                     conn = get_db_connection(db_path)
                     conn.executemany(
-                        f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, completed=1 "
+                        f"UPDATE {TABLE} SET `uptake[mol/kg framework]`=?, calculation_time=?, completed=? "
                         f"WHERE {df.columns[0]}=?",
-                        batch_updates
+                        [(u, t, c, m) for (u, t, m, c) in batch_updates]
                     )
                     conn.commit()
                     conn.close()
