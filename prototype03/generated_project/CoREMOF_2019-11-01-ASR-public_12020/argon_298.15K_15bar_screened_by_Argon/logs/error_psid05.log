@@ -1,0 +1,30 @@
+2025-06-13 17:58:48,270 ERROR: Error processing FEKBED_clean: No .data file in low_pressure_gcmc/FEKBED_clean/Output/System_0
+Traceback (most recent call last):
+  File "low_pressure_gcmc.py", line 263, in cmd_run
+    mof, uptake, elapsed = future.result()
+  File "/usr/local/anaconda3/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/local/anaconda3/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+    raise self._exception
+  File "/usr/local/anaconda3/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "low_pressure_gcmc.py", line 155, in run_simulation
+    uptake = parse_output(d)["Average loading absolute [mol/kg framework]"]
+  File "low_pressure_gcmc.py", line 123, in parse_output
+    raise FileNotFoundError(f"No .data file in {data_dir}")
+FileNotFoundError: No .data file in low_pressure_gcmc/FEKBED_clean/Output/System_0
+2025-06-13 20:51:21,960 ERROR: Error processing ORAWAH_clean: No .data file in low_pressure_gcmc/ORAWAH_clean/Output/System_0
+Traceback (most recent call last):
+  File "low_pressure_gcmc.py", line 263, in cmd_run
+    mof, uptake, elapsed = future.result()
+  File "/usr/local/anaconda3/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/local/anaconda3/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+    raise self._exception
+  File "/usr/local/anaconda3/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "low_pressure_gcmc.py", line 155, in run_simulation
+    uptake = parse_output(d)["Average loading absolute [mol/kg framework]"]
+  File "low_pressure_gcmc.py", line 123, in parse_output
+    raise FileNotFoundError(f"No .data file in {data_dir}")
+FileNotFoundError: No .data file in low_pressure_gcmc/ORAWAH_clean/Output/System_0
