@@ -363,9 +363,10 @@ def load_active_learning_dataset(db_path: Path, al_cfg: Path, gcfg: Path) -> pd.
     df = pd.read_sql("SELECT * FROM active_learning_gcmc", conn)
     df = df[df["iteration"] != "-1"]
     low_df = pd.read_sql(
-        "SELECT filename, uptake[mol/kg framework] AS uptake_lp FROM low_pressure_gcmc",
+        "SELECT * FROM low_pressure_gcmc",
         conn
     )
+    low_df = low_df[["filename",'uptake[mol/kg framework]']]
     conn.close()
     lp = gcfg['ExternalPressure_LOW']
     hp = gcfg['ExternalPressure']
@@ -373,7 +374,7 @@ def load_active_learning_dataset(db_path: Path, al_cfg: Path, gcfg: Path) -> pd.
     hp_col = f"{hp}bar uptake"
     df.rename(columns={'uptake[mol/kg framework]': hp_col}, inplace=True)
     df[lp_col] = df['filename'].map(
-        low_df.set_index('filename')['uptake_lp']
+        low_df.set_index('filename')['uptake[mol/kg framework]']
     )
     features = al_cfg['input_features']
     cols = [df.columns[0], 'iteration', lp_col] + features + [hp_col]
