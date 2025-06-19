@@ -512,14 +512,24 @@ def main():
 
     elif args.phase == 'init_model':
         print("🔧 Placeholder: init_model not implemented yet.")
-            # 1) Check previous phases
-        ok1, c1, t1 = check_phase_completion(dbp, 'active_learning_gcmc', 'initial_sample', 1)
-        ok2, c2, t2 = check_phase_completion(dbp, 'active_learning_gcmc', 'iteration', 0)
-        ok3, c3, t3 = check_phase_completion(dbp, 'low_pressure_gcmc', 'completed', 1)
-        if not (ok1 and ok2 and ok3):
-            logger.error(f"Initial samples: {c1}/{t1}, initial runs: {c2}/{t2}, low-pressure runs: {c3}/{t3}")
-            print(f"ERROR: Prerequisite phases incomplete. See logs for details.")
+    # 1) Check previous phases
+        _, c1, t1 = check_phase_completion(dbp, 'active_learning_gcmc', 'initial_sample', 1)
+        _, c2, t2 = check_phase_completion(dbp, 'active_learning_gcmc', 'iteration', 0)
+        _, c3, t3 = check_phase_completion(dbp, 'low_pressure_gcmc', 'completed', 1)
+        _, c4, t4 = check_phase_completion(dbp, 'low_pressure_gcmc', 'completed', -1)
+
+        if not (c1 == c2) and (t4 == c3 + c4):
+            # 상세한 오류 메시지 구성
+            error_msg = (
+                f"선행 단계 미완료: "
+                f"초기 샘플 {c1}/{t1}, "
+                f"초기 반복 {c2}/{t2}, "
+                f"저압 GCMC {c3}/{t3}"
+            )
+            logger.error(error_msg)
+            print("오류: 선행 단계가 완료되지 않았습니다. 자세한 내용은 로그를 확인하세요.")
             sys.exit(1)
+
 
         # 2) Load and prepare data
         df = load_active_learning_dataset(dbp, cfg, gcfg)
