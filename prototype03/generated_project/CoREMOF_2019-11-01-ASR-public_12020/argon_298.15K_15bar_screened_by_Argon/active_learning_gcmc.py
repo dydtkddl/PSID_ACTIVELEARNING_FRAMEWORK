@@ -539,7 +539,13 @@ def main():
 
         # 2) Load and prepare data
         df = load_active_learning_dataset(dbp, cfg, gcfg)
+        df['iteration'] = pd.to_numeric(df['iteration'], errors='coerce')
 
+        # 2) NaN 행 삭제
+        df = df.dropna(subset=['iteration'])
+
+        # 3) float→int 캐스팅
+        df['iteration'] = df['iteration'].astype(int)
         # 3) Check for existing training
         if (df['iteration'] >= 1).any():
             ans = input("Existing training detected. Reinitialize? (y/n): ")
