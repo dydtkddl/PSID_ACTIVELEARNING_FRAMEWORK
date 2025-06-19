@@ -361,7 +361,7 @@ def load_active_learning_dataset(db_path: Path, al_cfg: Path, gcfg: Path) -> pd.
     al_cfg = json.loads(al_cfg.read_text(encoding='utf-8'))
     conn = get_db_connection(db_path)
     df = pd.read_sql(f"SELECT * FROM active_learning_gcmc", conn)
-    df = df[df["iteration"]=="-1"]
+    df = df[df["iteration"]!="-1"]
     conn.close()
 
     # rename low-pressure uptake
