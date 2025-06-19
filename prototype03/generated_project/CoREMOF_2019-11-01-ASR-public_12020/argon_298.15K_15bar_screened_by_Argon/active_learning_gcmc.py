@@ -353,10 +353,12 @@ def check_phase_completion(db_path: Path, table: str, flag_column: str, flag_val
     return (count == total, count, total)
 
 # Dataset loader
-def load_active_learning_dataset(db_path: Path, al_cfg: dict, gcfg: dict) -> pd.DataFrame:
+def load_active_learning_dataset(db_path: Path, al_cfg: Path, gcfg: Path) -> pd.DataFrame:
     """
     Build DataFrame: MOF name, iteration, low & high pressure uptakes, input features.
     """
+    gcfg = json.loads(gcfg.read_text(encoding='utf-8'))
+    al_cfg = json.loads(al_cfg.read_text(encoding='utf-8'))
     conn = get_db_connection(db_path)
     df = pd.read_sql(f"SELECT * FROM active_learning_gcmc", conn)
     conn.close()
@@ -410,10 +412,12 @@ class FeedForwardNN(nn.Module):
     def forward(self, x): return self.net(x)
 
 # Training routine
-def train_model(labeled: pd.DataFrame, al_cfg: dict, model_dir: Path) -> nn.Module:
+def train_model(labeled: pd.DataFrame, al_cfg: Path, model_dir: Path) -> nn.Module:
     """
     Train NN with early stopping. Save model.pth & training_log.csv.
     """
+    # gcfg = json.loads(gcfg.read_text(encoding='utf-8'))
+    al_cfg = json.loads(al_cfg.read_text(encoding='utf-8'))
     # prepare arrays
     ups_col = [c for c in labeled.columns if 'uptake' in c][0]
     X = labeled.drop(columns=[labeled.columns[0],'iteration', ups_col]).select_dtypes(include='number').values
@@ -462,13 +466,15 @@ def train_model(labeled: pd.DataFrame, al_cfg: dict, model_dir: Path) -> nn.Modu
     return model
 
 # Prediction routine
-def predict_with_model(df: pd.DataFrame, model: nn.Module, gcfg: dict, model_dir: Path) -> pd.DataFrame:
+def predict_with_model(df: pd.DataFrame, model: nn.Module, al_cfg: Path, model_dir: Path) -> pd.DataFrame:
     """
     MC Dropout predictions. Save predictions.csv.
     """
+    al_cfg = json.loads(al_cfg.read_text(encoding='utf-8'))
+    # al_cfg = json.loads(al_cfg.read_text(encoding='utf-8'))
     model.eval(); feat = [c for c in df.columns if c not in [df.columns[0],'iteration'] and 'uptake' not in c]
     X = df[feat].values; tx=torch.tensor(X,dtype=torch.float32)
-    mcd=gcfg['prediction']['mcd_numbers']; all_preds=[]
+    mcd=al_cfg['prediction']['mcd_numbers']; all_preds=[]
     for _ in range(mcd):
         with torch.no_grad(): all_preds.append(model(tx).numpy().reshape(-1))
     arr=np.stack(all_preds); mean=arr.mean(0); std=arr.std(0)
@@ -511,7 +517,7 @@ def main():
             initial_run(dbp, cfg, args.ncpus, gcfg, node_map,mof_list)
 
     elif args.phase == 'init_model':
-        print("🔧 Placeholder: init_model not implemented yet.")
+        # print("🔧 Placeholder: init_model not implemented yet.")
     # 1) Check previous phases
         _, c1, t1 = check_phase_completion(dbp, 'active_learning_gcmc', 'initial_sample', 1)
         _, c2, t2 = check_phase_completion(dbp, 'active_learning_gcmc', 'iteration', 0)
@@ -547,7 +553,7 @@ def main():
         model = train_model(labeled, cfg, model_dir)
 
         # 6) Predict and save results
-        pred = predict_with_model(full, model, gcfg, model_dir)
+        pred = predict_with_model(full, model, cfg, model_dir)
         print('init_model phase completed successfully.')
     elif args.phase == 'active_gcmc':
         print("🔧 Placeholder: active_gcmc not implemented yet.")
