@@ -360,29 +360,26 @@ def load_active_learning_dataset(db_path: Path, al_cfg: Path, gcfg: Path) -> pd.
     gcfg = json.loads(gcfg.read_text(encoding='utf-8'))
     al_cfg = json.loads(al_cfg.read_text(encoding='utf-8'))
     conn = get_db_connection(db_path)
-    df = pd.read_sql(f"SELECT * FROM active_learning_gcmc", conn)
-    df = df[df["iteration"]!="-1"]
+    df = pd.read_sql("SELECT * FROM active_learning_gcmc", conn)
+    df = df[df["iteration"] != "-1"]
+    low_df = pd.read_sql(
+        "SELECT filename, uptake[mol/kg framework] AS uptake_lp FROM low_pressure_gcmc",
+        conn
+    )
     conn.close()
-
-    # rename low-pressure uptake
-    lp = gcfg['ExternalPressure']
+    lp = gcfg['ExternalPressure_LOW']
+    hp = gcfg['ExternalPressure']
     lp_col = f"{lp}bar uptake"
-    df.rename(columns={'uptake[mol/kg framework]': lp_col}, inplace=True)
-    # rename high-pressure if exists
-    if 'high_pressure_uptake' in df.columns:
-        hp = gcfg.get('HighPressure')
-        hp_col = f"{hp}bar uptake"
-        df.rename(columns={'high_pressure_uptake': hp_col}, inplace=True)
-    else:
-        hp_col = None
-
-    # select and reorder columns
+    hp_col = f"{hp}bar uptake"
+    df.rename(columns={'uptake[mol/kg framework]': hp_col}, inplace=True)
+    df[lp_col] = df['filename'].map(
+        low_df.set_index('filename')['uptake_lp']
+    )
     features = al_cfg['input_features']
-    cols = [df.columns[0], 'iteration', lp_col] + features
-    if hp_col:
-        cols.append(hp_col)
+    cols = [df.columns[0], 'iteration', lp_col] + features + [hp_col]
     df = df[cols]
     return df
+
 
 # Split datasets
 def split_datasets(df: pd.DataFrame, model_dir: Path) -> (pd.DataFrame, pd.DataFrame, pd.DataFrame):
@@ -420,7 +417,7 @@ def train_model(labeled: pd.DataFrame, al_cfg: Path, model_dir: Path) -> nn.Modu
     # gcfg = json.loads(gcfg.read_text(encoding='utf-8'))
     al_cfg = json.loads(al_cfg.read_text(encoding='utf-8'))
     # prepare arrays
-    ups_col = [c for c in labeled.columns if 'uptake' in c][0]
+    ups_col = labeled.columns[-1]
     X = labeled.drop(columns=[labeled.columns[0],'iteration', ups_col]).select_dtypes(include='number').values
     y = labeled[ups_col].values
     # warn on dropped non-numeric
