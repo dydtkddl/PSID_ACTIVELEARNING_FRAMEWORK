@@ -429,7 +429,13 @@ def train_model(labeled: pd.DataFrame, al_cfg: Path, model_dir: Path) -> nn.Modu
     # train split
     # X_train, _, y_train, _ = train_test_split(X, y, test_size=0.0)
     X_train, y_train = X, y
-    ds = TensorDataset(torch.tensor(X_train,dtype=torch.float32), torch.tensor(y_train,dtype=torch.float32).unsqueeze(1))
+    # ds =ds = TensorDataset(torch.tensor(X_train,dtype=torch.float32), torch.tensor(y_train,dtype=torch.float32).unsqueeze(1))
+    X_arr = np.asarray(X_train, dtype=np.float32)
+    y_arr = np.asarray(y_train, dtype=np.float32)
+    X_tensor = torch.from_numpy(X_arr)            # shape (N, n_features)
+    y_tensor = torch.from_numpy(y_arr).unsqueeze(1)  # shape (N, 1)
+    ds = TensorDataset(X_tensor, y_tensor)
+    
     loader = DataLoader(ds, batch_size=al_cfg['neural_network']['dataset']['BATCH_SIZE'], shuffle=True)
 
     # model
