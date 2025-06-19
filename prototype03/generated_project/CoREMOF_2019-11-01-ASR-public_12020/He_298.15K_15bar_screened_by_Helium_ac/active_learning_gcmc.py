@@ -177,7 +177,7 @@ def initial_create(db_path: Path, config_path: Path, base_input: Path, mode: str
     frac = cfg['initial_fraction']
     # 먼저 실패한 MOFs에 대해 active_learning_gcmc 테이블도 -1로 설정
     failed_mofs = conn.execute(
-        "SELECT mof FROM low_pressure_gcmc WHERE completed = -1"
+        f"SELECT {df.columns[0]} FROM low_pressure_gcmc WHERE completed = -1"
     ).fetchall()
     for (mof,) in failed_mofs:
         conn.execute(
