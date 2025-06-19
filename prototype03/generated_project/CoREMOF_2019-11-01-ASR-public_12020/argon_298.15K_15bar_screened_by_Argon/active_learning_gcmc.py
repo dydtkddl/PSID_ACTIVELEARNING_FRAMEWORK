@@ -419,12 +419,13 @@ def train_model(labeled: pd.DataFrame, al_cfg: Path, model_dir: Path) -> nn.Modu
     al_cfg = json.loads(al_cfg.read_text(encoding='utf-8'))
     # prepare arrays
     ups_col = labeled.columns[-1]
-    X = labeled.drop(columns=[labeled.columns[0],'iteration', ups_col]).select_dtypes(include='number').values
+    X = labeled.drop(columns=[labeled.columns[0],'iteration', ups_col])
+    print(X.shape)
     y = labeled[ups_col].values
     # warn on dropped non-numeric
     dropped = set(labeled.columns) - set([labeled.columns[0],'iteration', ups_col]) - set(labeled.select_dtypes(include='number').columns)
     if dropped: logger.warning(f"Dropped non-numeric columns: {dropped}")
-
+    
     # train split
     # X_train, _, y_train, _ = train_test_split(X, y, test_size=0.0)
     X_train, y_train = X, y
@@ -436,7 +437,8 @@ def train_model(labeled: pd.DataFrame, al_cfg: Path, model_dir: Path) -> nn.Modu
     ds = TensorDataset(X_tensor, y_tensor)
     
     loader = DataLoader(ds, batch_size=al_cfg['neural_network']['dataset']['BATCH_SIZE'], shuffle=True)
-
+    
+    print(X.shape)
     # model
     spec = al_cfg['neural_network']['model_spec']['hidden_layers']
     model = FeedForwardNN(X.shape[1], spec)
@@ -454,9 +456,13 @@ def train_model(labeled: pd.DataFrame, al_cfg: Path, model_dir: Path) -> nn.Modu
             optimizer.zero_grad(); preds=model(xb); loss=criterion(preds,yb)
             loss.backward(); optimizer.step(); total_loss+=loss.item()
         avg_loss=total_loss/len(loader)
-
+        X_arr = np.asarray(X_train, dtype=np.float32)
         # metrics
-        with torch.no_grad(): preds_all = model(torch.tensor(X_train,dtype=torch.float32)).numpy().reshape(-1)
+        X_tensor = torch.from_numpy(X_arr)
+        with torch.no_grad():
+            output = model(X_tensor)                  # Tensor
+            preds_all = output.detach().cpu().numpy() # NumPy ndarray
+            preds_all = preds_all.reshape(-1)
         r2 = r2_score(y_train,preds_all)
         mae = mean_absolute_error(y_train,preds_all)
         mse = mean_squared_error(y_train,preds_all)
@@ -480,8 +486,14 @@ def predict_with_model(df: pd.DataFrame, model: nn.Module, al_cfg: Path, model_d
     
 # al_cfg = json.loads(al_cfg.read_text(encoding='utf-8'))
     model.eval()
+    print(df.head())
     feat = [c for c in df.columns if c not in [df.columns[0],'iteration', df.columns[-1]] ]
-    X = df[feat].values; 
+    X_df = df[feat].apply(pd.to_numeric, errors='raise')
+    print(X_df.iloc[1])
+    X = X_df.values
+    print(feat)
+    print("converted dtype:", X.dtype)
+    tx = torch.from_numpy(X)  # 이미 float32 여서 dtype 지정 불필요
     tx=torch.tensor(X,dtype=torch.float32)
     mcd=al_cfg["neural_network"]['prediction']['mcd_numbers']; 
     all_preds=[]
@@ -491,9 +503,22 @@ def predict_with_model(df: pd.DataFrame, model: nn.Module, al_cfg: Path, model_d
     out=df[[df.columns[0],'iteration']].copy();
     out['pred_mean']=mean; 
     out['pred_std']=std
-    out[df.columns[-1]] = df[df.columns[-1]]
-    out["absolute_error"] =abs(out['pred_mean'] - df[df.columns[-1]])
-    out.to_csv(model_dir/'predictions.csv',index=False)
+
+
+
+# 실제값 컬럼 이름
+    actual_col = df.columns[-1]
+
+# 1) 실제값을 숫자형으로 변환 (기존 NaN은 그대로 NaN)
+    actual = pd.to_numeric(df[actual_col], errors='coerce')
+
+# 2) out에 실제값 복사
+    out[actual_col] = actual
+
+# 3) 절대오차 계산: actual이 NaN인 경우 결과도 NaN
+    out["absolute_error"] = (out['pred_mean'] - actual).abs()
+
+    out.to_csv(model_dir/'predictions.csv', index=False)
     return out
 # +    # 1) 피처 컬럼을 숫자형으로 변환 → DataFrame
 # +    import pandas as pd
