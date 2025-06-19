@@ -485,7 +485,7 @@ def predict_with_model(df: pd.DataFrame, model: nn.Module, al_cfg: Path, model_d
     al_cfg = json.loads(al_cfg.read_text(encoding='utf-8'))
     
 # al_cfg = json.loads(al_cfg.read_text(encoding='utf-8'))
-    model.eval()
+    # model.eval()
     print(df.head())
     feat = [c for c in df.columns if c not in [df.columns[0],'iteration', df.columns[-1]] ]
     X_df = df[feat].apply(pd.to_numeric, errors='raise')
