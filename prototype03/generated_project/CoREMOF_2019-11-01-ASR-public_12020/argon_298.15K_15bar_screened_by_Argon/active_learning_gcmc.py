@@ -427,7 +427,8 @@ def train_model(labeled: pd.DataFrame, al_cfg: Path, model_dir: Path) -> nn.Modu
     if dropped: logger.warning(f"Dropped non-numeric columns: {dropped}")
 
     # train split
-    X_train, _, y_train, _ = train_test_split(X, y, test_size=0.0)
+    # X_train, _, y_train, _ = train_test_split(X, y, test_size=0.0)
+    X_train, y_train = X, y
     ds = TensorDataset(torch.tensor(X_train,dtype=torch.float32), torch.tensor(y_train,dtype=torch.float32).unsqueeze(1))
     loader = DataLoader(ds, batch_size=al_cfg['neural_network']['dataset']['BATCH_SIZE'], shuffle=True)
 
