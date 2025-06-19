@@ -551,12 +551,16 @@ def main():
         df['iteration'] = pd.to_numeric(df['iteration'], errors='coerce')
 
         # 2) NaN 행 삭제
-        df = df.dropna(subset=['iteration'])
-
+        iterations_list = df['iteration'].dropna()
         # 3) float→int 캐스팅
-        df['iteration'] = df['iteration'].astype(int)
+        iterations_list = iterations_list.astype(int).to_list()
         # 3) Check for existing training
-        if (df['iteration'] >= 1).any():
+        flag = 0
+        for i in iterations_list:
+            if i >= 1:
+                flag = 1
+                break 
+        if flag == 1:
             ans = input("Existing training detected. Reinitialize? (y/n): ")
             if ans.lower() != 'y': sys.exit(0)
 
