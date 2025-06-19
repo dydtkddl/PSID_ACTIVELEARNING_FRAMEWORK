@@ -481,7 +481,7 @@ def predict_with_model(df: pd.DataFrame, model: nn.Module, al_cfg: Path, model_d
     # al_cfg = json.loads(al_cfg.read_text(encoding='utf-8'))
     model.eval(); feat = [c for c in df.columns if c not in [df.columns[0],'iteration'] and 'uptake' not in c]
     X = df[feat].values; tx=torch.tensor(X,dtype=torch.float32)
-    mcd=al_cfg['prediction']['mcd_numbers']; all_preds=[]
+    mcd=al_cfg["model_spec"]['prediction']['mcd_numbers']; all_preds=[]
     for _ in range(mcd):
         with torch.no_grad(): all_preds.append(model(tx).numpy().reshape(-1))
     arr=np.stack(all_preds); mean=arr.mean(0); std=arr.std(0)
