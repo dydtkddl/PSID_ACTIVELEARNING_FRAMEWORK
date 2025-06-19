@@ -495,6 +495,8 @@ def predict_with_model(df: pd.DataFrame, model: nn.Module, al_cfg: Path, model_d
     out["absolute_error"] =abs(out['pred_mean'] - df[df.columns[-1]])
     out.to_csv(model_dir/'predictions.csv',index=False)
     return out
+# +    # 1) 피처 컬럼을 숫자형으로 변환 → DataFrame
+# +    import pandas as pd
 
 def main():
     parser = argparse.ArgumentParser()
