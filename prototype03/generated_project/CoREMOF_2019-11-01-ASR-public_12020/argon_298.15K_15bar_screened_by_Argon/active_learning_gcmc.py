@@ -286,7 +286,7 @@ def initial_run(db_path: Path, config_path: Path, ncpus: int, gcfg_path: Path, n
     recent = deque(maxlen=WINDOW_SIZE)
     done = 0
     with concurrent.futures.ThreadPoolExecutor(max_workers=cpus) as executor:
-        futures = {executor.submit(run_simulation, mof, raspa): mof for mof in targets}
+        futures = {executor.submit(run_simulation, mof,Path("initial_gcmc"), raspa): mof for mof in targets}
         for future in concurrent.futures.as_completed(futures):
             mof = futures[future]
             try:
@@ -537,13 +537,13 @@ def create_active_inputs(mofs: list, tpl: str, params: dict, out_root: Path, ras
         make_simulation_input(mof, tpl, params, out_root, Path(raspa_dir), gcfg)
 
 
-def run_active_simulations(mofs: list, raspa_dir: Path, node_map: dict, ncpus: int, iteration: int, conn: sqlite3.Connection):
+def run_active_simulations(mofs: list, raspa_dir: Path, node_map: dict, ncpus: int, iteration: int, conn: sqlite3.Connection,out_root : Path):
     results = []
     if node_map:
         # Distributed logic as needed
         pass
     else:
-        def worker(m): return run_simulation(m,Path("initial_gcmc"), raspa_dir)
+        def worker(m): return run_simulation(m, out_root,raspa_dir)
         with concurrent.futures.ThreadPoolExecutor(max_workers=ncpus) as ex:
             futures = {ex.submit(worker, m): m for m in mofs}
             for fut in concurrent.futures.as_completed(futures):
@@ -680,7 +680,7 @@ def main():
                 out_root = Path('active_gcmc') / f'iteration{I:05d}'
                 out_root.mkdir(parents=True, exist_ok=True)
                 create_active_inputs(mofs, tpl, al_cfg, out_root, raspa, gcfg_d)
-                run_active_simulations(mofs, raspa, node_map, args.ncpus, I, conn)
+                run_active_simulations(mofs, raspa, node_map, args.ncpus, I, conn,out_root)
                 status = 'training_pending'
 
             if status in ('training_pending', 'ready_next'):
