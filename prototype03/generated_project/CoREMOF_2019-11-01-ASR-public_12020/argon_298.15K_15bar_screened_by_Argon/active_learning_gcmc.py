@@ -493,13 +493,13 @@ def predict_with_model(df: pd.DataFrame, model: nn.Module, al_cfg: Path, model_d
     return out
 
 
-
-
 # ---------------- Active GCMC Functions ----------------
 
 def get_iteration_status(conn: sqlite3.Connection, model_base: Path, n_samples: int, target_fraction: float) -> (int, str):
-    cur = conn.execute(f"SELECT MAX(iteration) FROM {TABLE} WHERE iteration NOT IN (-2)")
-    I_db = cur.fetchone()[0] or 0
+    # 1) Fetch max iteration from DB, exclude failures (-2)
+    raw = conn.execute(f"SELECT MAX(iteration) FROM {TABLE} WHERE iteration NOT IN (-2)").fetchone()[0]
+    I_db = int(raw) if raw is not None else 0
+    # 2) Determine max iteration from model directories
     dirs = [p for p in model_base.iterdir() if p.name.startswith('iteration')]
     I_dir = 0
     for d in dirs:
@@ -509,10 +509,13 @@ def get_iteration_status(conn: sqlite3.Connection, model_base: Path, n_samples: 
         except:
             continue
     I = max(I_db, I_dir)
+    # 3) Count GCMC-completed MOFs at iteration I
     count_gcmc = conn.execute(
         f"SELECT COUNT(*) FROM {TABLE} WHERE iteration = ?", (I,)
     ).fetchone()[0]
+    # 4) Check if model weights exist for iteration I
     model_exists = (model_base / f'iteration{I:05d}' / 'model.pth').exists()
+    # 5) Check overall labeled count vs target
     total = conn.execute(f"SELECT COUNT(*) FROM {TABLE}").fetchone()[0]
     count_labeled = conn.execute(
         f"SELECT COUNT(*) FROM {TABLE} WHERE iteration NOT NULL AND iteration != -2"
