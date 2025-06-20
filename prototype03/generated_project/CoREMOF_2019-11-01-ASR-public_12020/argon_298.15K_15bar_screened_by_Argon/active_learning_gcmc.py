@@ -143,13 +143,13 @@ def parse_output(mof_dir: Path) -> dict:
     if "Average loading absolute [mol/kg framework]" not in res:
         raise ValueError(f"Parse failed for {mof_dir.name}")
     return res
-def run_simulation(mof: str, raspa_dir: Path):
+def run_simulation(mof: str, simulation_root: Path, raspa_dir: Path):
     """
-    Run RASPA simulate for initial_gcmc and return uptake and elapsed time.
-    If simulate fails or output parsing fails, uptake is set to None.
+    Run RASPA simulate for any given iteration directory:
+      simulation_root/<MOF>/simulation.input
+    Returns (mof, uptake, elapsed).
     """
-    base_dir = Path('initial_gcmc')
-    d = base_dir / mof
+    d = simulation_root / mof
     start = time.time()
     result = subprocess.run(
         f"{raspa_dir}/bin/simulate simulation.input",
@@ -166,13 +166,10 @@ def run_simulation(mof: str, raspa_dir: Path):
         else:
             error_logger.error(f"Simulation failed for {mof} (code={result.returncode}): {stderr_output}")
     else:
-        # try:
         uptake = parse_output(d)["Average loading absolute [mol/kg framework]"]
-        # except Exception as e:
-        #     error_logger.error(f"Failed to parse output for {mof}: {e}", exc_info=True)
-        #     uptake = None
 
     return mof, uptake, elapsed
+
 
 def initial_create(db_path: Path, config_path: Path, base_input: Path, mode: str, gcfg : Path):
     conn = get_db_connection(db_path)
@@ -546,7 +543,7 @@ def run_active_simulations(mofs: list, raspa_dir: Path, node_map: dict, ncpus: i
         # Distributed logic as needed
         pass
     else:
-        def worker(m): return run_simulation(m, raspa_dir)
+        def worker(m): return run_simulation(m,Path("initial_gcmc"), raspa_dir)
         with concurrent.futures.ThreadPoolExecutor(max_workers=ncpus) as ex:
             futures = {ex.submit(worker, m): m for m in mofs}
             for fut in concurrent.futures.as_completed(futures):
@@ -677,13 +674,15 @@ def main():
                 print("✅ Active learning complete.")
                 break
             if status == 'gcmc_pending':
-                model_dir = Path('nn_model')/f'iteration{I-1:05d}'
+                prev_iter = I - 1 if I > 0 else 0
+                model_dir = Path('nn_model') / f'iteration{prev_iter:05d}'
                 mofs = select_top_uncertain_mofs(model_dir, al_cfg['n_samples'])
-                out_root = Path('active_gcmc')/f'iteration{I:05d}'
+                out_root = Path('active_gcmc') / f'iteration{I:05d}'
                 out_root.mkdir(parents=True, exist_ok=True)
                 create_active_inputs(mofs, tpl, al_cfg, out_root, raspa, gcfg_d)
-                run_active_simulations(mofs, raspa, node_map, args.ncpus, I+1, conn)
+                run_active_simulations(mofs, raspa, node_map, args.ncpus, I, conn)
                 status = 'training_pending'
+
             if status in ('training_pending', 'ready_next'):
                 retrain_model_for_iteration(I, cfg, gcfg)
 
