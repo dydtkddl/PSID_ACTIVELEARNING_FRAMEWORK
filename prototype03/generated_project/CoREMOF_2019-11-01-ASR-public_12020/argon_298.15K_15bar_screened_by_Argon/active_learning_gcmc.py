@@ -74,7 +74,15 @@ def get_db_connection(db_path: Path) -> sqlite3.Connection:
 # 
 ###############################################################################################
 ###############################################################################################
+
 ###############################################################################################
+# Active GCMC Logger
+active_logger = logging.getLogger('active_gcmc')
+active_handler = logging.FileHandler(LOG_DIR / 'active_gcmc.log')
+active_handler.setFormatter(logging.Formatter('%(asctime)s %(levelname)s: %(message)s'))
+active_logger.addHandler(active_handler)
+active_logger.setLevel(logging.INFO)
+
 run_logger = logging.getLogger('active_run')
 uptake_logger = logging.getLogger('active_uptake')
 error_logger = logging.getLogger('active_error')
@@ -380,8 +388,6 @@ def load_active_learning_dataset(db_path: Path, al_cfg: Path, gcfg: Path) -> pd.
     cols = [df.columns[0], 'iteration', lp_col] + features + [hp_col]
     df = df[cols]
     return df
-
-
 # Split datasets
 def split_datasets(df: pd.DataFrame, model_dir: Path) -> (pd.DataFrame, pd.DataFrame, pd.DataFrame):
     """
@@ -395,7 +401,6 @@ def split_datasets(df: pd.DataFrame, model_dir: Path) -> (pd.DataFrame, pd.DataF
     labeled.to_csv(model_dir/'labeled.csv', index=False)
     unlabeled.to_csv(model_dir/'unlabeled.csv', index=False)
     return df, labeled, unlabeled
-
 # Neural network model
 class FeedForwardNN(nn.Module):
     def __init__(self, input_dim: int, hidden_layers: list):
@@ -415,41 +420,26 @@ def train_model(labeled: pd.DataFrame, al_cfg: Path, model_dir: Path) -> nn.Modu
     """
     Train NN with early stopping. Save model.pth & training_log.csv.
     """
-    # gcfg = json.loads(gcfg.read_text(encoding='utf-8'))
     al_cfg = json.loads(al_cfg.read_text(encoding='utf-8'))
-    # prepare arrays
     ups_col = labeled.columns[-1]
     X = labeled.drop(columns=[labeled.columns[0],'iteration', ups_col])
-    print(X.shape)
     y = labeled[ups_col].values
-    # warn on dropped non-numeric
     dropped = set(labeled.columns) - set([labeled.columns[0],'iteration', ups_col]) - set(labeled.select_dtypes(include='number').columns)
     if dropped: logger.warning(f"Dropped non-numeric columns: {dropped}")
-    
-    # train split
-    # X_train, _, y_train, _ = train_test_split(X, y, test_size=0.0)
     X_train, y_train = X, y
-    # ds =ds = TensorDataset(torch.tensor(X_train,dtype=torch.float32), torch.tensor(y_train,dtype=torch.float32).unsqueeze(1))
     X_arr = np.asarray(X_train, dtype=np.float32)
     y_arr = np.asarray(y_train, dtype=np.float32)
     X_tensor = torch.from_numpy(X_arr)            # shape (N, n_features)
     y_tensor = torch.from_numpy(y_arr).unsqueeze(1)  # shape (N, 1)
     ds = TensorDataset(X_tensor, y_tensor)
-    
     loader = DataLoader(ds, batch_size=al_cfg['neural_network']['dataset']['BATCH_SIZE'], shuffle=True)
-    
-    print(X.shape)
-    # model
     spec = al_cfg['neural_network']['model_spec']['hidden_layers']
     model = FeedForwardNN(X.shape[1], spec)
     optimizer = optim.Adam(model.parameters(), lr=al_cfg['neural_network']['training']['learning_rate'])
     criterion = nn.MSELoss()
-
-    # early stopping
     patience = al_cfg['neural_network']['training']['patience']
     min_delta = al_cfg['neural_network']['training'].get('min_delta',0.0)
     best_loss=float('inf'); wait=0; logs=[]
-
     for epoch in range(al_cfg['neural_network']['training']['max_epoch']):
         model.train(); total_loss=0
         for xb,yb in loader:
@@ -467,7 +457,6 @@ def train_model(labeled: pd.DataFrame, al_cfg: Path, model_dir: Path) -> nn.Modu
         mae = mean_absolute_error(y_train,preds_all)
         mse = mean_squared_error(y_train,preds_all)
         logs.append((epoch,avg_loss,r2,mae,mse))
-
         if avg_loss+min_delta < best_loss:
             best_loss=avg_loss; wait=0; torch.save(model.state_dict(), model_dir/'model.pth')
         else:
@@ -483,16 +472,9 @@ def predict_with_model(df: pd.DataFrame, model: nn.Module, al_cfg: Path, model_d
     MC Dropout predictions. Save predictions.csv.
     """
     al_cfg = json.loads(al_cfg.read_text(encoding='utf-8'))
-    
-# al_cfg = json.loads(al_cfg.read_text(encoding='utf-8'))
-    # model.eval()
-    print(df.head())
     feat = [c for c in df.columns if c not in [df.columns[0],'iteration', df.columns[-1]] ]
     X_df = df[feat].apply(pd.to_numeric, errors='raise')
-    print(X_df.iloc[1])
     X = X_df.values
-    print(feat)
-    print("converted dtype:", X.dtype)
     tx = torch.from_numpy(X)  # 이미 float32 여서 dtype 지정 불필요
     tx=torch.tensor(X,dtype=torch.float32)
     mcd=al_cfg["neural_network"]['prediction']['mcd_numbers']; 
@@ -503,25 +485,94 @@ def predict_with_model(df: pd.DataFrame, model: nn.Module, al_cfg: Path, model_d
     out=df[[df.columns[0],'iteration']].copy();
     out['pred_mean']=mean; 
     out['pred_std']=std
-
-
-
-# 실제값 컬럼 이름
     actual_col = df.columns[-1]
-
-# 1) 실제값을 숫자형으로 변환 (기존 NaN은 그대로 NaN)
     actual = pd.to_numeric(df[actual_col], errors='coerce')
-
-# 2) out에 실제값 복사
     out[actual_col] = actual
-
-# 3) 절대오차 계산: actual이 NaN인 경우 결과도 NaN
     out["absolute_error"] = (out['pred_mean'] - actual).abs()
-
     out.to_csv(model_dir/'predictions.csv', index=False)
     return out
-# +    # 1) 피처 컬럼을 숫자형으로 변환 → DataFrame
-# +    import pandas as pd
+
+
+
+
+# ---------------- Active GCMC Functions ----------------
+
+def get_iteration_status(conn: sqlite3.Connection, model_base: Path, n_samples: int, target_fraction: float) -> (int, str):
+    cur = conn.execute(f"SELECT MAX(iteration) FROM {TABLE} WHERE iteration NOT IN (-2)")
+    I_db = cur.fetchone()[0] or 0
+    dirs = [p for p in model_base.iterdir() if p.name.startswith('iteration')]
+    I_dir = 0
+    for d in dirs:
+        try:
+            idx = int(d.name.replace('iteration', ''))
+            I_dir = max(I_dir, idx)
+        except:
+            continue
+    I = max(I_db, I_dir)
+    count_gcmc = conn.execute(
+        f"SELECT COUNT(*) FROM {TABLE} WHERE iteration = ?", (I,)
+    ).fetchone()[0]
+    model_exists = (model_base / f'iteration{I:05d}' / 'model.pth').exists()
+    total = conn.execute(f"SELECT COUNT(*) FROM {TABLE}").fetchone()[0]
+    count_labeled = conn.execute(
+        f"SELECT COUNT(*) FROM {TABLE} WHERE iteration NOT NULL AND iteration != -2"
+    ).fetchone()[0]
+    if count_labeled >= total * target_fraction:
+        return I, 'finished'
+    if count_gcmc < n_samples:
+        return I, 'gcmc_pending'
+    if count_gcmc == n_samples and not model_exists:
+        return I, 'training_pending'
+    return I, 'ready_next'
+
+
+def select_top_uncertain_mofs(model_dir: Path, n_samples: int) -> list:
+    df = pd.read_csv(model_dir / 'predictions.csv')
+    pending = df[df['iteration'].isna()]
+    return pending.sort_values('pred_std', ascending=False).head(n_samples)['filename'].tolist()
+
+
+def create_active_inputs(mofs: list, tpl: str, params: dict, out_root: Path, raspa_dir: Path, gcfg: dict):
+    for mof in mofs:
+        make_simulation_input(mof, tpl, params, out_root, Path(raspa_dir), gcfg)
+
+
+def run_active_simulations(mofs: list, raspa_dir: Path, node_map: dict, ncpus: int, iteration: int, conn: sqlite3.Connection):
+    results = []
+    if node_map:
+        # Distributed logic as needed
+        pass
+    else:
+        def worker(m): return run_simulation(m, raspa_dir)
+        with concurrent.futures.ThreadPoolExecutor(max_workers=ncpus) as ex:
+            futures = {ex.submit(worker, m): m for m in mofs}
+            for fut in concurrent.futures.as_completed(futures):
+                results.append(fut.result())
+    for mof, uptake, elapsed in results:
+        if uptake is None:
+            conn.execute(f"UPDATE {TABLE} SET iteration=-2 WHERE filename=?", (mof,))
+        else:
+            conn.execute(
+                f"UPDATE {TABLE} SET iteration=?, `uptake[mol/kg framework]`=?, calculation_time=? WHERE filename=?",
+                (iteration, uptake, elapsed, mof)
+            )
+    conn.commit()
+
+
+def retrain_model_for_iteration(iteration: int, al_cfg: Path, gcfg: Path):
+    prev = Path('nn_model') / f'iteration{iteration:05d}'
+    next_dir = Path('nn_model') / f'iteration{iteration+1:05d}'
+    full, labeled, unlabeled = split_datasets(
+        load_active_learning_dataset(Path('mof_project.db'), al_cfg, gcfg), next_dir
+    )
+    model = FeedForwardNN(labeled.shape[1]-2, json.loads(al_cfg.read_text())['neural_network']['model_spec']['hidden_layers'])
+    model.load_state_dict(torch.load(prev/'model.pth'))
+    trained = train_model(labeled, al_cfg, next_dir)
+    predict_with_model(full, trained, al_cfg, next_dir)
+
+# ---------------- End Active GCMC Functions ----------------
+
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -606,8 +657,32 @@ def main():
         # 6) Predict and save results
         pred = predict_with_model(full, model, cfg, model_dir)
         print('init_model phase completed successfully.')
+
     elif args.phase == 'active_gcmc':
-        print("🔧 Placeholder: active_gcmc not implemented yet.")
+        conn = get_db_connection(dbp)
+        al_cfg = json.loads(cfg.read_text())
+        gcfg_d = json.loads(gcfg.read_text())
+        tpl = binput.read_text()
+        raspa = Path(gcfg_d['RASPA_DIR'])
+        total = conn.execute(f"SELECT COUNT(*) FROM {TABLE}").fetchone()[0]
+
+        while True:
+            I, status = get_iteration_status(conn, Path('nn_model'), al_cfg['n_samples'], al_cfg['target_fraction'])
+            active_logger.info(f"Iteration {I}, status={status}")
+            if status == 'finished':
+                active_logger.info("Target fraction reached, exiting.")
+                print("✅ Active learning complete.")
+                break
+            if status == 'gcmc_pending':
+                model_dir = Path('nn_model')/f'iteration{I:05d}'
+                mofs = select_top_uncertain_mofs(model_dir, al_cfg['n_samples'])
+                out_root = Path('active_gcmc')/f'iteration{I+1:05d}'
+                out_root.mkdir(parents=True, exist_ok=True)
+                create_active_inputs(mofs, tpl, al_cfg, out_root, raspa, gcfg_d)
+                run_active_simulations(mofs, raspa, node_map, args.ncpus, I+1, conn)
+                status = 'training_pending'
+            if status in ('training_pending', 'ready_next'):
+                retrain_model_for_iteration(I, cfg, gcfg)
 
 if __name__ == '__main__':
     main()
