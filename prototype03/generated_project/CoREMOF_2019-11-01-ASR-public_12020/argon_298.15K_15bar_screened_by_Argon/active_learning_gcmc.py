@@ -94,6 +94,7 @@ for logger, name in [(run_logger, 'run.log'), (uptake_logger, 'uptake.log'), (er
     logger.setLevel(logging.INFO if logger != error_logger else logging.ERROR)
 def make_simulation_input(mof: str, base_template: str, params: dict, out_root: Path, raspa_dir: Path, gcfg : dict) -> None:
     cif_path = raspa_dir / 'share' / 'raspa' / 'structures' / 'cif' / mof
+    print(cif_path)
     try:
         ucell = pyrascont.cif2Ucell(str(cif_path), float(params.get('CUTOFFVDW', 12.8)), Display=False)
         unitcell_str = ' '.join(map(str, ucell))
