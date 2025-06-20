@@ -533,7 +533,9 @@ def select_top_uncertain_mofs(model_dir: Path, n_samples: int) -> list:
 
 
 def create_active_inputs(mofs: list, tpl: str, params: dict, out_root: Path, raspa_dir: Path, gcfg: dict):
+    print(create_active_inputs)
     for mof in mofs:
+        print(mof, '\n\n\n')
         make_simulation_input(mof, tpl, params, out_root, Path(raspa_dir), gcfg)
 
 
