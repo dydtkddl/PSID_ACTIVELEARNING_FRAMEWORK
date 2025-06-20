@@ -568,7 +568,7 @@ def retrain_model_for_iteration(iteration: int, al_cfg: Path, gcfg: Path):
     full, labeled, unlabeled = split_datasets(
         load_active_learning_dataset(Path('mof_project.db'), al_cfg, gcfg), next_dir
     )
-    model = FeedForwardNN(labeled.shape[1]-2, json.loads(al_cfg.read_text())['neural_network']['model_spec']['hidden_layers'])
+    model = FeedForwardNN(labeled.shape[1]-3, json.loads(al_cfg.read_text())['neural_network']['model_spec']['hidden_layers'])
     model.load_state_dict(torch.load(prev/'model.pth'))
     trained = train_model(labeled, al_cfg, next_dir)
     predict_with_model(full, trained, al_cfg, next_dir)
