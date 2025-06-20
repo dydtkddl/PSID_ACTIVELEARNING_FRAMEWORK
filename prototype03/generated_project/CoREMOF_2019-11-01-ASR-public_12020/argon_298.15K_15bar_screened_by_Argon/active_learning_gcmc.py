@@ -492,7 +492,7 @@ def predict_with_model(df: pd.DataFrame, model: nn.Module, al_cfg: Path, model_d
     out.to_csv(model_dir/'predictions.csv', index=False)
     return out
 
-
+import concurrent.futures
 # ---------------- Active GCMC Functions ----------------
 
 def get_iteration_status(conn: sqlite3.Connection, model_base: Path, n_samples: int, target_fraction: float) -> (int, str):
@@ -677,9 +677,9 @@ def main():
                 print("✅ Active learning complete.")
                 break
             if status == 'gcmc_pending':
-                model_dir = Path('nn_model')/f'iteration{I:05d}'
+                model_dir = Path('nn_model')/f'iteration{I-1:05d}'
                 mofs = select_top_uncertain_mofs(model_dir, al_cfg['n_samples'])
-                out_root = Path('active_gcmc')/f'iteration{I+1:05d}'
+                out_root = Path('active_gcmc')/f'iteration{I:05d}'
                 out_root.mkdir(parents=True, exist_ok=True)
                 create_active_inputs(mofs, tpl, al_cfg, out_root, raspa, gcfg_d)
                 run_active_simulations(mofs, raspa, node_map, args.ncpus, I+1, conn)
