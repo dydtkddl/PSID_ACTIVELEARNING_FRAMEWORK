@@ -540,27 +540,102 @@ def create_active_inputs(mofs: list, tpl: str, params: dict, out_root: Path, ras
         print(mof, '\n\n\n')
         make_simulation_input(mof, tpl, params, out_root, Path(raspa_dir), gcfg)
 
+def run_active_simulations(db_path: Path,
+                           raspa_dir: Path,
+                           node_map: dict,
+                           ncpus: int,
+                           iteration: int,
+                           mof_list: list,
+                           out_root: Path):
+    """
+    Run Active GCMC locally or distributed across nodes via SSH using node_map keys.
+    Writes results into DB with given iteration.
+    """
+    import socket
+    hostname = socket.gethostname()
+    conn = get_db_connection(db_path)
 
-def run_active_simulations(mofs: list, raspa_dir: Path, node_map: dict, ncpus: int, iteration: int, conn: sqlite3.Connection,out_root : Path):
-    results = []
+    total = len(mof_list)
+    if total == 0:
+        print("▶ No pending MOFs to run.")
+        return
+
+    # Distributed mode
     if node_map:
-        # Distributed logic as needed
-        pass
-    else:
-        def worker(m): return run_simulation(m, out_root,raspa_dir)
-        with concurrent.futures.ThreadPoolExecutor(max_workers=ncpus) as ex:
-            futures = {ex.submit(worker, m): m for m in mofs}
-            for fut in concurrent.futures.as_completed(futures):
-                results.append(fut.result())
-    for mof, uptake, elapsed in results:
-        if uptake is None:
-            conn.execute(f"UPDATE {TABLE} SET iteration=-2 WHERE filename=?", (mof,))
-        else:
-            conn.execute(
-                f"UPDATE {TABLE} SET iteration=?, `uptake[mol/kg framework]`=?, calculation_time=? WHERE filename=?",
-                (iteration, uptake, elapsed, mof)
+        total_cpus = sum(node_map.values())
+        assigned = {}
+        start = 0
+        for node, cpus in node_map.items():
+            count = round(total * cpus / total_cpus)
+            assigned[node] = mof_list[start:start+count]
+            start += count
+        if start < total:
+            assigned[list(node_map.keys())[-1]] += mof_list[start:]
+
+        procs = []
+        project_dir = Path.cwd()
+        for node, cpus in node_map.items():
+            mofs = assigned[node]
+            list_file = project_dir / f'active_mofs_{node}.txt'
+            list_file.write_text("\n".join(mofs), encoding='utf-8')
+            ssh_cmd = (
+                f"ssh {node} 'cd {project_dir} && "
+                f"python active_learning_gcmc.py active_gcmc "
+                f"--pal_nodes none --ncpus {cpus} "
+                f"--mof_list {list_file}'"
             )
-    conn.commit()
+            procs.append(subprocess.Popen(ssh_cmd, shell=True))
+        for p in procs:
+            p.wait()
+        print("✅ Distributed active_run complete.")
+        return
+
+    # Local mode
+    cpus = ncpus
+    print(f"▶ Local   {total}/{total} MOFs → {cpus} CPUs")
+    active_logger.info(f"Start active run ({hostname}): {total}/{total}, CPUs={cpus}")
+
+    recent = deque(maxlen=WINDOW_SIZE)
+    done = 0
+
+    def worker(mof):
+        return run_simulation(mof, out_root, raspa_dir)
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=cpus) as executor:
+        futures = {executor.submit(worker, mof): mof for mof in mof_list}
+        for fut in concurrent.futures.as_completed(futures):
+            mof = futures[fut]
+            try:
+                mof, uptake, elapsed = fut.result()
+                done += 1
+                recent.append(elapsed)
+                win_avg = sum(recent) / len(recent)
+                remain = total - done
+                eta_sec = win_avg * remain / cpus
+                eta_min = eta_sec / 60
+                msg = (
+                    f"({hostname}) {done}/{total} completed: {mof} took {elapsed:.2f}s | "
+                    f"win_avg({len(recent)})={win_avg:.2f}s | "
+                    f"ETA@{cpus}cpus={eta_sec:.2f}s({eta_min:.2f}min)"
+                )
+                active_logger.info(msg)
+                print(msg)
+
+                # Update DB
+                if uptake is None:
+                    conn.execute(f"UPDATE {TABLE} SET iteration=-2 WHERE filename=?", (mof,))
+                else:
+                    conn.execute(
+                        f"UPDATE {TABLE} "
+                        f"SET iteration=?, `uptake[mol/kg framework]`=?, calculation_time=? "
+                        f"WHERE filename=?",
+                        (iteration, uptake, elapsed, mof)
+                    )
+                conn.commit()
+            except Exception as e:
+                error_logger.error(f"Error processing {mof}: {e}", exc_info=True)
+
+    print("✅ Local active_run complete.")
 
 
 def retrain_model_for_iteration(iteration: int, al_cfg: Path, gcfg: Path):
@@ -684,7 +759,15 @@ def main():
                 out_root = Path('active_gcmc') / f'iteration{I:05d}'
                 out_root.mkdir(parents=True, exist_ok=True)
                 create_active_inputs(mofs, tpl, al_cfg, out_root, raspa, gcfg_d)
-                run_active_simulations(mofs, raspa, node_map, args.ncpus, I, conn,out_root)
+                run_active_simulations(
+                        dbp,                # 1) DB 파일 경로
+                        raspa,              # 2) RASPA_DIR
+                        node_map,           # 3) 노드 맵
+                        args.ncpus,         # 4) 로컬 CPU 수
+                        I,                  # 5) 이번 iteration 번호
+                        mofs,               # 6) 샘플링된 MOF 리스트
+                        out_root            # 7) 입력/출력 루트 디렉터리
+                    )
                 status = 'training_pending'
 
             if status in ('training_pending', 'ready_next'):
