@@ -115,6 +115,7 @@ def make_simulation_input(mof: str, base_template: str, params: dict, out_root: 
         UNITCELL=unitcell_str
     )
     dest = out_root / mof
+    print(dest)
     dest.mkdir(parents=True, exist_ok=True)
     (dest / 'simulation.input').write_text(content, encoding='utf-8')
 def parse_output(mof_dir: Path) -> dict:
@@ -533,7 +534,7 @@ def select_top_uncertain_mofs(model_dir: Path, n_samples: int) -> list:
 
 
 def create_active_inputs(mofs: list, tpl: str, params: dict, out_root: Path, raspa_dir: Path, gcfg: dict):
-    print(out_root)
+    print(out_root,1)
     for mof in mofs:
         print(mof, '\n\n\n')
         make_simulation_input(mof, tpl, params, out_root, Path(raspa_dir), gcfg)
